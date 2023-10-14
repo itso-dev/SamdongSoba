@@ -33,11 +33,11 @@
             </div>
                 <div class="input-wrap">
                     <p class="label-name">아이디*</p>
-                    <input type="text" name="login_id" class="form-control" value="<?= $login_id ?>">
+                    <input type="text" autocomplete="off" name="login_id" class="form-control" value="<?= $login_id ?>">
                 </div>
                 <div class="input-wrap">
                     <p class="label-name">비밀번호*</p>
-                    <input type="password" id="password" name="password" class="form-control" value="" required>
+                    <input type="password" autocomplete="off" id="password" name="password" class="form-control" value="" required>
                 </div>
                 <div class="input-wrap">
                     <p class="label-name">이름*</p>
@@ -50,7 +50,7 @@
             </div>
                 <div class="btn-wrap">
                     <input type="submit" class="submit" value="확인" />
-                    <a href="./manager_list.php" class="go-back">목록</a>
+                    <a href="./manager_list.php?menu=4" class="go-back">목록</a>
                 </div>
         </form>
     </div>

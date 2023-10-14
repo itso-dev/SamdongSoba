@@ -133,6 +133,12 @@
     $row = ceil($_GET['page']/$page_size);
 
     $start_page=(($row-1)*$page_size)+1;
+
+//담당자 리스트
+$admin_sql = "select * from admin_tbl order by id";
+$admin_stt=$db_conn->prepare($admin_sql);
+$admin_stt->execute();
+
 ?>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="./css/apply_list.css" rel="stylesheet" />
@@ -272,12 +278,11 @@
                                             <option value="0" <? if($list_row['manager_fk'] == 0) echo "selected"?>>없음</option>
                                             <?php
                                             //담당자 리스트
-                                            $admin_sql = "select * from admin_tbl order by id";
-                                            $admin_stt=$db_conn->prepare($admin_sql);
-                                            $admin_stt->execute();
-                                            while($admin_row=$admin_stt->fetch()){
-                                            ?>
-                                            <option value="<?= $admin_row['id'] ?>" <? if($list_row['manager_fk'] == $admin_row['id']) echo "selected"?>><?= $admin_row['login_name'] ?></option>
+                                            $admin_stt2=$db_conn->prepare($admin_sql);
+                                            $admin_stt2->execute();
+                                            while($manager_row=$admin_stt2->fetch()){
+                                                ?>
+                                                <option value="<?= $manager_row['id'] ?>" <? if($list_row['manager_fk'] == $manager_row['id']) echo "selected"?>><?= $manager_row['login_name'] ?></option>
                                             <?php } ?>
                                         </select>
                                     </td>

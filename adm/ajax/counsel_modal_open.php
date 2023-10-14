@@ -46,15 +46,12 @@ $row = $modal_stt -> fetch();
                         <div class="col-6">
                             <label for="modal_counsel_content_result">결과</label>
                             <select class="custom-select modal_counsel_result" id="modal_counsel_result" name="result_status">
-                                <option value="대기" <? if(row['result_status'] == "대기") echo "selected"?>>대기</option>
-                                <option value="A등급" <? if(row['result_status'] == "A등급") echo "selected"?>>A등급</option>
-                                <option value="B등급" <? if(row['result_status'] == "B등급") echo "selected"?>>B등급</option>
-                                <option value="부재" <? if(row['result_status'] == "부재") echo "selected"?>>부재</option>
-                                <option value="결번" <? if(row['result_status'] == "결번") echo "selected"?>>결번</option>
-                                <option value="재통화" <? if(row['result_status'] == "재통화") echo "selected"?>>재통화</option>
-                                <option value="결제" <? if(row['result_status'] == "결제") echo "selected"?>>결제</option>
-                                <option value="블랙" <? if(row['result_status'] == "블랙") echo "selected"?>>블랙</option>
-                                <option value="거절" <? if(row['result_status'] == "거절") echo "selected"?>>거절</option>
+                                <option value="대기" <? if($row['result_status'] == "대기") echo "selected"?>>대기</option>
+                                <option value="부재" <? if($row['result_status'] == "부재") echo "selected"?>>부재</option>
+                                <option value="재통화" <? if($row['result_status'] == "재통화") echo "selected"?>>재통화</option>
+                                <option value="블랙" <? if($row['result_status'] == "블랙") echo "selected"?>>블랙</option>
+                                <option value="거절" <? if($row['result_status'] == "거절") echo "selected"?>>거절</option>
+                                <option value="완료" <? if($row['result_status'] == "완료") echo "selected"?>>완료</option>
                             </select>
                         </div>
                     </div>
