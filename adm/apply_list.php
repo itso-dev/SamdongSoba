@@ -33,6 +33,9 @@ if($req != ""){
 $change = isset($_POST['change']) ? $_POST['change'] : '';
 $wr_id = isset($_POST['wr_id']) ? $_POST['wr_id'] : '';
 $result = isset($_POST['result']) ? $_POST['result'] : '';
+$sch_startdate = isset($_POST['sch_startdate']) ? $_POST['sch_startdate'] : '';
+$sch_enddate = isset($_POST['sch_enddate']) ? $_POST['sch_enddate'] : '';
+$stx = isset($_POST['stx']) ? $_POST['stx'] : '';
 
 
 // 상담결과 동적 변경
@@ -88,12 +91,27 @@ if($sch_c_result == ""){
 }else{
     $sch_c_result_key = " and result_status like '%$sch_c_result%'";
 }
-// 날짜 검색
-if($sch_date == ""){
-    $sch_date_key = "";
-}else{
-    $sch_date_key = " AND write_date between '$sch_date 00:00:00' and '$sch_date 23:59:59'";
+
+
+// 담당자 검색
+if ($sch_manager == "") {
+    $sch_manager_key = " where manager_fk is not NULL";
+} else {
+    $sch_manager_key = " where manager_fk = $sch_manager";
 }
+
+// 날짜 검색
+if ($sch_startdate == "" && $sch_enddate == "") {
+    $sch_date_key = "";
+} elseif ($sch_startdate != "" && $sch_enddate == "") {
+    $sch_date_key = " and write_date between '$sch_startdate 00:00:00' and '$sch_startdate 23:59:59'";
+} elseif ($sch_startdate == "" && $sch_enddate != "") {
+    $sch_date_key = " and write_date between '$sch_enddate 00:00:00' and '$sch_enddate 23:59:59'";
+}
+else {
+    $sch_date_key = " and write_date between '$sch_startdate 00:00:00' and '$sch_enddate 23:59:59'";
+}
+
 // 통합 검색
 if($stx == ""){
     $stx_key = "";
@@ -109,6 +127,7 @@ $first = ($_GET['page']*$list_size)-$list_size;
 
 
 $list_sql = "select * from contact_tbl "
+    .$sch_manager_key
     .$sch_c_result_key
     .$sch_date_key
     .$stx_key
@@ -118,7 +137,13 @@ $list_stt=$db_conn->prepare($list_sql);
 $list_stt->execute();
 
 //총 페이지를 구하기 위한 sql문
-$total_sql = "select count(*) from contact_tbl";
+$total_sql = "select count(*) from contact_tbl "
+     .$sch_manager_key
+    .$sch_c_result_key
+    .$sch_date_key
+    .$stx_key;
+
+
 $total_stt=$db_conn->prepare($total_sql);
 $total_stt->execute();
 $total_row=$total_stt->fetch();
@@ -164,8 +189,8 @@ $admin_stt->execute();
                 <span id="export_chks" class="btn btn-primary btn-sm float-right shadow ip-modal-open">차단 아이피 관리</span>
             </div>
             <div class="btn_fixed_top justify-end">
-                <a href="./schedule.php?menu=55" class="btn btn-sm btn-danger shadow mt-0">교육/행사 일정 관리</a>
-                <a href="./calendar.php?menu=55" class="btn btn-sm btn-danger shadow mt-0">미팅 일정 관리</a>
+<!--                <a href="./schedule.php?menu=55" class="btn btn-sm btn-danger shadow mt-0">교육/행사 일정 관리</a>-->
+<!--                <a href="./calendar.php?menu=55" class="btn btn-sm btn-danger shadow mt-0">미팅 일정 관리</a>-->
             </div>
         </div>
         <div class="mx-3 my-2 p-3 page-header border">
@@ -179,7 +204,10 @@ $admin_stt->execute();
                         <label>결과</label>
                     </div>
                     <div class="col-md-2 my-1 my-md-0 px-1" >
-                        <label>생성일</label>
+                        <label>검색 시작일</label>
+                    </div>
+                    <div class="col-md-2 my-1 my-md-0 px-1" >
+                        <label>검색 종료일</label>
                     </div>
                     <div class="col-md-4 my-1 my-md-0 px-1">
                         <label>통합검색</label>
@@ -209,12 +237,16 @@ $admin_stt->execute();
                     </select>
                 </div>
                 <div class="col-12 col-md-2 py-md-0 my-1 my-md-0 px-1 position-relative">
-                    <input type="text" class="form-control h-100 bg-white date-picker" value="<?= $sch_date ?>" name="sch_date" id="sch_date" autocomplete="off" placeholder="생성일" style="border-radius: 0;border: 1px solid #ced4da;">
-                    <a class="position-absolute" href="javascript:initSchDate();" style="top:23%; right:2%;"><img src="./img/close.png" class="w-75"></a>
+                    <input type="text" class="form-control h-100 bg-white date-picker" value="<?= $sch_startdate ?>" name="sch_startdate" id="sch_startdate" autocomplete="off" placeholder="검색 시작일" style="border-radius: 0;border: 1px solid #ced4da;">
+                    <a class="position-absolute" href="javascript:initSchDate();" style="top:23%; right:6%;"><img src="<?= $site_url ?>/img/close.png" class="w-75"></a>
+                </div>
+                <div class="col-12 col-md-2 py-md-0 my-1 my-md-0 px-1 position-relative">
+                    <input type="text" class="form-control h-100 bg-white date-picker" value="<?= $sch_enddate ?>" name="sch_enddate" id="sch_enddate" autocomplete="off" placeholder="검색 종료일" style="border-radius: 0;border: 1px solid #ced4da;">
+                    <a class="position-absolute" href="javascript:initSchEndDate();" style="top:23%; right:6%;"><img src="<?= $site_url ?>/img/close.png" class="w-75"></a>
                 </div>
                 <div class="col-12 col-md-2 my-1 my-md-0 px-1 position-relative">
                     <input type="text" class="form-control h-100 pr-5" value="<?= $stx ?>" name="stx" id="sch_str" placeholder="검색어 입력" style="border-radius: 0;border: 1px solid #ced4da;">
-                    <a class="position-absolute" href="javascript:initSchStr();" style="top:23%; right:2%;"><img src="./img/close.png" class="w-75"></a>
+                    <a class="position-absolute" href="javascript:initSchStr();" style="top:23%; right:2%;"><img src="<?= $site_url ?>/img/close.png" class="w-75"></a>
                 </div>
                 <div class="col-12 col-md-2 my-1 my-md-0 px-1">
                     <div class="w-100 py-1 py-md-1 my-md-auto row mx-0 rounded-0" style="background-color:#F66332; border-radius: 3px; color:white; border:none; cursor:pointer" onclick="search();">
@@ -449,14 +481,20 @@ $admin_stt->execute();
     }
     // 검색 input text 지움
     function initSchDate(){
-        $('#sch_date').val('');
+        $('#sch_startdate').val('');
+    }
+    function initSchEndDate(){
+        $('#sch_enddate').val('');
     }
     function initSchStr(){
         $('#sch_str').val('');
     }
     //datepicker
     $( function() {
-        $( "#sch_date" ).datepicker({
+        $( "#sch_startdate" ).datepicker({
+            dateFormat: "yy-mm-dd"
+        });
+        $( "#sch_enddate" ).datepicker({
             dateFormat: "yy-mm-dd"
         });
     });

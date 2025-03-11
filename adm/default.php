@@ -107,6 +107,12 @@ $contact_alert_count = $contact_alert_result['today_count'];
                 </li>
                 <?php } ?>
             </ul>
+            <div class="service-center-wrap">
+                <p class="tit"><i class="fas fa-headphones"></i> 고객센터</p>
+                <p class="text">사용 중인 관리서비스에<br>
+                    필요한 내용을 확인하세요.</p>
+                <a href="<?= $site_url ?>/service_center.php?menu=10">고객센터</a>
+            </div>
         </div>
     </div>
 </div>
