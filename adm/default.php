@@ -1,90 +1,95 @@
 <?
 header('P3P: CP="NOI CURa ADMa DEVa TAIa OUR DELa BUS IND PHY ONL UNI COM NAV INT DEM PRE"');
-if( isset( $_SESSION[ 'manager_id' ] ) ) {
-    $adm_login = TRUE;
-}
+ if( isset( $_SESSION[ 'manager_id' ] ) ) {
+     $adm_login = TRUE;
+ }
 
-if ( !$adm_login ) {
-    ?>
-    <script>
-
-    </script>
-    <meta http-equiv="refresh" content="0;url=bbs/login.php" />
-    <?
-}
+ if ( !$adm_login ) {
+?>
+<script>
+</script>
+<meta http-equiv="refresh" content="0;url=bbs/login.php" />
+<?
+ }
 
 ?>
 
 <script type="text/javascript">
 
     $( document ).ready(function() {
-
         $('.navbar-toggler').click(function(){
             $('body').toggleClass('sidebar-open');
         });
+        $(".sidebar-wrapper .nav li").click(function (){
+            if($(this).hasClass("toggle-open")){
+                $(this).find(".submenu").slideUp("300");
+
+                $(this).removeClass("toggle-open");
+            } else {
+                $(this).find(".submenu").slideDown("300");
+                $(this).addClass("toggle-open");
+            }
+        });
     });
+
 </script>
 
-
+<!-- Font Awesome 6.x CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <body>
 <!-- admin menu -->
 <div class="gnb-container">
     <div class="sidebar">
         <div class="brand-wrapper">
-            <a class="brand" href="apply_list.php">미디어플래닛(이름)</a>
+            <a class="brand" ><img src="<?= $site_url ?>/img/logo.png" class="adm_logo"></a>
         </div>
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li <?php if($menu == 0  || $menu == "") echo "class='active'" ?> >
-                    <a href="index.php?menu=0">
+                    <a class="menu" href="<?= $site_url ?>/index.php?menu=0">
                         <i class="fas fa-chart-bar"></i>
-                        <p>로그관리</p>
+                        <p>홈</p>
                     </a>
                 </li>
-                <li <?php if($menu == 1) echo "class='active'" ?> >
-                    <a href="apply_list.php?menu=1">
-                        <i class="far fa-address-book"></i>
-                        <p>전체보기</p>
-                    </a>
-                </li>
-                <li <?php if($menu == 2) echo "class='active'" ?> >
-                    <a href="config_form.php?menu=2">
+                <li <?php if($menu == 11) echo "class='active'" ?> >
+                    <a class="menu" href="<?= $site_url ?>/config_form.php?menu=11">
                         <i class="fas fa-list-ul"></i>
                         <p>기본 설정</p>
                     </a>
                 </li>
-                <li <?php if($menu == 3) echo "class='active'" ?> >
-                    <a href="popup_list.php?menu=3">
+                <li <?php if($menu == 77) echo "class='active'" ?> >
+                    <a class="menu" href="<?= $site_url ?>/ad/ad_list.php?menu=77">
+                        <i class="fas fa-ad"></i>
+                        <p>광고 관리</p>
+                    </a>
+                </li>
+                <li <?php if($menu == 99) echo "class='active'" ?> >
+                    <a class="menu" href="<?= $site_url ?>/test/test_list.php?menu=99">
+                        <i class="fas fa-laptop-code"></i>
+                        <p>A/B 테스트</p>
+                    </a>
+                </li>
+                <li <?php if($menu == 55) echo "class='active'" ?> >
+                    <a class="menu" href="<?= $site_url ?>/apply_list.php?menu=55">
+                        <i class="far fa-envelope"></i>
+                        <p>문의관리</p>
+                    </a>
+                </li>
+                <li <?php if($menu == 66) echo "class='active'" ?> >
+                    <a class="menu" href="<?= $site_url ?>/popup_list.php?menu=66">
                         <i class="far fa-clone"></i>
                         <p>팝업 설정</p>
                     </a>
                 </li>
-                <li <?php if($menu == 4) echo "class='active'" ?> >
-                    <a href="manager_list.php?menu=4">
+
+                <li <?php if($menu == 111) echo "class='active'" ?> >
+                    <a class="menu" href="<?= $site_url ?>/manager_list.php?menu=111">
                         <i class="far fa-user"></i>
                         <p>담당자 설정</p>
                     </a>
                 </li>
-                <li class="line"></li>
-                <li <?php if($menu == 5) echo "class='active'" ?> >
-                    <a href="chat_bot_service.php?menu=10" class="pay-menu">
-                        <i class="far fa-comment-alt"></i>
-                        <p>챗봇 설정</p>
-                    </a>
-                </li>
-                <li <?php if($menu == 6) echo "class='active'" ?> >
-                    <a href="sms_service.php?menu=10" class="pay-menu">
-                        <i class="far fa-bell"></i>
-                        <p>알림문자 설정</p>
-                    </a>
-                </li>
             </ul>
-        </div>
-        <div class="service-center-wrap">
-            <p class="tit"><i class="fas fa-headphones"></i> 고객센터</p>
-            <p class="text">사용 중인 관리서비스에<br>필요한 내용을 확인하세요.</p>
-            <a href="service_center.php?menu=10">고객센터</a>
         </div>
     </div>
 </div>

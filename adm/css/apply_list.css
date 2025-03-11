@@ -107,6 +107,80 @@ table{
     color: #5D6369;
     border: 1px solid #CED4DA;
 }
+.writer-ip{
+    color: #ce1a1a !important;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.modal-bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: #000;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    display: none;
+}
+.ip-modal-container{
+    position: fixed;
+    top: 10%;
+    width: 800px;
+    left: calc(50% - 400px);
+    background: #fff;
+    z-index: 10001;
+    border-radius: 15px;
+    overflow: hidden;
+    display: none;
+}
+.ip-modal-container .head-wrap{
+    text-align: center;
+    position: relative;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #00a1b7;
+    color: #fff;
+}
+.ip-modal-container .head-wrap i{
+    cursor: pointer;
+    font-size: 25px;
+    position: absolute;
+    top: 17px;
+    right: 25px;
+    color: #fff;
+}
+.ip-modal-container .ip-table{
+    width: 90%;
+    margin: 15px auto;
+    background: #f2f2f2;
+    height: 300px;
+    overflow-y: scroll;
+}
+.ip-modal-container .ip-table table{
+    width: 100%;
+}
+.ip-modal-container .ip-table th{
+    text-align: center;
+    padding: 8px;
+}
+
+.ip-modal-container .ip-table tr{
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.ip-modal-container .ip-table td{
+    padding: 8px 15px;
+    text-align: center;
+
+}
+.ip-modal-container .ip-del{
+    cursor: pointer;
+    font-size: 15px;
+    color: #961818;
+    font-weight: 500;
+}
 
 .button {
     font-weight: 200;
@@ -120,7 +194,13 @@ table{
     border-radius: 0.1875rem;
     padding: 7.5px 15px;
 }
-
+.modal-dialog .table th{
+    font-size: 17px !important;
+}
+.modal-dialog .table td{
+    font-size: 15px;
+    white-space: nowrap;
+}
 
 @media (min-width: 992px){
     .modal-lg, .modal-xl {

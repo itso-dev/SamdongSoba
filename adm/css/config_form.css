@@ -1,113 +1,18 @@
-.content-box-wrap .box .page-header{
-    padding: 15px 15px 15px !important;
-}
-.form-container{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.box label {
-    font-size: 1em;
-    margin-bottom: 5px;
-    color: #9a9a9a;
+.tab{
+    border: 1px solid #0eb1c9;
+    padding: 8px 15px;
     display: inline-block;
-    width: 100%;
-}
-.row{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-.form-group .form-control, .input-group .form-control {
-    padding: 10px 18px;
-}
-.form-control {
-    background-color: transparent;
-    border: 1px solid #e3e3e3;
-    border-radius: 30px;
-    color: #2c2c2c;
-    line-height: normal;
-    height: auto;
-    font-size: 1em;
-    transition: color .3s ease-in-out,border-color .3s ease-in-out,background-color .3s ease-in-out;
-    box-shadow: none;
-}
-button, input {
-    overflow: visible;
-}
-.pr-1, .px-1 {
-    padding-right: .25rem!important;
-}
-.input-group, .form-group {
-    margin-bottom: 10px;
-    position: relative;
-}
-.description, .card-description, .footer-big p, .card .footer .stats {
-    color: #9a9a9a;
-    font-weight: 300;
     margin-bottom: 20px;
-    display: inline-block;
-}
-.small, small {
-    font-size: 80%;
-    font-weight: 400;
-}
-hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid rgba(0,0,0,.1);
-    display: block !important;
-}
-.title {
-    font-weight: 700;
-    font-size: 1.2em;
-}
-.mb-4, .my-4 {
-    margin-bottom: 1.5rem!important;
-}
-.btn-primary {
-    background-color: #f96332;
-    color: #fff;
-}
-.btn, .navbar .navbar-nav>a.btn {
-    border-width: 2px;
-    font-weight: 400;
-    font-size: .8571em;
-    line-height: 1.35em;
-    border: none;
-    margin: 10px 1px;
-    border-radius: .1875rem;
-    padding: 11px 22px;
+    border-radius: 8px;
+    font-size: 15px;
     cursor: pointer;
+    font-weight: 500;
+}
+.tab.active{
+    background: #0eb1c9;
     color: #fff;
+    font-weight: 500;
 }
-@media (min-width: 992px){
-
+#config_form_b{
+    display: none;
 }
-@media (min-width: 768px){
-    .box {
-        -ms-flex: 0 0 66.666667%;
-        flex: 0 0 66.666667%;
-        max-width: 66.666667% i !important;
-    }
-    .col-md-5 {
-        -ms-flex: 0 0 41.666667%;
-        flex: 0 0 41.666667%;
-        max-width: 41.666667%;
-    }
-    .col-md-12 {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
-@media (min-width: 576px){
-
-}
-
