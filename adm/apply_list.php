@@ -184,8 +184,8 @@ $admin_stt->execute();
                 </div>
                 <button type="submit" name="act_button" id="delete_btn" value="선택삭제" onclick="document.pressed=this.value" class="btn btn-danger btn-sm shadow">선택삭제</button>
                 <button type="submit" id="export_chks" class="btn btn-primary btn-sm float-right shadow" onclick="document.pressed = '다운로드'" data-href="./ajax/apply_list_export.php">선택 엑셀 다운로드</button>
-                <a id="export_all" href="./ajax/apply_list_export.php?type=all" target="_self" class="btn btn-sm float-right shadow">액셀 다운로드</a>
-                <a id="export_chks" class="btn btn-primary btn-sm float-right shadow" href="email_form.php?menu=55">발송 이메일 관리</a>
+                <a id="export_all" href="./ajax/contact_list_export.php?type=all" target="_self" class="btn btn-sm float-right shadow">액셀 다운로드</a>
+                <a id="export_chks" class="btn btn-primary btn-sm float-right shadow" href="email_form.php?menu=1">발송 이메일 관리</a>
                 <span id="export_chks" class="btn btn-primary btn-sm float-right shadow ip-modal-open">차단 아이피 관리</span>
             </div>
             <div class="btn_fixed_top justify-end">
@@ -471,7 +471,7 @@ $admin_stt->execute();
                     document.fboardlist.action = "./ajax/contact_delete.php";
                 }
             } else if(document.pressed == "다운로드"){
-                document.fboardlist.action = "./ajax/apply_list_export.php";
+                document.fboardlist.action = "./ajax/contact_list_export.php";
             }
             return true;
         }
