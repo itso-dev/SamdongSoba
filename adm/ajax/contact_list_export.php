@@ -1,6 +1,5 @@
 <?php
 
-
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xls; # Xls 파일로 다운받을경우
 // use PhpOffice\PhpSpreadsheet\Writer\Xlsx; # Xlsx 파일로 다운받을경우
@@ -109,5 +108,4 @@ header('Cache-Control: max-age=0');
 
 $writer = new Xls($spreadsheet);
 $writer->save('php://output');
-
 ?>
