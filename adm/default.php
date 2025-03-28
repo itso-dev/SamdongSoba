@@ -1,5 +1,6 @@
 <?
-header('P3P: CP="NOI CURa ADMa DEVa TAIa OUR DELa BUS IND PHY ONL UNI COM NAV INT DEM PRE"');
+session_start();
+
  if( isset( $_SESSION[ 'manager_id' ] ) ) {
      $adm_login = TRUE;
      $manager_key = $_SESSION[ 'manager_id' ];
@@ -11,14 +12,13 @@ header('P3P: CP="NOI CURa ADMa DEVa TAIa OUR DELa BUS IND PHY ONL UNI COM NAV IN
      ";
  }
 
- if ( !$adm_login ) {
-?>
-<script>
-    alert("비정상적인 접근입니다.");
-</script>
-<meta http-equiv="refresh" content="0;url=bbs/login.php" />
-<?
- }
+if (!$adm_login) {
+    header('Location: bbs/login.php');
+    exit;
+}
+
+header('P3P: CP="NOI CURa ADMa DEVa TAIa OUR DELa BUS IND PHY ONL UNI COM NAV INT DEM PRE"');
+
 
 // 문의알림
 if($manager_key == 1){
