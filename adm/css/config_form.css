@@ -16,3 +16,11 @@
 #config_form_b{
     display: none;
 }
+textarea.form-control {
+    height: 300px;
+    resize: none;
+}
+textarea.body {
+    height: 150px;
+    resize: none;
+}

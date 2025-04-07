@@ -145,6 +145,8 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
 <!doctype html>
 <html lang="ko">
 <head>
+    <?= $site['head_script'] ?>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
     <meta name="HandheldFriendly" content="true">
@@ -178,6 +180,8 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
 </head>
 
 <body>
+    <?= $site['body_script'] ?>
+    
     <div id="header">
         <img src="img/logo.png" class="logo">
         <img src="img/mo-logo.svg" class="mo-logo">

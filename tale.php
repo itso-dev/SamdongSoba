@@ -2,7 +2,6 @@
         </div>
 
     <div id="floating-container">
-        <img src="img/desktop.png" class="desktop">
         <div class="floating-wrap">
             <div class="floating-form">
                 <p><span class="primary">창업문의</span> 문의번호</p>
@@ -60,7 +59,7 @@
 
     <div id="go-contact">
         <div class="headset-div">
-            <img src="img/headset.svg" alt="가맹문의">
+            <!-- <img src="img/headset.svg" alt="가맹문의"> -->
         </div>
         문의하기
     </div>

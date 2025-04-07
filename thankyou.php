@@ -25,11 +25,9 @@ if($ab_type === 'A'){
 }
 $message = isset($_SESSION['message']) ? $_SESSION["message"] : '';
 
-
 if($check || $type == '' || $message == ''){
-    header("Location: https://".$_SERVER["HTTP_HOST"]);
+    header("Location: http://".$_SERVER["HTTP_HOST"]);
 }
-
 
 //사이트 정보 쿼리
 $site_info_sql = "select * from site_setting_tbl where id = " .$type;
@@ -40,6 +38,7 @@ $site = $site_info_stt -> fetch();
 ?>
 
 <head>
+    <?= $site['conversion_script'] ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
@@ -60,6 +59,8 @@ $site = $site_info_stt -> fetch();
 </head>
 
 <body>
+<?= $site['body_script'] ?>
+
 <div id="thank-page">
     <div class="thank-div">
         <div class="thank-top">
