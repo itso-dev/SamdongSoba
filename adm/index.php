@@ -56,36 +56,38 @@ $today_finish_stt->execute();
 $today_finish = $today_finish_stt -> fetch();
 
 
-
-//차트 관련
+// 차트 관련
 $stChart = date('Y-m-d', strtotime('-5 days'));
 $edChart = date('Y-m-d');
+// A, B페이지 결과 배열 초기화
 $result = [];
-foreach (range(strtotime($stChart), strtotime($edChart), 86400) as $timestamp) {
-    $date = date('Y-m-d', $timestamp);
-    $result[$date] = [
-        'contact_count' => 0,
-        'view_count' => 0
-    ];
+foreach (['A', 'B'] as $page) {
+    foreach (range(strtotime($stChart), strtotime($edChart), 86400) as $timestamp) {
+        $date = date('Y-m-d', $timestamp);
+        $result[$page][$date] = [
+            'contact_count' => 0,
+            'view_count' => 0
+        ];
+    }
 }
 
-// 문의 건수 SQL
+// 총 문의 SQL
 $search_contact_sql = "
-    SELECT DATE(reg_date) AS log_date, COUNT(contact_cnt) AS contact_count
-    FROM contact_log_tbl
-    WHERE reg_date BETWEEN ? AND ?
-    GROUP BY log_date
+    SELECT ab_test, DATE(write_date) AS log_date, COUNT(id) AS contact_count
+    FROM contact_tbl
+    WHERE write_date BETWEEN ? AND ? AND ab_test IN ('A', 'B')
+    GROUP BY ab_test, log_date
     ORDER BY log_date";
 $search_contact_stt = $db_conn->prepare($search_contact_sql);
 $search_contact_stt->execute([$stChart, $edChart]);
 $contact_data = $search_contact_stt->fetchAll(PDO::FETCH_ASSOC);
 
 // 조회수 SQL
-$search_view_sql = "
-    SELECT DATE(reg_date) AS log_date, COUNT(view_cnt) AS view_count
+$search_view_sql ="
+    SELECT ab_test, DATE(reg_date) AS log_date, COUNT(view_cnt) AS view_count
     FROM view_log_tbl
-    WHERE reg_date BETWEEN ? AND ?
-    GROUP BY log_date
+    WHERE reg_date BETWEEN ? AND ? AND ab_test IN ('A', 'B')
+    GROUP BY ab_test, log_date
     ORDER BY log_date";
 $search_view_stt = $db_conn->prepare($search_view_sql);
 $search_view_stt->execute([$stChart, $edChart]);
@@ -93,16 +95,25 @@ $view_data = $search_view_stt->fetchAll(PDO::FETCH_ASSOC);
 
 // 데이터 병합
 foreach ($contact_data as $row) {
-    $result[$row['log_date']]['contact_count'] = $row['contact_count'];
+    $result[$row['ab_test']][$row['log_date']]['contact_count'] = $row['contact_count'];
 }
 foreach ($view_data as $row) {
-    $result[$row['log_date']]['view_count'] = $row['view_count'];
+    $result[$row['ab_test']][$row['log_date']]['view_count'] = $row['view_count'];
 }
 
 // 차트에 사용할 데이터 준비
-$dates = array_keys($result); // 날짜 리스트
-$contact_counts = array_column($result, 'contact_count'); // 문의 건수 리스트
-$view_counts = array_column($result, 'view_count'); // 조회수 리스트
+$dates = array_keys($result['A']); // 날짜 리스트 (공통일 경우 A나 B 둘 중 아무거나 가능)
+$chart_data_A = [
+    'dates' => $dates,
+    'contact_counts' => array_column($result['A'], 'contact_count'),
+    'view_counts' => array_column($result['A'], 'view_count')
+];
+$chart_data_B = [
+    'dates' => $dates,
+    'contact_counts' => array_column($result['B'], 'contact_count'),
+    'view_counts' => array_column($result['B'], 'view_count')
+];
+
 
 // 담당자 쿼리
 $admin_sql = "select * from admin_tbl order by id";
@@ -273,32 +284,47 @@ $endDate = '';
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script>
 
+    // PHP에서 json_encode로 A/B 데이터를 모두 넘겨줌
+    const chartData = <?= json_encode([
+        'dates' => $dates,
+        'A' => $chart_data_A,
+        'B' => $chart_data_B
+    ]) ?>;
 
-    //차트 관련
-    const categories = <?= json_encode($dates) ?>; // x축 날짜
-    const contactData = <?= json_encode($contact_counts) ?>; // 문의 건수
-    const viewData = <?= json_encode($view_counts) ?>; // 조회수
+    const categories = chartData.dates;
+
+    // A/B 시리즈 데이터 설정
+    const series = [
+        {
+            name: 'A페이지 - 총 문의',
+            data: chartData.A.contact_counts
+        },
+        {
+            name: 'A페이지 - 총 방문수(노출)',
+            data: chartData.A.view_counts
+        },
+        {
+            name: 'B페이지 - 총 문의',
+            data: chartData.B.contact_counts
+        },
+        {
+            name: 'B페이지 - 총 방문수(노출)',
+            data: chartData.B.view_counts
+        }
+    ];
 
     // ApexCharts 옵션 설정
     var options = {
         chart: {
             type: 'area',
-            height: 350
+            height: 400,
+            toolbar: { show: true }
         },
-        series: [
-            {
-                name: '문의 건수',
-                data: contactData
-            },
-            {
-                name: '조회수',
-                data: viewData
-            }
-        ],
+        series: series,
         xaxis: {
-            categories: categories
+            categories: categories,
         },
-        colors: ['#85A6FA', '#4347F0'],
+        colors: ['#85A6FA', '#4347F0', '#FFB572', '#FF7C43'],
         fill: {
             type: 'gradient',
             gradient: {
@@ -311,11 +337,17 @@ $endDate = '';
         dataLabels: {
             enabled: false
         },
+        tooltip: {
+            shared: true,
+            intersect: false
+        },
+        legend: {
+            position: 'bottom'
+        }
     };
 
     var chart = new ApexCharts(document.querySelector("#chart"), options);
     chart.render();
-
 
     //선택조회
     $("#search").click(function (){

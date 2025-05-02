@@ -30,7 +30,7 @@ $ad_stt2->execute();
         </div>
         <div class="top_btn-wrap">
             <span onclick="delData()" class="btn btn-danger">선택삭제</span>
-            <a href="ad_form.php?menu=77&mode=insert" id="member_add" class="btn btn-primary">고유코드 추가</a>
+            <a href="ad_form.php?menu=77&mode=insert" id="member_add" class="btn btn-primary">코드 추가</a>
         </div>
     </div>
 
@@ -46,10 +46,10 @@ $ad_stt2->execute();
                         <label for="check_all_a"></label>
                     </th>
                     <!-- <th scope="col" id="mb_list_id" width="10%" class="text-center">구분</th> -->
-                    <th scope="col" id="mb_list_join" width="20%" class="text-center">고유코드</th>
+                    <th scope="col" id="mb_list_join" width="20%" class="text-center">코드명</th>
                     <th scope="col" id="mb_list_join" width="10%" class="text-center">유입 방문자 수</th>
                     <th scope="col" id="mb_list_join" width="10%" class="text-center">문의 수</th>
-                    <th scope="col" id="mb_list_join" width="10%" class="text-center">작성일</th>
+                    <th scope="col" id="mb_list_join" width="10%" class="text-center">등록일</th>
                     <th scope="col" id="mb_list_mng" width="40%" class="text-center">링크</th>
                     <th scope="col"  id="mb_list_mng" width="20%" class="text-center">메모</th>
                 </tr>
@@ -91,10 +91,10 @@ $ad_stt2->execute();
                         <label for="check_all_b"></label>
                     </th>
                     <!-- <th scope="col" id="mb_list_id" width="10%" class="text-center">구분</th> -->
-                    <th scope="col" id="mb_list_join" width="20%" class="text-center">고유코드</th>
+                    <th scope="col" id="mb_list_join" width="20%" class="text-center">코드명</th>
                     <th scope="col" id="mb_list_join" width="10%" class="text-center">유입 방문자 수</th>
                     <th scope="col" id="mb_list_join" width="10%" class="text-center">문의 수</th>
-                    <th scope="col" id="mb_list_join" width="10%" class="text-center">작성일</th>
+                    <th scope="col" id="mb_list_join" width="10%" class="text-center">등록일</th>
                     <th scope="col" id="mb_list_mng" width="40%" class="text-center">링크</th>
                     <th scope="col"  id="mb_list_mng" width="20%" class="text-center">메모</th>
                 </tr>

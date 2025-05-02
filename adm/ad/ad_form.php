@@ -18,7 +18,7 @@ $today = date("Y-m-d");
 
 <div class="page-header">
     <div class="title-div">
-        <h4 class="page-title">광고 링크 관리</h4>
+        <h4 class="page-title">광고 코드 등록</h4>
     </div>
     <form name="popup_form" id="popup_form" method="post" enctype="multipart/form-data"
           action="setting/ad_setting.php">
@@ -32,16 +32,18 @@ $today = date("Y-m-d");
 
             </div>
             <div class="input-wrap">
-                <p class="label-name">고유 코드</p>
+                <p class="label-name">광고 코드</p>
                 <input type="text" name="link" id="link" class="form-control"
-                       placeholder="고유 코드를 입력해주세요" required>
-                <small>* 고유코드는 중복값을 작성 할 수 없습니다.</small>
+                       placeholder="광고 코드로 사용할 이름을 입력해주세요." required>
+                <small>* 광고 코드명은 영어로 작성해주세요.</small>
+                <small>* 동일한 광고 코드명을 중복으로 사용하실 수 없습니다.</small>
+                <small>* 생성된 광고 코드는 링크를 클릭하면 복사하여 사용하실 수 있습니다.</small>
             </div>
         </div>
 
         <div class="btn-wrap">
             <a href="./ad_list.php?menu=77" class="go-back">목록</a>
-            <input type="submit" class="submit" id="submit" value="확인" />
+            <input type="submit" class="submit" id="submit" value="등록" />
         </div>
     </form>
 </div>

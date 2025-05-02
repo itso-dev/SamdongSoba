@@ -21,22 +21,28 @@ foreach ($bad_agents as $bot) {
 
 
 // 현재 URL 가져오기
-$current_url = $_SERVER['REQUEST_URI'];
+$current_url = strtolower($_SERVER['REQUEST_URI']);
 
 $site_info_sql = "";
-
+$ab_type = "";
+$ab_id = "";
 try {
     if ($current_url === '/' || $current_url === '/index_bak.php') {
-        // A사이트
+        // A 사이트
         $site_info_sql = "SELECT * FROM site_setting_tbl WHERE id = 1";
-    } elseif ($current_url === '/b/' || $current_url === '/B/') {
-        // B사이트
+        $ab_type = 'A';
+        $ab_id = 1;
+    } elseif (strpos($current_url, '/b/') === 0) {
+        // B 사이트
         $site_info_sql = "SELECT * FROM site_setting_tbl WHERE id = 2";
+        $ab_type = 'B';
+        $ab_id = 2;
     } else {
         $site_info_sql = "SELECT * FROM site_setting_tbl WHERE id = 1";
+        $ab_type = 'A';
+        $ab_id = 1;
     }
 
-    // SQL 실행
     $site_info_stt = $db_conn->prepare($site_info_sql);
     $site_info_stt->execute();
     $site = $site_info_stt->fetch();
@@ -77,26 +83,25 @@ $view_chk = $view_cnt_stt->fetch();
 if (!$view_chk) {
     $today = date("Y-m-d H:i:s");
     $view_sql = "insert into view_log_tbl
-                              (view_cnt, ip, reg_date)
+                              (view_cnt, ip, ab_test, reg_date)
                          value
-                              (? ,?, ?)";
+                              (? ,?, ?, ?)";
 
     $db_conn->prepare($view_sql)->execute(
-        [1, get_client_ip(), $today]
+        [1, get_client_ip(), $ab_type, $today]
     );
 
     $update_view_sql = "UPDATE ad_link_tbl SET view = view + 1 WHERE link = '$adCode'";
     $update_view_stmt = $db_conn->prepare($update_view_sql);
     $update_view_stmt->execute();
 
-    $update_ab_sql = "UPDATE ab_test_tbl SET view = view + 1 WHERE id = 1";
+    $update_ab_sql = "UPDATE ab_test_tbl SET view = view + 1 WHERE id = $ab_id";
     $update_ab_stmt = $db_conn->prepare($update_ab_sql);
     $update_ab_stmt->execute();
 }
 
 
 $client_ip = get_client_ip();
-
 
 $ip_sql = "SELECT * FROM ip_block_tbl WHERE ip = '$client_ip'";
 $ip_stt = $db_conn->prepare($ip_sql);
