@@ -22,8 +22,8 @@ ini_set('display_errors', '1');
     <h4 class="page-title">기본 설정</h4>
 
     <div class="tab-wrap">
-        <span class="tab-item tab1  active">A사이트 기본설정</span>
-        <span class="tab-item tab2">B사이트 기본설정</span>
+        <span class="tab-item tab1  active">사이트 기본설정</span>
+        <!-- <span class="tab-item tab2">B사이트 기본설정</span> -->
     </div>
 
 
@@ -56,7 +56,6 @@ ini_set('display_errors', '1');
                 <small class="description text-xs">meta 태그의 og:description 에 해당됩니다.</small>
             </div>
         </div>
-        <hr>
         <div class="row">
             <div class="col-md-8 pr-1">
                 <div class="form-group">
@@ -130,7 +129,6 @@ ini_set('display_errors', '1');
                 <small class="description text-xs">meta 태그의 og:description 에 해당됩니다.</small>
             </div>
         </div>
-        <hr>
         <div class="row">
             <div class="col-md-8 pr-1">
                 <div class="form-group">

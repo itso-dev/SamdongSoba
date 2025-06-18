@@ -174,7 +174,7 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
     <meta name="title" content="<?= $site['site_title'] ?>">
     <meta name="description" content="<?= $site['site_description'] ?>">
 
-    <link rel="shortcut icon" href="<?= $site_url ?>/favicon.ico">
+    <link rel="shortcut icon" href="<?= $site_url ?>/img/favicon.png">
 
     <meta property="og:title" content="<?= $og_title ?? $site[1] ?>" />
     <meta property="og:description" content="<?= $og_description ?? $site[2] ?>" />

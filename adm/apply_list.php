@@ -253,6 +253,7 @@ $admin_stt->execute();
                         </div>
                     </div>
                 </div>
+                <a href="?menu=55" class="btn btn-default text-center" style="margin-right:8px;">조건 초기화</a>
                 <button type="submit" class="btn btn-default text-center">
                     상세검색
                 </button>
@@ -279,7 +280,7 @@ $admin_stt->execute();
                     <a id="export_chks" class="btn btn-default float-right" href="./contact/email_form.php?menu=55">발송 이메일 관리</a>
                     <span id="export_chks" class="btn btn-default float-right ip-modal-open">차단 아이피 관리</span>
                 </div>
-                <!--                <span onclick="addModal();" class="btn btn-primary">문의 데이터 추가</span>-->
+                <span onclick="addModal();" class="btn btn-primary">문의 데이터 추가</span>
             </div>
             <div class="scroll-msg mt-4">표를 좌우로 스크롤하여 전체내용을 확인하세요 <i class="fa-solid fa-right-left"></i>  </div>
             <div class="top_btn-wrap mt-2" id="etc-mo">
@@ -303,7 +304,6 @@ $admin_stt->execute();
                             <label for="chkall"></label>
                         </th>
                         <th scope="col" style="width: 200px;" class="text-center">광고 코드</th>
-                        <th scope="col" style="width: 200px;" class="text-center">문의 타입</th>
                         <th scope="col" style="width: 200px;" class="text-center" onclick="sortColumn('sort_date');">등록일</th>
                         <th scope="col" style="width: 200px;" class="text-center">유입 경로</th>
                         <th scope="col" style="width: 170px; cursor: pointer;" class="text-center">성함</th>
@@ -328,7 +328,6 @@ $admin_stt->execute();
                                 <label for="chk_<?=$list_row['id']?>"></label>
                             </td>
                             <td class="text-center"><?=$list_row['ad_code']?></td>
-                            <td class="text-center"><?=$list_row['contact_type']?></td>
                             <td class="text-center"><?=$list_row['write_date']?></td>
                             <td class="text-center"><?=$list_row['flow']?></td>
                             <td class="text-center"><?=$list_row['name']?></td>
