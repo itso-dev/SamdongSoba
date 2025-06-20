@@ -17,16 +17,16 @@ $desc = isset($_POST["contact_desc"]) ? $_POST["contact_desc"] : '';
 
 $sql="
         insert into contact_tbl
-            (name, phone, location,
+            (ad_code, name, phone, location,
             contact_desc, result_status,
             consult_fk, write_date)
         value
-            (?, ?, ?,
+            (?, ?, ?, ?,
             ?, ?, 
             ?, ?)";
 
 $db_conn->prepare($sql)->execute(
-    [$name, $phone, $location,
+    ['', $name, $phone, $location,
         $desc, '대기',
         0, $posted]);
 
