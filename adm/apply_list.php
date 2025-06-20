@@ -463,8 +463,8 @@ $admin_stt->execute();
     <div class="body">
         <form action="ajax/contact_data_insert.php" method="post">
             <div class="input-wrap">
-                <p class="label">브랜드명</p>
-                <input type="text" name="brand_name" required />
+                <p class="label">성함</p>
+                <input type="text" name="name" required />
             </div>
             <div class="input-wrap">
                 <p class="label">연락처</p>
