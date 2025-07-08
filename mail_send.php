@@ -1,8 +1,11 @@
 <?php
 include_once('./db/dbconfig.php');
 include_once('./mail_lib.php');
-$message = $_POST['message'];
-
+$messageArr = [];
+if (isset($_POST['message'])) {
+ $messageArr = json_decode($_POST['message'], true);
+}
+$message = mailForm($messageArr);
 
  $email_sql = "select * from email_tbl where id = 1";
  $email_stt=$db_conn->prepare($email_sql);

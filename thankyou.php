@@ -20,7 +20,7 @@ if($ab_type === 'A'){
     $type = 1;
     $redirect = './index.php';
 }
-$message = isset($_SESSION['message']) ? $_SESSION["message"] : '';
+$message = isset($_SESSION['messageArr']) ? $_SESSION["messageArr"] : '';
 
 if($check || $type == '' || $message == ''){
     header("Location: http://".$_SERVER["HTTP_HOST"]);
@@ -79,15 +79,13 @@ $site = $site_info_stt -> fetch();
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // PHP 세션에서 가져온 메시지 값을 JavaScript 변수에 저장
         var message = <?= json_encode($message ?? '') ?>;
-
         fetch("/mail_send.php", {
-            method: "POST", // HTTP POST 요청
+            method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: "message=" + encodeURIComponent(message) // POST 데이터 전송
+            body: "message=" + encodeURIComponent(JSON.stringify(message))
         })
             .then(response => response.text())
             .then(data => console.log("메일 전송 완료:", data))

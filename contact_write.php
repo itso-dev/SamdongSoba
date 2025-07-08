@@ -65,24 +65,18 @@ $update_ab_stmt = $db_conn->prepare($update_ab_sql);
 $update_ab_stmt->execute();
 
 
-$message = '<html><body>
-                        <div style="width: 500px; margin: 0 auto; text-align: left;">
-                             <p style="font-size: 25px; color:#06acc4; font-weight: 600; margin-bottom: 30px; text-align: center;">회사명 랜딩 문의</p>
-                             <p style="font-size: 20px; margin-bottom: 30px;"><strong style="color:#06acc4;">신규 문의</strong> 안내입니다.</p>
-                             <p style="font-size: 16px; margin-bottom: 40px;">
-                                 <strong style="margin-right: 30px">유입경로: </strong> '.$flow.'<br>
-                                 <strong style="margin-right: 30px">성함: </strong> '.$name.'<br>
-                                 <strong style="margin-right: 30px">연락처:</strong> '.$phone.'<br>
-                                 <strong style="margin-right: 30px">이메일:</strong> '.$email.'<br>
-                                 <strong style="margin-right: 30px">창업희망지역:</strong> '.$location.'<br>
-                                 <strong style="margin-right: 30px">창업형태:</strong> '.$sort.'<br>
-                                 <strong style="margin-right: 30px">문의 내용:</strong><br>
-                                 '.$desc.'
-                             </p>
-                         </div>
-                 </body></html>';
+//문의 필드에 맞게 수정
+$message = [
+    "유입경로" => $flow,
+    "회사명" => $b_name,
+    "연락처" => $phone,
+    "담당자명" => $m_name,
+    "이메일" => $email,
+    "문의내용" => $desc
+];
 
-$_SESSION['message'] = $message;
+$_SESSION['messageArr'] = $message;
+
 
 
 

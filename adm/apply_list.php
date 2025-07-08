@@ -471,12 +471,24 @@ $admin_stt->execute();
                 <input type="text" name="phone" required />
             </div>
             <div class="input-wrap">
-                <p class="label">담당자 명</p>
-                <input type="text" name="manager_name" required />
+                <p class="label">이메일</p>
+                <input type="text" name="email" required />
             </div>
             <div class="input-wrap">
                 <p class="label">창업희망지역</p>
                 <input type="email" name="location" required />
+            </div>
+            <div class="input-wrap">
+                <p class="label">창업예상비용</p>
+                <input type="email" name="price" required />
+            </div>
+            <div class="input-wrap">
+                <p class="label">점포보유</p>
+                <input type="email" name="store" required />
+            </div>
+            <div class="input-wrap">
+                <p class="label">업종변경</p>
+                <input type="email" name="sort" required />
             </div>
             <div class="input-wrap">
                 <p class="label">문의 내용</p>
