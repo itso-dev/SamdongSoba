@@ -81,8 +81,8 @@ function mailer_google($fname, $fmail, $tomail, $subject, $content, $file="", $c
     $mail->Host = "smtp.gmail.com";	// 보낼때 사용할 서버를 지정
     $mail->Port = "587";	// 보낼때 사용할 포트지정
     $mail->IsHTML(true);	// HTML 사용
-    $mail->Username = "jh.oh@itso.co.kr"; // 구글 이메일
-    $mail->Password = "cyzl qadc ndpv cvem"; // 구글 앱 비밀번호
+    $mail->Username = "dev@itso.co.kr"; // 구글 이메일
+    $mail->Password = "iuxc ivro vqqw ojby"; // 구글 앱 비밀번호
     $mail->CharSet = "UTF-8";
     $mail->Encoding = "base64";
     $mail->charSet = PHPMailer::CHARSET_UTF8;

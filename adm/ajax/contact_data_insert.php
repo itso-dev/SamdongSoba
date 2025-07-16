@@ -12,22 +12,26 @@ $posted = date("Y-m-d H:i:s");
 $name = $_POST["name"];
 $phone = $_POST["phone"];
 $location = $_POST["location"];
+$cost = $_POST["cost"];
+$store = $_POST["store"];
+$sort = $_POST["sort"];
+$location = $_POST["location"];
 $manager_name = isset($_POST["manager_name"]) ? $_POST["manager_name"] : '';
 $desc = isset($_POST["contact_desc"]) ? $_POST["contact_desc"] : '';
 
 $sql="
         insert into contact_tbl
             (ad_code, name, phone, location,
-            contact_desc, result_status,
+            cost, store, sort, contact_desc, result_status,
             consult_fk, write_date)
         value
             (?, ?, ?, ?,
-            ?, ?, 
+            ?, ?, ?, ?, ?, 
             ?, ?)";
 
 $db_conn->prepare($sql)->execute(
     ['', $name, $phone, $location,
-        $desc, '대기',
+        $cost, $store, $sort, $desc, '대기',
         0, $posted]);
 
 

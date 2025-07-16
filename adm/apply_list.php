@@ -277,7 +277,7 @@ $admin_stt->execute();
                     <span class="btn btn-default float-right" onclick="exelModal()">엑셀 데이터 업로드</span>
                     <button type="submit" id="export_chks" class="btn btn-default float-right" onclick="document.pressed = '다운로드'" data-href="./ajax/contact_list_export.php">선택 엑셀 다운로드</button>
                     <button id="export_all" type="submit" id="export_chks" class="btn btn-default float-right" onclick="document.pressed = '전체다운로드'" data-href="./ajax/contact_list_export.php?type=all">엑셀 다운로드</button>
-                    <a id="export_chks" class="btn btn-default float-right" href=".<?= $site_url ?>/email_form.php?menu=55">발송 이메일 관리</a>
+                    <a id="export_chks" class="btn btn-default float-right" href="<?= $site_url ?>/email_form.php?menu=55">발송 이메일 관리</a>
                     <span id="export_chks" class="btn btn-default float-right ip-modal-open">차단 아이피 관리</span>
                 </div>
                 <span onclick="addModal();" class="btn btn-primary">문의 데이터 추가</span>
@@ -469,10 +469,6 @@ $admin_stt->execute();
             <div class="input-wrap">
                 <p class="label">연락처</p>
                 <input type="text" name="phone" required />
-            </div>
-            <div class="input-wrap">
-                <p class="label">이메일</p>
-                <input type="text" name="email" required />
             </div>
             <div class="input-wrap">
                 <p class="label">창업희망지역</p>

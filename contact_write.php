@@ -27,7 +27,7 @@ $adCode = isset($_POST["adCode"]) ? $_POST["adCode"] : '';
 $name = $_POST["name"];
 $phone = $_POST["phone"];
 $location = $_POST["location"];
-$store = isset($_POST["sort"]) ? $_POST["sort"] : '';
+$sort = isset($_POST["sort"]) ? $_POST["sort"] : '';
 $desc = isset($_POST["contact_desc"]) ? $_POST["contact_desc"] : '';
 
 $type = isset($_POST["abtype"]) ? 'B' : 'A';
@@ -68,10 +68,10 @@ $update_ab_stmt->execute();
 //문의 필드에 맞게 수정
 $message = [
     "유입경로" => $flow,
-    "회사명" => $b_name,
+    "성함" => $name,
     "연락처" => $phone,
-    "담당자명" => $m_name,
-    "이메일" => $email,
+    "창업희망지역" => $location,
+    // "이메일" => $email,
     "문의내용" => $desc
 ];
 
