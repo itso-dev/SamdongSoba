@@ -46,7 +46,7 @@ $sql="
             ?, ?, ?)";
 
 $db_conn->prepare($sql)->execute(
-    [$flow, $type, $adCode, $name, $phone, $email, $location,
+    [$flow, $type, $adCode, $name, $phone, $location,
         $sort, $desc, '대기',
         0, $writer_ip, $posted]);
 
@@ -71,7 +71,6 @@ $message = [
     "성함" => $name,
     "연락처" => $phone,
     "창업희망지역" => $location,
-    // "이메일" => $email,
     "문의내용" => $desc
 ];
 

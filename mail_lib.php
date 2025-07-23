@@ -135,7 +135,7 @@ function mailForm($arr){
                                 </div>
                             </div>
                             <p style="color: #505050; font-size: 18px;letter-spacing: -0.45px;font-weight: 400; margin-bottom: 24px;">
-                                안녕하세요. 잇소 담당자님.<br>
+                                안녕하세요. 랜딩페이지 담당자님.<br>
                                 새로운 문의가 접수되어 아래와 같이 전달드립니다.
                             </p>
                             <div style="display: flex; align-items: center">

@@ -7,14 +7,13 @@ if (isset($_POST['message'])) {
 }
 $message = mailForm($messageArr);
 
- $email_sql = "select * from email_tbl where id = 1";
- $email_stt=$db_conn->prepare($email_sql);
- $email_stt->execute();
- $row = $email_stt -> fetch();
+$email_sql = "select * from email_tbl where id = 1";
+$email_stt=$db_conn->prepare($email_sql);
+$email_stt->execute();
 
- $email = $row['email'];
-
-while ($email_data = $email_stt->fetch()) {
- mailer_google("ITSO", "jh.oh@itso.co.kr", "jh.oh@itso.co.kr", "잇소 랜딩 문의", $message, 1);
+// 반복문으로 모든 이메일에 메일 발송
+while ($row = $email_stt->fetch(PDO::FETCH_ASSOC)) {
+    $to_email = $row['email'];
+    mailer_google("랜딩페이지명", "dev@itso.co.kr", $to_email, "랜딩페이지명 랜딩 문의", $message, 1);
 }
 ?>
