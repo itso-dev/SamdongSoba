@@ -4,7 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
-  
+
 @font-face {
     font-family: 'GmarketSansLight';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
@@ -26,7 +26,7 @@
     -ms-user-select: none;
     user-select: none;
 }
-  
+
 .grecaptcha-badge{
     visibility: hidden;
 }
@@ -505,13 +505,13 @@ option {
     background: rgba(255, 255, 255, 0.90);
     border: 1px solid #DDD;
 }
-  
+
 .floating-agree-wrap .round-checkbox:checked::before {
     font-size: 100%;
     color: #fff;
     position: relative;
 }
-  
+
 .floating-agree-wrap .round-checkbox:checked {
     background-image: url("../img/check.png");
     background-size: 15px !important;
@@ -520,7 +520,7 @@ option {
     background-repeat: no-repeat;
     border: none;
 }
-  
+
 .floating-agree-wrap .agree {
     color: #FFF;
     font-size: 14px !important;
@@ -529,11 +529,11 @@ option {
     letter-spacing: -0.28px !important;
     cursor: pointer;
 }
-  
+
 .floating-agree-wrap .agree-open {
     font-weight: 600;
 }
-  
+
 .f-btn {
     display: flex;
     height: 42px;
@@ -703,7 +703,7 @@ option {
     gap: 20px !important;
     display: none;
 }
-  
+
 .agree-close {
     position: absolute;
     top: 0;
@@ -712,19 +712,19 @@ option {
     justify-content: end;
     cursor: pointer;
 }
-  
+
 .agree-close > svg {
     width: 48px;
     height: 48px;
     background: rgba(0, 0, 0, 0.80);
     padding: 6.4px 6.4px 5.6px 5.6px;
 }
-  
+
 .agree-close>svg:hover {
     background: #000;
     transition: 0.3s;
 }
-  
+
 .agree-modal>.title {
     text-align: center;
     display: flex;
@@ -732,7 +732,7 @@ option {
     align-items: center;
     gap: 5px;
 }
-  
+
 .p24 {
     color: #111;
     font-size: 24px;
@@ -741,7 +741,7 @@ option {
     line-height: 34px; /* 141.667% */
     letter-spacing: -0.6px;
 }
-  
+
 .p40 {
     color:  #111;
     font-size: 40px;
@@ -750,13 +750,13 @@ option {
     line-height: 52px; /* 130% */
     letter-spacing: -1px;
 }
-  
+
 .content-div {
     margin-top: 20px;
     height: 81%;
     overflow: hidden;
 }
-  
+
 .agree-modal>.content-div>.content {
     height: 100%;
     overflow: scroll;
@@ -766,15 +766,15 @@ option {
     color: #505050;
     padding-bottom: 20px;
 }
-  
+
 .agree-logo {
     width: 150px;
 }
-  
+
 .mo-tit {
     display: none;
 }
-  
+
 .modal-bg {
     display: none;
     position: fixed;
