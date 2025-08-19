@@ -210,7 +210,7 @@ $admin_stt->execute();
                                         <?php
                                         while($admin_row1=$admin_stt->fetch()){
                                             ?>
-                                            <option value="<?= $admin_row1['id'] ?>"><?= $admin_row1['login_name'] ?></option>
+                                            <option value="<?= $admin_row1['id'] ?>" <? if($sch_manager == $admin_row1['id']) echo "selected"?>><?= $admin_row1['login_name'] ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
