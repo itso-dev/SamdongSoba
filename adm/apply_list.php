@@ -295,8 +295,8 @@ $admin_stt->execute();
                 <a href="./calendar.php?menu=55" class="btn btn-danger">미팅 일정 관리</a>
             </div> -->
 
-            <div class="table-responsive">
-                <table class="table border-bottom border-top" style="min-width: 2200px;">
+            <div class="table-responsive apply-list">
+                <table class="table border-top" style="min-width: 2200px;">
                     <thead>
                     <tr>
                         <th scope="col" class="cursor: pointer; text-center" style="width: 50px;">
@@ -344,6 +344,7 @@ $admin_stt->execute();
                                     <option value="대기" <? if($list_row['result_status'] == "대기") echo "selected"?>>대기</option>
                                     <option value="진행" <? if($list_row['result_status'] == "진행") echo "selected"?>>진행</option>
                                     <option value="부재" <? if($list_row['result_status'] == "부재") echo "selected"?>>부재</option>
+                                    <option value="재통화" <? if($list_row['result_status'] == "재통화") echo "selected"?>>재통화</option>
                                     <option value="거절" <? if($list_row['result_status'] == "거절") echo "selected"?>>거절</option>
                                     <option value="완료" <? if($list_row['result_status'] == "완료") echo "selected"?>>완료</option>
                                 </select>
