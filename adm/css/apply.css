@@ -232,11 +232,11 @@
 
 #apply-container .apply-page .field-wrap .input-wrap .error-input::placeholder,
 #apply-container
-  .apply-page
-  .field-wrap
-  .input-wrap
-  .error-input
-  .text-input::placeholder {
+.apply-page
+.field-wrap
+.input-wrap
+.error-input
+.text-input::placeholder {
   color: #f85a57 !important;
 }
 
@@ -273,11 +273,11 @@
 }
 
 #apply-container
-  .apply-page
-  .field-wrap
-  .input-wrap
-  .address-input
-  .text-input {
+.apply-page
+.field-wrap
+.input-wrap
+.address-input
+.text-input {
   color: #333;
   font-size: 19px;
   font-family: "Noto Sans KR";
@@ -293,11 +293,11 @@
 }
 
 #apply-container
-  .apply-page
-  .field-wrap
-  .input-wrap
-  .address-input
-  .text-input::placeholder {
+.apply-page
+.field-wrap
+.input-wrap
+.address-input
+.text-input::placeholder {
   color: #bbb;
 }
 
@@ -1070,11 +1070,11 @@
   }
 
   #apply-container
-    .apply-page
-    .field-wrap
-    .input-wrap
-    .address-input
-    .text-input {
+  .apply-page
+  .field-wrap
+  .input-wrap
+  .address-input
+  .text-input {
     font-size: 18px;
   }
 
@@ -1227,7 +1227,7 @@
   .info-box .inner ul li:after {
     top: 11px;
   }
-    #apply-container .apply-page {
-      padding: 50px 20px 55px 20px;
-    }
+  #apply-container .apply-page {
+    padding: 50px 20px 55px 20px;
+  }
 }

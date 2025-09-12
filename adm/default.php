@@ -53,29 +53,25 @@ $authority = json_decode($authority_json);
 
 <script type="text/javascript">
 
-    $( document ).ready(function() {
-        $('.navbar-toggler').click(function(){
-            $('body').toggleClass('sidebar-open');
-        });
+    $(document).ready(function() {
+        // 모든 하위 메뉴를 닫음
+        $('.sidebar-wrapper .nav li > .submenu').slideUp(0);
 
-        $(".sidebar-wrapper .nav li").click(function (){
-            if($(this).hasClass("toggle-open")){
-                $(this).find(".submenu").slideUp("300");
+        // 활성 메뉴 항목의 하위 메뉴를 엶
+        $('.sidebar-wrapper .nav li.active > .submenu').slideDown(300);
 
-                $(this).removeClass("toggle-open");
-            } else {
-                $(this).find(".submenu").slideDown("300");
-                $(this).addClass("toggle-open");
-            }
-        });
-
-        $('.sidebar-wrapper .nav .active').each(function () {
-            $(this).find('.submenu').each(function () {
-                if ($(this).find('.this').length) {
-                    $(this).show();
-                    $(this).prev('.menu').addClass('toggle-open');
+        // 메뉴 항목 클릭 시 하위 메뉴 토글
+        $('.sidebar-wrapper .nav li').click(function() {
+            const submenu = $(this).find('.submenu');
+            if (submenu.length) {
+                if ($(this).hasClass('toggle-open')) {
+                    submenu.slideUp(300);
+                    $(this).removeClass('toggle-open');
+                } else {
+                    submenu.slideDown(300);
+                    $(this).addClass('toggle-open');
                 }
-            });
+            }
         });
     });
 
@@ -98,6 +94,15 @@ $authority = json_decode($authority_json);
     <div class="sidebar">
         <nav class="navbar">
             <div class="container-fluid">
+                <div class="navbar-wrapper">
+                    <div class="navbar-toggle">
+                        <div id="sidebar-mo-close" class="navbar-toggler">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                        </div>
+                    </div>
+                </div>
                 <div class="navbar-collapse">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -189,6 +194,18 @@ $authority = json_decode($authority_json);
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $("#sidebar-mo-btn").click(function(){
+            $('.sidebar').addClass("sidebar-open");
+        });
+
+        $('#sidebar-mo-close').click(function(){
+            $(".sidebar").removeClass("sidebar-open");
+        });
+    });
+</script>
 
 <!-- 컨텐츠 영역 시작 -->
 <div class="main-wrapper" id="wrapper">
