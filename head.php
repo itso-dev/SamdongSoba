@@ -30,19 +30,21 @@ $current_url = strtolower($_SERVER['REQUEST_URI']);
 $site_info_sql = "";
 $ab_type = "";
 $ab_id = "";
+$client_key = "";
+
 try {
     if ($current_url === '/' || $current_url === '/index_bak.php') {
         // A 사이트
-        $site_info_sql = "SELECT * FROM site_setting_tbl WHERE id = 1";
+        $site_info_sql = "SELECT * FROM site_setting_tbl WHERE client_key = '$client_key'";
         $ab_type = 'A';
         $ab_id = 1;
     } elseif (strpos($current_url, '/b/') === 0) {
         // B 사이트
-        $site_info_sql = "SELECT * FROM site_setting_tbl WHERE id = 2";
+        $site_info_sql = "SELECT * FROM site_setting_tbl WHERE client_key = '$client_key'";
         $ab_type = 'B';
         $ab_id = 2;
     } else {
-        $site_info_sql = "SELECT * FROM site_setting_tbl WHERE id = 1";
+        $site_info_sql = "SELECT * FROM site_setting_tbl WHERE client_key = '$client_key'";
         $ab_type = 'A';
         $ab_id = 1;
     }
@@ -84,15 +86,17 @@ $view_cnt_stt = $db_conn->prepare($view_cnt_sql);
 $view_cnt_stt->execute();
 $view_chk = $view_cnt_stt->fetch();
 
+$client_ip = get_client_ip();
+
 if (!$view_chk) {
     $today = date("Y-m-d H:i:s");
     $view_sql = "insert into view_log_tbl
-                              (view_cnt, ip, ab_test, reg_date)
+                              (view_cnt, ip, client_key, ab_test, reg_date)
                          value
-                              (? ,?, ?, ?)";
+                              (? ,?, ?, ?, ?)";
 
     $db_conn->prepare($view_sql)->execute(
-        [1, get_client_ip(), $ab_type, $today]
+        [1, $client_ip, $client_key, $ab_type, $today]
     );
 
     $update_view_sql = "UPDATE ad_link_tbl SET view = view + 1 WHERE link = '$adCode'";
@@ -105,9 +109,7 @@ if (!$view_chk) {
 }
 
 
-$client_ip = get_client_ip();
-
-$ip_sql = "SELECT * FROM ip_block_tbl WHERE ip = '$client_ip'";
+$ip_sql = "SELECT * FROM ip_block_tbl WHERE client_key = '$client_key' and ip = '$client_ip'";
 $ip_stt = $db_conn->prepare($ip_sql);
 $ip_stt->execute();
 $ip_chk = $ip_stt -> fetch();
@@ -180,8 +182,8 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
 
     <link rel="shortcut icon" href="<?= $site_url ?>/img/favicon.png">
 
-    <meta property="og:title" content="<?= $og_title ?? $site[1] ?>" />
-    <meta property="og:description" content="<?= $og_description ?? $site[2] ?>" />
+    <meta property="og:title" content="<?= $og_title ?? $site['site_title'] ?>" />
+    <meta property="og:description" content="<?= $og_description ?? $site['site_description'] ?>" />
     <meta property="og:url" content="<?= $og_url ?? $site_url ?>" />
     <meta property="og:image" content="<?= $og_image ?? $site_url . '/img/og.png' ?>" />
 

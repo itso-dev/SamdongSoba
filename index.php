@@ -164,6 +164,9 @@ if ($popup_stt->rowCount() > 0) {
     }
 </script>
 
+
+<div id="main"></div>
+
 <div id="contact">
     <form class="contact-form" name="contact_form" id="contact_form" method="post" action="contact_write.php" data-aos="fade-up" data-aos-duration="800">
         <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
@@ -220,6 +223,7 @@ if ($popup_stt->rowCount() > 0) {
         </div>
     </form>
 </div>
+
 
 <script type="text/javascript">
 
