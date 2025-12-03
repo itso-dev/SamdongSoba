@@ -191,7 +191,7 @@ if ($popup_stt->rowCount() > 0) {
                     <label for="phone">연락처 <span>*</span></label>
                 </div>
                 <div class="input">
-                    <input type="tel" name="phone" id="phone-input" placeholder="연락처" required maxlength="11">
+                    <input type="tel" name="phone" id="phone-input" placeholder="연락처" required maxlength="11" inputmode="numeric">
                 </div>
             </div>
             <div class="item">
@@ -238,11 +238,26 @@ if ($popup_stt->rowCount() > 0) {
         }
     }
 
+    const phoneInput = document.getElementById('phone-input');
+
+    phoneInput.addEventListener('input', function () {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
+
     // 페이지 진입 시간 저장
     const pageEnterTime = Date.now();
 
     document.querySelector("#contact_form").addEventListener("submit", function(e) {
         e.preventDefault(); // 기본 제출 방지
+
+        const phone = phoneInput.value.trim();
+
+        if (!/^\d{11}$/.test(phone)) {
+            alert('휴대폰 번호는 숫자 11자리로 입력해주세요.');
+            e.preventDefault();
+            phoneInput.focus();
+            return false;
+        }
 
         // 체류 시간 계산 (초 단위)
         const now = Date.now();

@@ -16,7 +16,7 @@
 
                     <div class="input-wrap">
                         <input type="text" name="name" placeholder="성함" required>
-                        <input type="text" name="phone" placeholder="연락처" required>
+                        <input type="text" name="phone" placeholder="연락처" id="phone-input2" required maxlength="11" inputmode="numeric">
                         <input type="text" name="location" placeholder="창업희망지역" required>
                     </div>
                     <div class="floating-form-wrap">
@@ -157,11 +157,26 @@
 
     });
 
+    const phoneInput2 = document.getElementById('phone-input2');
+
+    phoneInput2.addEventListener('input', function () {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
+
     // 페이지 진입 시간 저장
     const pageEnterTime2 = Date.now();
 
     document.querySelector("#contact_form2").addEventListener("submit", function(e) {
         e.preventDefault(); // 기본 제출 방지
+
+        const phone = phoneInput2.value.trim();
+
+        if (!/^\d{11}$/.test(phone)) {
+            alert('휴대폰 번호는 숫자 11자리로 입력해주세요.');
+            e.preventDefault();
+            phoneInput2.focus();
+            return false;
+        }
 
         const now = Date.now();
         const staySeconds = Math.floor((now - pageEnterTime2) / 1000);
