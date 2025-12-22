@@ -1,7 +1,9 @@
 <?php
 include_once('./db/dbconfig.php');
 include_once('./mail_lib.php');
-include_once('./db/manage_db_config.php');
+
+//통합관리에 속하지 않을시 추가
+//include_once('./db/manage_db_config.php');
 
 //배너 출력하기 위한 sql문
 //$banner_sql = "select * from banner_tbl where type = 2 order by id desc limit 1 ";
