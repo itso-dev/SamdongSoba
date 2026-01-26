@@ -23,7 +23,6 @@ foreach ($bad_agents as $bot) {
     }
 }
 
-
 // 현재 URL 가져오기
 $current_url = strtolower($_SERVER['REQUEST_URI']);
 
@@ -54,11 +53,29 @@ try {
     $site = $site_info_stt->fetch();
 } catch (Exception $e) {}
 
+//신규 광고링크 기능 추가
+$ad_category_sql = "select * from ad_type_tbl where client_key = '$client_key' order by regdate desc";
+$ad_category_stt = $db_conn->prepare($ad_category_sql);
+$ad_category_stt->execute();
+$ad_categories = $ad_category_stt->fetchAll();
 
-$menu = isset($_GET["menu"]) ? $_GET["menu"] : '';
-$page = isset($_GET["page"]) ? $_GET["page"] : '';
+// 키 전부 소문자로 변환
+$getParams = array_change_key_case($_GET, CASE_LOWER);
 
-$adCode = isset($_GET["adCode"]) ? $_GET["adCode"] : '';
+$ad_type = '';
+$adCode = '';
+$is_adcode = 0;
+
+foreach ($ad_categories as $category) {
+    $key = strtolower($category['eng_name']); 
+
+    if (isset($getParams[$key])) {
+        $is_adcode = 1;
+        $ad_type = $category['id'];
+        $adCode = $getParams[$key];
+    }
+}
+
 function get_client_ip()
 {
     $ipaddress = '';
