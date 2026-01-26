@@ -99,7 +99,7 @@
     padding: 0px 40px;
     justify-content: center;
     align-items: center;
-    background: #FFF;
+    background: rgba(255, 255, 255, 0.95);
     position: fixed;
     top: 0;
     left: 0;
@@ -107,7 +107,7 @@
 }
 
 .logo {
-    width: 170px;
+    width: 165px;
     position: absolute;
     left: 40px;
     cursor: pointer;
@@ -132,27 +132,29 @@
     padding: 8px 30px;
     justify-content: center;
     align-items: center;
-    font-family: "GmarketSansMedium";
-    color:#BEB8AE;
-    font-size: 20px;
-    line-height: 120%; /* 24px */
-    letter-spacing: -0.5px;
+    color: #505050;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px; /* 144.444% */
+    letter-spacing: -0.45px;
     cursor: pointer;
 }
 
 #header nav>ul>li:hover, .tap {
-    color: #F0832C !important;
+    color: #393B85 !important;
+}
+
+.header-div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: absolute;
+    right: 40px;
 }
 
 .mo-menu-open {
     display: none;
-    width: 40px;
-    height: 40px;
-    box-sizing: border-box;
-    padding: 8px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
     cursor: pointer;
     background: transparent;
 }
@@ -166,28 +168,23 @@
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
-    gap: 4px;
-    color: #FFF;
+    gap: 2px;
+    color: #393B85;
     text-align: right;
-    font-family: "Gmarket Sans";
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 125%;
-    letter-spacing: -0.5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 125%; /* 22.5px */
+    letter-spacing: -0.45px;
 }
 
 .call:hover {
-    color: #FFF;
-}
-
-#header .call {
-    display: none;
+    opacity: 0.8;
 }
 
 .mo-menu .call {
     font-size: 24px;
-    font-weight: 500;
-    line-height: 34px; /* 141.667% */
+    font-weight: 700;
+    line-height: 125%;
     letter-spacing: -0.6px;
 }
 
@@ -195,160 +192,118 @@
     width: 100%;
     height: 100%;
     display: none;
-    background: rgba(55, 55, 55, 0.70);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.87);
+    backdrop-filter: blur(6px);
     position: fixed;
     left: 0;
     z-index: 101;
 }
 
 .mo-menu-top {
-    height: 66px;
+    height: 50px;
     box-sizing: border-box;
     padding: 0px 16px;
     display: flex;
     align-items: center;
-    justify-content: end;
-    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.mo-menu-top .logo {
+    position: static;
 }
 
 .mo-menu-bottom {
     width: 100%;
-    height: calc(100% - 100px);
+    height: calc(100% - 50px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 32px;
 }
 
 .menu-close {
     display: flex;
-    width: 34px;
-    height: 34px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
     background: transparent;
     cursor: pointer;
 }
 
 .mo-menu nav {
     width: 100%;
+    height: calc(100% - 62px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mo-menu nav>ul>li {
     width: 100%;
-    color: rgba(255, 255, 255, 0.70);
+    height: 80px;
+    color: #505050;
     text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px; /* 150% */
-    letter-spacing: -0.4px;
+    font-family: "Gowun Batang";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px; /* 144.444% */
+    letter-spacing: -0.45px;
     box-sizing: border-box;
-    height: 60px;
-    padding: 8px 16px;
+    padding: 8px 30px;
     cursor: pointer;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 }
 
-.mo-menu nav>ul>li>span {
-    box-sizing: border-box;
-    padding: 8px 15px;
-    border-radius: 100px;
-}
-
-.mo-menu nav>ul>li:hover,.mo-menu .tap {
-    color: #F0832C !important;
+.mo-menu nav>ul>li:hover, .mo-menu .tap {
+    color: #B8000E !important;
     background: transparent !important;
 }
+
 
 /* footer */
 footer {
     width: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0.20);
-    background: #F0832C;
+    background: #E8E2DC;
     display: flex !important;
-    padding: 65px 0 105px;
-    flex-direction: column;
+    padding: 65px 0;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
     position: relative;
 }
 
 .footer-big-container {
     display: flex;
-    max-width: 1280px;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1300px;
     width: 100%;
     box-sizing: border-box;
-    padding: 0px 20px;
-    justify-content: space-between;
+    padding: 0px 16px;
+    justify-content: center;
     align-items: flex-start;
 }
 
 .footer-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    width: 163px;
+}
+
+.footer-wrapper {
     display: flex;
     gap: 56px;
     align-items: flex-start;
 }
 
-.footer-logo {
-    width: 222px;
-}
-
-.footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.footer-wrapper>p {
-    color: #FFF;
-    font-family: Pretendard;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 130%; /* 20.8px */
-}
-
-.footer-big-container>p {
-    display: none;
-}
-
 .footer-wrap {
     display: flex;
     align-items: center;
-}
-
-.footer-div, .footer-inner>p {
-    box-sizing: border-box;
-    display: flex;
-    color: rgba(255, 255, 255, 0.70);
-    font-size: 16px;
-    line-height: 130%; /* 20.8px */
-    letter-spacing: -0.4px;
-    align-items: center;
-}
-
-.footer-div:first-child {
-    padding-right: 10px;
-}
-
-.footer-big-div {
-    display: flex;
-    align-items: center;
-}
-
-.footer-big-div .footer-div:first-child {
-    padding: 0 10px;
-    height: 15px;
-    border-left: 1px solid rgba(255, 255, 255, 0.70);
-    border-right: 1px solid rgba(255, 255, 255, 0.70);
-}
-
-.footer-div:last-child {
-    padding-left: 10px;
 }
 
 .footer-inner {
@@ -358,27 +313,42 @@ footer {
     align-items: flex-start;
 }
 
-.footer-right {
+.footer-div {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    color: rgba(17, 17, 17, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%; 
+    letter-spacing: -0.4px;
+    word-break: keep-all;
+}
+
+.footer-contact {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 4px;
 }
 
-.footer-right>p:first-child {
+.footer-contact div {
     display: flex;
-    gap: 5px;
     align-items: center;
-    color: #FFF;
+    gap: 5px;
+    color: #111;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px; /* 150% */
     letter-spacing: -0.4px;
 }
 
-.footer-right>p:last-child {
-    color: #FFF;
-    font-family: "Gmarket Sans";
+.footer-contact p {
+    color: #111;
     font-size: 24px;
+    font-weight: 500;
     line-height: 34px; /* 141.667% */
     letter-spacing: -0.6px;
 }
@@ -403,8 +373,8 @@ footer {
 }
 
 .up-btn:hover {
-    border: 1px solid #FFF;
-    background: #E87519;
+    background: #BB3F4F;
+    border: 1px solid #BB3F4F;
 }
 
 .up-btn:hover svg path {
@@ -414,50 +384,68 @@ footer {
 
 /* 하단 고정 문의 */
 #floating-container {
+    max-width: 1300px;
     width: 100%;
     position: fixed;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
     z-index: 45;
-    background: #F0832C;
     padding: 3px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 1s all;
     box-sizing: border-box;
-    padding: 3px 10px;
+    border-radius: 8px 8px 0 0;
+    background: rgba(255, 255, 255, 0.90);
 }
 
-.floating-wrap {
-    max-width: 1280px;
+.floating-form {
+    max-width: 1240px;
     width: 100%;
     height: 54px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-left: -2px;
-    margin-right: -2px;
-    transition: 1s all;
+    gap: 32px;
 }
 
-.floating-form {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    position: relative;
-    transition: 0.1s all;
-}
-
-.floating-form>p {
-    color: #FFF;
-    font-family: "Gmarket Sans";
+.floating-num {
+    color: #393B85;
+    text-align: right;
+    font-family: "Paperlogy";
     font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
     line-height: 125%; /* 30px */
     letter-spacing: -0.6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.floating-num p {
+    display: flex;
+    align-items: center;
+}
+
+.floating-num p span {
+    color: #FFF;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 125%; /* 25px */
+    letter-spacing: -0.5px;
+    border-radius: 8px;
+    background: #393B85;
+    display: inline-flex;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-right: -1px;
 }
 
 .floating-contact {
@@ -473,25 +461,24 @@ footer {
     gap: 10px;
 }
 
-.floating-contact input[type="text"], select {
+.input-wrap input[type="text"] {
     border-radius: 4px;
-    background: rgba(255, 255, 255, 0.90);
+    border: 1px solid rgba(85, 85, 85, 0.20);
+    background: rgba(255, 255, 255, 0.80);
     display: flex;
-    width: 200px;
+    width: 180px;
     box-sizing: border-box;
     padding: 8px 10px;
     align-items: center;
-    color: #111;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 130%;
-    letter-spacing: -0.5px;
-    border: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.4px;
 }
 
 select {
-    color: rgba(34, 34, 34, 0.50);
+    color: rgba(51, 51, 51, 0.50);
     font-size: 16px !important;
     line-height: 24px !important;
     font-weight: 400;
@@ -499,11 +486,11 @@ select {
     padding: 11.5px 10px;
 }
 
-.floating-contact input[type="text"]:focus {
-    background: #FFF;
+.input-wrap input[type="text"]:focus {
+    border: 1px solid #393B85;
 }
 
-.floating-contact input[type="text"]::placeholder, select {
+.input-wrap input[type="text"]::placeholder {
     color: rgba(10, 24, 69, 0.50);
     font-size: 16px;
     font-weight: 400;
@@ -511,19 +498,10 @@ select {
     letter-spacing: -0.4px;
 }
 
-option {
-    color: #111;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: -0.4px;
-}
-
 .floating-form-wrap {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 32px;
 }
 
 .floating-agree-wrap {
@@ -540,8 +518,8 @@ option {
     appearance: none;
     position: relative;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.90);
-    border: 1px solid #DDD;
+    background: #FFF;
+    border: 1px solid rgba(85, 85, 85, 0.20);
 }
 
 .floating-agree-wrap .round-checkbox:checked::before {
@@ -554,13 +532,13 @@ option {
     background-image: url("../img/check.png");
     background-size: 15px !important;
     background-position: center center !important;
-    background-color: #FFF;
+    background-color: #393B85;
     background-repeat: no-repeat;
     border: none;
 }
 
 .floating-agree-wrap .agree {
-    color: #FFF;
+    color: #333;
     font-size: 14px !important;
     font-weight: 400 !important;
     line-height: normal;
@@ -576,42 +554,26 @@ option {
     display: flex;
     height: 42px;
     box-sizing: border-box;
-    padding: 0px 36px;
+    padding: 0px 40px;
     justify-content: center;
     align-items: center;
-    border-radius: 4px;
-    background: #562A06;
+    border-radius: 8px;
+    background: #393B85;
     color: #FFF;
-    font-family: "GmarketSansMedium";
     font-size: 18px;
+    font-weight: 600;
+    line-height: 130%;
     letter-spacing: -0.45px;
     border: none;
 }
 
 .f-btn:hover {
-    background: #351800;
-}
-
-.floating-tit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
-    color: #19493B;
-    text-align: center;
-    font-family: "SF_HambakSnow";
-    font-size: 18px;
-    line-height: 125%; /* 22.5px */
-    letter-spacing: -0.45px;
-    flex-shrink: 0;
-    cursor: pointer;
-    box-sizing: border-box;
-    padding-right: 10px;
+    background: #181A61;
 }
 
 .rotate-180 {
     transform: rotate(180deg);
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 }
 
 
@@ -864,35 +826,49 @@ option {
     display: none;
 }
 
-
-@media(max-width: 1400px) {
-
+/* 370px */
+.xxxs-br {
+    display: none;
 }
 
 @media(max-width: 1280px) {
+    #header {
+        height: 65px;
+        padding: 0 16px;
+    }
     .logo {
-        width: 140px;
+        width: 120px;
+        left: 16px;
     }
     #header nav>ul>li {
-        font-size: 18px;
-        letter-spacing: -0.45px;
+        font-size: 16px;
+        letter-spacing: -0.4px;
+        padding: 8px 20px;
     }
-    .floating-form {
+    .header-div {
+        right: 16px;
+    }
+    .floating-form, .floating-form-wrap {
         gap: 20px;
     }
     .floating-contact {
         gap: 16px;
     }
-    .floating-form>p {
+    .floating-num {
         font-size: 20px;
         letter-spacing: -0.5px;
     }
-    .floating-contact input[type="text"], select {
-        width: 180px;
+    .floating-num p span {
+        font-size: 18px;
+        letter-spacing: -0.45px;
+    }
+    .input-wrap input[type="text"], select {
+        width: 160px;
     }
     .f-btn {
         font-size: 16px;
         letter-spacing: -0.4px;
+        padding: 0 32px;
     }
     .st-tit {
         font-size: 56px;
@@ -905,9 +881,6 @@ option {
 }
 
 @media(max-width: 1200px) {
-    .floating-contact input[type="text"], select {
-        width: 165px;
-    }
     .agree-modal {
         width: 100%;
         left: 0;
@@ -919,12 +892,9 @@ option {
 }
 
 @media(max-width: 1100px) {
-    .footer-logo {
-        width: 185px;
-    }
-    .footer-container {
+    .footer-wrapper, .footer-container {
         flex-direction: column;
-        gap: 20px;
+        gap: 24px;
     }
     .input-wrap {
         gap: 4px;
@@ -933,7 +903,7 @@ option {
         gap: 12px;
     }
     .floating-contact input[type="text"], select {
-        width: 150px;
+        width: 140px;
     }
     select {
         padding: 10.5px 10px;
@@ -941,17 +911,22 @@ option {
 }
 
 @media(max-width: 1024px) {
+     #floating-container {
+        display: none !important;
+    }
     #header {
-        height: 56px;
-        padding: 8px 12px;
-        background: transparent;
+        height: 50px;
         justify-content: space-between;
     }
-    #header nav {
+    .logo {
+        width: 98px;
+    }
+    #header nav, #header .call span {
         display: none;
     }
-    #header .call {
-        display: flex;
+    #header .call svg {
+        width: 28px;
+        height: 29px;
     }
     .mo-menu-open {
         display: flex;
@@ -962,18 +937,6 @@ option {
     }
     #floating-container {
         display: none;
-    }
-    .f-btn {
-        padding: 0 40px;
-        height: 42px;
-    }
-    .floating-agree-wrap .round-checkbox {
-        width: 30px;
-        height: 30px;
-    }
-    #go-contact {
-        bottom: 20px;
-        right: 10px;
     }
     footer {
         padding: 60px 0;
@@ -1004,32 +967,12 @@ option {
 }
 
 @media(max-width: 650px) {
-    #header {
-        height: 60px;
-    }
-    .logo {
-        width: 145px;
-    }
-    .mo-menu-open {
-        top: 11px;
-        right: 11px;
-    }
     .footer-logo {
-        width: 165px;
+        width: 130px;
     }
-    .footer-wrap {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer-big-div .footer-div:first-child {
-        padding-left: 0;
-        border-left: none;
-    }
-    .footer-big-container {
-        padding: 0 16px;
-    }
-    .input-wrap {
-        gap: 4px;
+    .footer-div {
+        font-size: 14px;
+        letter-spacing: -0.35px;
     }
     .agree-modal {
         gap: 40px !important;
@@ -1084,7 +1027,7 @@ option {
 }
 
 @media(max-width: 370px) {
-    .f-btn {
-        padding: 0 32px;
+    .xxxs-br {
+        display: block;
     }
 }

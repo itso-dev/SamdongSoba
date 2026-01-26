@@ -177,10 +177,11 @@ if ($popup_stt->rowCount() > 0) {
         <input type="hidden" name="client_key" value="<?= $client_key ?>" />
         <input type="hidden" name="stay_time" id="stay_time" value="0" />
 
-        <div class="contact-form-div">
+        
+        <div class="flex-input">
             <div class="item">
                 <div class="label">
-                    <label for="name">성함 <span>*</span></label>
+                    <label for="name">성함</label>
                 </div>
                 <div class="input">
                     <input type="text" id="name" name="name" placeholder="성함" required>
@@ -188,21 +189,26 @@ if ($popup_stt->rowCount() > 0) {
             </div>
             <div class="item">
                 <div class="label">
-                    <label for="phone">연락처 <span>*</span></label>
+                    <label for="phone">연락처</label>
                 </div>
                 <div class="input">
                     <input type="tel" name="phone" id="phone-input" placeholder="연락처" required maxlength="11" inputmode="numeric">
                 </div>
             </div>
+        </div>
+        <div class="flex-input">
             <div class="item">
                 <div class="label">
-                    <label for="location">창업 희망 지역 <span>*</span></label>
+                    <label for="location">창업 희망 지역</label>
                 </div>
                 <div class="input">
                     <input type="text" id="location" name="location" placeholder="창업 희망 지역" required>
                 </div>
             </div>
             <div class="item">
+                <div class="label">
+                    <label for="sort">창업형태</label>
+                </div>
                 <div class="s-btn-wrap">
                     <input type="hidden" name="sort" value="신규 창업">
                     <div class="form-tab s-tab have">
@@ -212,6 +218,14 @@ if ($popup_stt->rowCount() > 0) {
                         <span>업종 변경</span>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="label">
+                <label for="phone">문의내용(선택)</label>
+            </div>
+            <div class="input">
+                <textarea name="contact_desc" id="contact_desc" placeholder="문의 내용을 작성해주세요"></textarea>
             </div>
         </div>
         <div class="form-wrap">
