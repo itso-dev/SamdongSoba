@@ -837,7 +837,7 @@ select {
     letter-spacing: -0.7px;
 }
 .text20{
-    color: var(--, #505050);
+    color: #505050;
     font-family: Pretendard;
     font-size: 20px;
     font-style: normal;
@@ -883,7 +883,48 @@ select {
     z-index: -1;
     will-change: transform;
 }
+.pg-padding {
+    box-sizing: border-box;
+    padding: 40px;
+}
 
+.pg-container {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 80px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.pg-top-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.pg-top-div img {
+    max-width: 380px;
+    width: 90%;
+}
+
+.fadeDown, .fadeUp, .fadeLeft, .fadeRight {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: transform, opacity;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+    transition: unset;
+}
+.top-line {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
 @media(max-width: 1280px) {
     #header {
@@ -931,6 +972,16 @@ select {
     .st-sub-tit {
         font-size: 28px;
         letter-spacing: -0.7px;
+    }
+
+    .txt34{
+        font-size: 30px;
+    }
+    .text20{
+        font-size: 18px;
+    }
+    .top-line {
+        width: 150%;
     }
 }
 
@@ -995,6 +1046,10 @@ select {
     footer {
         padding: 60px 0;
     }
+
+    .p120{
+        padding: 100px 0;
+    }
 }
 
 @media(max-width: 900px) {
@@ -1009,6 +1064,9 @@ select {
     .mi-br {
         display: block;
     }
+    .top-line {
+        width: 200%;
+    }
 }
 
 @media(max-width: 768px) {
@@ -1017,6 +1075,9 @@ select {
     }
     .ta-br {
         display: block;
+    }
+    .p120{
+        padding: 80px 0;
     }
 }
 
@@ -1055,6 +1116,12 @@ select {
     .mo-br {
         display: block;
     }
+    .top-line {
+        width: 300%;
+    }
+    .text34{
+
+    }
 }
 
 @media(max-width: 480px) {
@@ -1071,6 +1138,9 @@ select {
     }
     .xs-no-br {
         display: none;
+    }
+    .top-line {
+        width: 400%;
     }
 }
 
