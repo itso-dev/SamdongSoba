@@ -19,6 +19,7 @@ $db_conn->prepare($view_sql)->execute(
 ?>
 
 <link rel="stylesheet" type="text/css" href="css/index.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/index2.css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="css/reset.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -313,76 +314,90 @@ if ($popup_stt->rowCount() > 0) {
 </div>
 
 <div id="contact">
-    <form class="contact-form" name="contact_form" id="contact_form" method="post" action="contact_write.php" data-aos="fade-up" data-aos-duration="800">
-        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
-        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-1">
-        <input type="hidden" name="writer_ip" value="<?= get_client_ip() ?>" />
-        <input type="hidden" name="adCode" value="<?= $adCode ?>" />
-        <input type="hidden" name="flow" value="<?= $flow ?>" />
-        <input type="hidden" name="client_key" value="<?= $client_key ?>" />
-        <input type="hidden" name="stay_time" id="stay_time" value="0" />
-
-
-        <div class="flex-input">
-            <div class="item">
-                <div class="label">
-                    <label for="name">성함</label>
-                </div>
-                <div class="input">
-                    <input type="text" id="name" name="name" placeholder="성함" required>
-                </div>
+    <div class="contact-container">
+        <div class="contact-left">
+            <div class="contact-left-div">
+                <img src="img/head-logo.png" alt="삼동소바" class="contact-logo">
+                <p class="text72 w">창업문의</p>
             </div>
-            <div class="item">
-                <div class="label">
-                    <label for="phone">연락처</label>
-                </div>
-                <div class="input">
-                    <input type="tel" name="phone" id="phone-input" placeholder="연락처" required maxlength="11" inputmode="numeric">
-                </div>
+            <div class="contact-left-txt">
+                부동산 가치 분석이 포함된 삼동소바 창업 컨설팅을 신청하세요.<br>
+                영업일 기준 2-3일 내에 삼동소바 창업컨설턴트가 연락을 드립니다.
             </div>
         </div>
-        <div class="flex-input">
-            <div class="item">
-                <div class="label">
-                    <label for="location">창업 희망 지역</label>
-                </div>
-                <div class="input">
-                    <input type="text" id="location" name="location" placeholder="창업 희망 지역" required>
-                </div>
-            </div>
-            <div class="item">
-                <div class="label">
-                    <label for="sort">창업형태</label>
-                </div>
-                <div class="s-btn-wrap">
-                    <input type="hidden" name="sort" value="신규 창업">
-                    <div class="form-tab s-tab have">
-                        <span>신규 창업</span>
+        <form class="contact-form" name="contact_form" id="contact_form" method="post" action="contact_write.php" data-aos="fade-up" data-aos-duration="800">
+            <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
+            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-1">
+            <input type="hidden" name="writer_ip" value="<?= get_client_ip() ?>" />
+            <input type="hidden" name="adCode" value="<?= $adCode ?>" />
+            <input type="hidden" name="flow" value="<?= $flow ?>" />
+            <input type="hidden" name="client_key" value="<?= $client_key ?>" />
+            <input type="hidden" name="stay_time" id="stay_time" value="0" />
+
+            <div class="contact-inner">
+                <div class="flex-input">
+                    <div class="item">
+                        <div class="label">
+                            <label for="name">성함</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="name" name="name" placeholder="성함" required>
+                        </div>
                     </div>
-                    <div class="form-tab s-tab">
-                        <span>업종 변경</span>
+                    <div class="item">
+                        <div class="label">
+                            <label for="phone">연락처</label>
+                        </div>
+                        <div class="input">
+                            <input type="tel" name="phone" id="phone-input" placeholder="연락처" required maxlength="11" inputmode="numeric">
+                        </div>
                     </div>
                 </div>
+                <div class="flex-input">
+                    <div class="item">
+                        <div class="label">
+                            <label for="location">창업 희망 지역</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="location" name="location" placeholder="창업 희망 지역" required>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="label">
+                            <label for="sort">창업형태</label>
+                        </div>
+                        <div class="s-btn-wrap">
+                            <input type="hidden" name="sort" value="신규 창업">
+                            <div class="form-tab s-tab have">
+                                <span>신규 창업</span>
+                            </div>
+                            <div class="form-tab s-tab">
+                                <span>업종 변경</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">
+                        <label for="phone">문의내용(선택)</label>
+                    </div>
+                    <div class="input">
+                        <textarea name="contact_desc" id="contact_desc" placeholder="문의 내용을 작성해주세요"></textarea>
+                    </div>
+                </div>
+                <div class="form-wrap">
+                    <div class="agree-wrap">
+                        <label class="checkbox-label">
+                            <input class="round-checkbox" type="checkbox" id="agree" name="agree" required>
+                        </label>
+                        <label for="agree" class="agree"><span class="agree-open">개인정보취급방침(보기)</span> 동의</label>
+                    </div>
+                    <input type="submit" value="문의하기" class="c-btn">
+                </div>
             </div>
-        </div>
-        <div class="item">
-            <div class="label">
-                <label for="phone">문의내용(선택)</label>
-            </div>
-            <div class="input">
-                <textarea name="contact_desc" id="contact_desc" placeholder="문의 내용을 작성해주세요"></textarea>
-            </div>
-        </div>
-        <div class="form-wrap">
-            <div class="agree-wrap">
-                <label class="checkbox-label">
-                    <input class="round-checkbox" type="checkbox" id="agree" name="agree" required>
-                </label>
-                <label for="agree" class="agree"><span class="agree-open">개인정보취급방침(보기)</span> 동의</label>
-            </div>
-            <input type="submit" value="문의하기" class="c-btn">
-        </div>
-    </form>
+        </form>
+
+    </div>
 </div>
 
 
