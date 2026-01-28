@@ -80,15 +80,279 @@
 }
 
 
+
+
+
+
+.font-style{
+  font-family: "ON YeossihyangyakeonhaeOTF";
+}
+
 /* main */
 #main {
   width: 100%;
-  height: 100vh;
   background: #111;
+}
+.page1{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+}
+.page1 .swap-txt-wrap{
+  width: 100%;
+  position: relative;
+  height: 3.3em;              /* ⭐ 한 줄 높이 고정 */
+  overflow: hidden
+}
+.page1 .swap-txt-wrap .txt{
+  color: #FFF;
+  text-align: center;
+  font-family: "ON YeossihyangyakeonhaeOTF";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1px;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.page1 .swap-txt-wrap .txt.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.page1 .page-logo{
+  max-width: 610px;
+  width: 70%;
+  position: relative;
+  z-index: 2;
+}
+.page1 .video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+.page1 .video-bg iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  /* 핵심 */
+  min-width: 177.78vh;   /* 16:9 기준 가로 강제 */
+  min-height: 56.25vw;   /* 16:9 기준 세로 강제 */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.page2{
+  background: url("../img/page2-bg.png");
+  background-size: cover !important;
+  background-position: center center !important;
+}
+.page2 .flex-wrap{
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page2 .flex-wrap .left-wrap{
+
+}
+.page2 .flex-wrap .left-wrap .top-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.page2 .flex-wrap .left-wrap .top-wrap .item{
+  width: 25%;
+}
+.page2 .flex-wrap .left-wrap .top-wrap .item svg{
+  width: 58px;
+  margin-bottom: 12px;
+}
+.page2 .flex-wrap .left-wrap .top-wrap .item .txt{
+  color: var(--darkbrown, #5B373B);
+  text-align: center;
+  font-family: 'ON YeossihyangyakeonhaeOTF';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+.page2 .flex-wrap .left-wrap .page-logo{
+  max-width: 407px;
+  width: 90%;
+  margin: 20px 0 60px 0;
+}
+.page2 .flex-wrap .left-wrap .txt1{
+  margin-bottom: 25px;
+}
+.page2 .flex-wrap .right-wrap{
+  width: 585px;
+  position: relative;
+  text-align: right;
+}
+.page2 .flex-wrap .right-wrap .video{
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.page2 .flex-wrap .right-wrap .talk{
+  width: 204px;
+  position: absolute;
+  z-index: 2;
+  top: -90px;
+  right: -6%;
+}
+.page2 .flex-wrap .right-wrap .youtube-wrap{
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.80);
+  display: inline-flex;
+  padding: 12px 20px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+
+  color: var(--darkbrown, #5B373B);
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+.page2 .flex-wrap .right-wrap .back{
+  position: absolute;
+  left: -35%;
+  width: 100%;
+  top: -85px;
+}
+.page3{
+  background: url("../img/page3-bg.png");
+  background-size: cover !important;
+  background-position: center center !important;
+}
+.page3 .tit1{
+  color: #0B080C;
+  margin-bottom: 20px;
+}
+.page3 .tit2{
+  color: #0B080C;
+  line-height: 120%;
+}
+.page3 .slide-container{
+  max-width: 1020px;
+  margin: 60px auto 0;
+  position: relative;
+  width: 90%;
+}
+.page3 .slide-container .store-slide-container{
+  overflow: hidden;
+  width: 100%;
+}
+.page3 .slide-container .store-slide-container .swiper-slide{
+  border: 1px solid #111;
+  background: #FFF;
+  padding: 10px;
+  position: relative;
+}
+.page3 .slide-container .store-slide-container .swiper-slide img{
+  width: 100%;
+}
+.page3 .slide-container .store-slide-container .swiper-slide .info-box{
+  display: flex;
+  padding: 6px 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(5px);
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+.page3 .slide-container .store-slide-container .swiper-slide .info-box .txt1{
+  color: #D02326;
+  font-family: "ON YeossihyangyakeonhaeOTF";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 44.8px */
+  letter-spacing: -0.8px;
+}
+.page3 .slide-container .store-slide-container .swiper-slide .info-box .txt2{
+  color: #505050;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  letter-spacing: -0.5px;
+}
+.page3 .slide-container .store-slide-container .swiper-slide .info-box .dv{
+  color: rgba(80, 80, 80, 0.15);
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.5px;
+}
+.page3 .slide-container .navi-wrap{
+  display: flex;
+  width: 120%;
+  position: absolute;
+  left: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  align-items: center;
+  justify-content: space-between;
+}
+.page3 .slide-container .navi-wrap .prev,
+.page3 .slide-container .navi-wrap .next{
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
 }
 
 
-/* contact */
+
+
+
+
+
+
+
+
+  /* contact */
 #contact {
   box-sizing: border-box;
   width: 100%;

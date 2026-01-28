@@ -1,75 +1,18 @@
-/* Gmarket Sans */
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
+    font-family: 'ON YeossihyangyakeonhaeOTF';
+    src: url('YeossihyangyakeonhaeOTF_L.otf') format('opentype');
+    font-weight: 300;
     font-style: normal;
 }
 @font-face {
-    font-family: 'GmarketSansLight';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-    font-weight: normal;
+    font-family: 'ON YeossihyangyakeonhaeOTF';
+    src: url('YeossihyangyakeonhaeOTF_R.otf') format('opentype');
+    font-weight: 400;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Gmarket Sans';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Paperlogy */
-@font-face {
-  font-family: 'Paperlogy';
-  src: url('./Paperlogy-1Thin.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Paperlogy';
-  src: url('./Paperlogy-2ExtraLight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Paperlogy';
-  src: url('./Paperlogy-3Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Paperlogy';
-  src: url('./Paperlogy-4Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Paperlogy';
-  src: url('./Paperlogy-5Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Paperlogy';
-  src: url('./Paperlogy-6SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Paperlogy';
-  src: url('./Paperlogy-7Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Paperlogy';
-  src: url('./Paperlogy-8ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Paperlogy';
-  src: url('./Paperlogy-9Black.ttf') format('truetype');
+  font-family: 'ON YeossihyangyakeonhaeOTF';
+  src: url('YeossihyangyakeonhaeOTF_B.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
 }
@@ -93,24 +36,48 @@
 /* header */
 #header {
     width: 100%;
-    display: flex;
-    height: 80px;
     box-sizing: border-box;
     padding: 0px 40px;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.95);
+    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 45;
 }
-
-.logo {
-    width: 165px;
+#header.gnb-blur,
+#header:hover{
+    background: #fff;
+}
+#header.gnb-blur nav>ul>li,
+#header:hover nav>ul>li{
+    color: #505050;
+}
+#header.gnb-blur .head-logo.black,
+#header:hover .head-logo.black{
+    display: block;
+}
+#header.gnb-blur .head-logo.white,
+#header:hover .head-logo.white{
+    display: none;
+}
+#header .head-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    height: 64px;
+}
+.head-logo {
+    width: 115px;
     position: absolute;
-    left: 40px;
+    left: 0px;
     cursor: pointer;
+}
+.head-logo.black{
+    display: none;
 }
 
 #header nav {
@@ -132,9 +99,9 @@
     padding: 8px 30px;
     justify-content: center;
     align-items: center;
-    color: #505050;
+    color: #fff;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 26px; /* 144.444% */
     letter-spacing: -0.45px;
@@ -142,7 +109,7 @@
 }
 
 #header nav>ul>li:hover, .tap {
-    color: #393B85 !important;
+    color: #D02326 !important;
 }
 
 .header-div {
@@ -322,7 +289,7 @@ footer {
     color: rgba(17, 17, 17, 0.70);
     font-size: 16px;
     font-weight: 400;
-    line-height: 130%; 
+    line-height: 130%;
     letter-spacing: -0.4px;
     word-break: keep-all;
 }
@@ -412,7 +379,7 @@ footer {
 }
 
 .floating-num {
-    color: #393B85;
+    color: #5B373B;
     text-align: right;
     font-family: "Paperlogy";
     font-size: 24px;
@@ -438,7 +405,7 @@ footer {
     line-height: 125%; /* 25px */
     letter-spacing: -0.5px;
     border-radius: 8px;
-    background: #393B85;
+    background: #5B373B;
     display: inline-flex;
     box-sizing: border-box;
     padding: 6px 10px;
@@ -532,7 +499,7 @@ select {
     background-image: url("../img/check.png");
     background-size: 15px !important;
     background-position: center center !important;
-    background-color: #393B85;
+    background-color: #333;
     background-repeat: no-repeat;
     border: none;
 }
@@ -558,7 +525,7 @@ select {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    background: #393B85;
+    background: #5B373B;
     color: #FFF;
     font-size: 18px;
     font-weight: 600;
@@ -830,6 +797,93 @@ select {
 .xxxs-br {
     display: none;
 }
+/*Common*/
+.text72{
+    color: #0B080C;
+    text-align: center;
+    font-family: "ON YeossihyangyakeonhaeOTF";
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -1.8px;
+}
+.text34{
+    font-family: Pretendard;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 40.8px */
+    letter-spacing: -0.85px;
+}
+.text32{
+    color: #111;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 38.4px */
+    letter-spacing: -0.8px;
+}
+.text28{
+    color: #111;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135%; /* 37.8px */
+    letter-spacing: -0.7px;
+}
+.text20{
+    color: var(--, #505050);
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 30px */
+    letter-spacing: -0.5px;
+}
+.brown{
+    color: var(--darkbrown, #5B373B);
+}
+.red{
+    color: #D02326;
+}
+.white{
+    color: #fff;
+}
+.p120{
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.tit-deco{
+    width: 165px;
+    margin: 0 auto 20px;
+    display: block;
+}
+.line-animation1,
+.line-animation2,
+.line-animation3{
+    padding: 2px 7px 2px 5px;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+}
+.line-animation1::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--Red, #D02326);
+    transform: scaleX(var(--fill, 0));   /* ✅ JS에서 --fill 변경 */
+    transform-origin: left center;
+    z-index: -1;
+    will-change: transform;
+}
+
 
 @media(max-width: 1280px) {
     #header {

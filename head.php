@@ -2,8 +2,8 @@
 header('P3P: CP="NOI CURa ADMa DEVa TAIa OUR DELa BUS IND PHY ONL UNI COM NAV INT DEM PRE"');
 session_start();
 
-$site_path = $_SERVER["DOCUMENT_ROOT"]."/DB_Solution_PHP";
-$site_url = "http://".$_SERVER["HTTP_HOST"]."/DB_Solution_PHP";
+$site_path = $_SERVER["DOCUMENT_ROOT"]."/Samdong";
+$site_url = "http://".$_SERVER["HTTP_HOST"]."/Samdong";
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -67,7 +67,7 @@ $adCode = '';
 $is_adcode = 0;
 
 foreach ($ad_categories as $category) {
-    $key = strtolower($category['eng_name']); 
+    $key = strtolower($category['eng_name']);
 
     if (isset($getParams[$key])) {
         $is_adcode = 1;
@@ -225,31 +225,27 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
     <?= $site['body_script'] ?>
 
     <div id="header">
-        <img src="img/logo.svg" class="logo" alt="회사명">
-        <nav>
-            <ul>
-                <li class="link" data-target="main">1등 브랜드</li>
-                <li class="link" data-target="section4">5초의 법칙</li>
-                <li class="link" data-target="section5">품질의 경쟁력</li>
-                <li class="link" data-target="section6">브랜드 메뉴</li>
-                <li class="link" data-target="section8">브랜드 안정성</li>
-                <li class="link" data-target="contact">개설 문의</li>
-            </ul>
-        </nav>
-        <div class="header-div">
-            <a href="tel:00000000" class="call">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M8.07397 6.51612C8.23264 6.78678 8.2293 7.11945 8.0693 7.38878L7.25664 8.75278C7.07464 9.05812 7.09597 9.43945 7.31464 9.71945C7.69264 10.2035 8.32864 10.9828 9.00664 11.6608C9.68464 12.3388 10.464 12.9748 10.948 13.3528C11.228 13.5715 11.6093 13.5928 11.9146 13.4108L13.2786 12.5981C13.548 12.4375 13.8833 12.4361 14.154 12.5948L17.5733 14.5968C17.904 14.7908 18.0666 15.1761 17.9753 15.5488C17.8866 15.9108 17.672 16.3808 17.1793 16.8735C15.6366 18.4161 13.0346 19.2355 7.2333 13.4341C1.43197 7.63278 2.25064 5.03012 3.7933 3.48745C4.2873 2.99345 4.75797 2.77945 5.12064 2.69079C5.49264 2.60079 5.8753 2.76078 6.06864 3.09078C6.55064 3.91478 7.5913 5.69212 8.07397 6.51612Z" fill="#393B85"/>
-                </svg>
-                <span>0000-0000</span>
-            </a>
-            <div class="mo-menu-open">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
-                <path d="M3.5 14.5H24.5M3.5 7.25H24.5M3.5 21.75H24.5" stroke="#393B85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+        <div class="head-wrap">
+            <img src="img/head-logo.png" class="head-logo white" alt="삼동소바">
+            <img src="img/head-logo2.png" class="head-logo black" alt="삼동소바">
+            <nav>
+                <ul>
+                    <li class="link" data-target="main">브랜드소개</li>
+                    <li class="link" data-target="section4">성공요인</li>
+                    <li class="link" data-target="section5">메뉴소개</li>
+                    <li class="link" data-target="contact">창업문의</li>
+                </ul>
+            </nav>
+            <div class="header-div">
+                <div class="mo-menu-open">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                        <path d="M3.5 14.5H24.5M3.5 7.25H24.5M3.5 21.75H24.5" stroke="#393B85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
             </div>
         </div>
-        
+
+
     </div>
 
     <div class="mo-menu">
@@ -345,19 +341,19 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
         });
     });
 
-    // window.onscroll = function() {
+    window.onscroll = function() {
 
-    //     if (window.innerWidth <= 1000) {
-    //         return;
-    //     }
+        if (window.innerWidth <= 1000) {
+            return;
+        }
 
-    //     var header = document.getElementById("header");
+        var header = document.getElementById("header");
 
-    //     if (window.scrollY > 0) {
-    //         header.classList.add("gnb-blur");
-    //     } else {
-    //         header.classList.remove("gnb-blur");
-    //     }
-    // };
+        if (window.scrollY > 0) {
+            header.classList.add("gnb-blur");
+        } else {
+            header.classList.remove("gnb-blur");
+        }
+    };
 
 </script>

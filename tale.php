@@ -8,11 +8,11 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
                 <path d="M11 6.5L0 0V12L11 6.5Z" fill="#393B85"/>
                 </svg>
-                </p> 0000-0000
+                </p> 1800-8148
             </div>
             <form class="floating-contact" name="contact_form" id="contact_form2" method="post" action="contact_write.php">
                 <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
-                <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-2">  
+                <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-2">
                 <input type="hidden" name="writer_ip" value="<?= get_client_ip() ?>" />
                 <input type="hidden" name="adCode" value="<?= $adCode ?>" />
                 <input type="hidden" name="flow" value="<?= $flow ?>" />
@@ -78,7 +78,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="up-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
         <path d="M20 6.125L19.425 6.675L10.725 15.4C10.4875 15.5938 10.3781 15.9031 10.4469 16.2031C10.5156 16.5 10.75 16.7344 11.0469 16.8031C11.3469 16.8719 11.6562 16.7625 11.85 16.525L19.2 9.175V32.8C19.1969 33.0875 19.3469 33.3563 19.5969 33.5031C19.8469 33.6469 20.1531 33.6469 20.4031 33.5031C20.6531 33.3563 20.8031 33.0875 20.8 32.8V9.175L28.15 16.525C28.3437 16.7625 28.6531 16.8719 28.9531 16.8031C29.25 16.7344 29.4843 16.5 29.5531 16.2031C29.6218 15.9031 29.5125 15.5938 29.275 15.4L20.575 6.675L20 6.125Z" fill="#BB3F4F"/>
@@ -187,11 +187,11 @@
         // grecaptcha.ready(function () {
         //     grecaptcha.execute('', {action: 'contact_form2'}).then(function(token) {
         //         document.getElementById('g-recaptcha-response-2').value = token;
-        //         e.target.submit(); 
+        //         e.target.submit();
         //     });
         // });
 
-        e.target.submit(); 
+        e.target.submit();
 
     });
 
