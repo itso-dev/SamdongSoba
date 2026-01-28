@@ -352,205 +352,10 @@
 
 
 
-  /* contact */
-#contact {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 100px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(../img/contact-bg.png);
-  background-attachment: fixed;
-  background-position: center center !important;
-}
-
-.contact-form {
-  display: flex;
-  max-width: 1300px;
-  width: 90%;
-  box-sizing: border-box;
-  padding: 40px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  background: #FFF;
-  border-radius: 20px;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
-}
-
-.flex-input {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-.item {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contact-form input[type="text"], input[type="tel"], textarea {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  height: 44px;
-  padding: 10px;
-  color: #1A1A1A;
-  font-size: 16px !important;
-  font-weight: 400 !important;
-  line-height: 150%; /* 21px */
-  letter-spacing: -0.4px !important;
-  border-radius: 8px;
-  border: 1px solid rgba(17, 17, 17, 0.16);
-  background: #FFF;
-}
-
-.contact-form input[type="text"]:focus, .contact-form input[type="tel"]:focus, textarea:focus {
-  outline: none;
-  border: 1px solid #393B85 !important;
-  box-shadow: none !important;
-}
-
-.contact-form input[type="text"]::placeholder, .contact-form input[type="tel"]::placeholder, textarea::placeholder {
-  color: rgba(34, 34, 34, 0.50);
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px; /* 150% */
-  letter-spacing: -0.4px;
-}
-
-textarea {
-  resize: none;
-}
-
-.item label {
-  box-sizing: border-box;
-  color: #262626;
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  line-height: 150% !important; /* 23.4px */
-  letter-spacing: -0.4px !important;
-}
-
-.s-btn-wrap {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.form-tab {
-  width: 50%;
-  height: 44px;
-  box-sizing: border-box;
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  border: 1.2px solid rgba(168, 168, 168, 0.30);
-  background: #FFF;
-  color: #6B6B6B;
-  font-size: 14px;
-  line-height: 24px; /* 150% */
-  font-weight: 500;
-  letter-spacing: -0.35px;
-  cursor: pointer;
-  transition: 0.1s !important;
-}
-
-.have {
-  color: #393B85;
-  border: 2px solid #393B85;
-  font-weight: 700;
-}
-
-.form-wrap {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 24px;
-}
-
-.agree-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 0;
-}
-
-.contact-form .round-checkbox {
-  width: 30px;
-  height: 30px;
-  border: none;
-  border-radius: 50px;
-  appearance: none;
-  position: relative;
-  cursor: pointer;
-  background: #FFF;
-  border: 1.2px solid rgba(168, 168, 168, 0.30);
-}
-
-.contact-form .round-checkbox:checked::before {
-  font-size: 100%;
-  color: #fff;
-  position: relative;
-}
-
-.contact-form .round-checkbox:checked {
-  background-image: url("../img/check.png");
-  background-size: 17px !important;
-  background-position: center center !important;
-  background-color: #393B85;
-  background-repeat: no-repeat;
-  border: none;
-}
-
-.contact-form .agree {
-  color: #333;
-  font-size: 16px !important;
-  font-weight: 400;
-  line-height: 24px !important;
-  letter-spacing: -0.4px !important;
-  cursor: pointer;
-}
-
-.contact-form .agree-open {
-  font-weight: 600 !important;
-  color: #393B85;
-}
-
-.c-btn {
-  width: 160px;
-  background: #393B85;
-  display: flex;
-  box-sizing: border-box;
-  padding: 15px 32px;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  color: #FFF;
-  font-size: 18px;
-  line-height: normal;
-  font-weight: 600;
-  letter-spacing: -0.45px;
-  border: none;
-  border-radius: 8px;
-}
-
-.c-btn:hover {
-  background: #181A61;
-}
 
 
 @media (max-width: 1280px) {
-  .contact-form {
-    padding: 40px 30px;
-  }
+
 }
 
 @media(max-width: 900px) {
@@ -574,9 +379,7 @@ textarea {
 }
 
 @media(max-width: 1024px) {
-  .contact-form {
-    padding: 30px;
-  }
+
   .flex-input {
     gap: 24px;
   }
@@ -591,23 +394,7 @@ textarea {
 }
 
 @media (max-width: 650px) {
-  #contact {
-    background-attachment: unset;
-  }
-  .contact-form {
-    padding: 20px;
-  }
-  .flex-input {
-    flex-wrap: wrap;
-  }
-  .form-wrap {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-  .c-btn {
-    width: 100%;
-  }
+
 }
 
 @media (max-width: 480px) {
