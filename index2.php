@@ -313,11 +313,331 @@ if ($popup_stt->rowCount() > 0) {
     </div>
 </div>
 
+<div id="interior">
+    <p class="text72 w">삼동소바 인테리어</p>
+    <div class="interior-container">
+        <div class="tab-wrap">
+            <div class="common-tab active interior-tab" data-tab="interior-tab1">
+                <p class="tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 0C10.2091 0 12 1.79086 12 4C14.2091 4 16 5.79086 16 8C16 10.2091 14.2091 12 12 12C12 14.2091 10.2091 16 8 16C5.79086 16 4 14.2091 4 12C1.79086 12 0 10.2091 0 8C0 5.79086 1.79086 4 4 4C4 1.79086 5.79086 0 8 0Z" fill="#D0B18B"/>
+                    </svg>
+                    스탠다드 타입
+                </p>
+            </div>
+            <div class="common-tab interior-tab" data-tab="interior-tab2">
+                <p class="tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 0C10.2091 0 12 1.79086 12 4C14.2091 4 16 5.79086 16 8C16 10.2091 14.2091 12 12 12C12 14.2091 10.2091 16 8 16C5.79086 16 4 14.2091 4 12C1.79086 12 0 10.2091 0 8C0 5.79086 1.79086 4 4 4C4 1.79086 5.79086 0 8 0Z" fill="#D0B18B"/>
+                    </svg>
+                    랜드마크 타입
+                </p>
+            </div>
+        </div>
+        <div class="interior-wrap" id="interior-tab1">
+            <div class="interior-box">
+                <img src="img/standard1.png" alt="삼동소바 스탠다드 타입 인테리어">
+                <div class="interior-box-div">
+                    <p>성북동점</p>
+                    <div>작은 공간에서 최대의 효율을<br class="br-1024"> 만드는 고밀도 인테리어<br>
+                    조리/동선/좌석 구조를<br class="mo-br"> 효율적으로 배치</div>
+                </div>
+            </div>
+            <div class="interior-box">
+                <img src="img/standard2.png" alt="삼동소바 스탠다드 타입 인테리어">
+                <div class="interior-box-div">
+                    <p>여의도점</p>
+                    <div>상권에 맞게 설계된<br class="xs-br"> 공간 구조<br>
+                    회전율을 극대화하는<br class="mo-br"> 테이블 구성과 동선</div>
+                </div>
+            </div>
+        </div>
+        <div class="interior-wrap" id="interior-tab2">
+            <div class="interior-box">
+                <img src="img/landmark1.png" alt="삼동소바 랜드마크 타입 인테리어">
+                <div class="interior-box-div">
+                    <p>울산울주점</p>
+                    <div>지역의 분위기와 미감을 살린<br class="br-1024"> 랜드마크형 인테리어<br>
+                    넓은 면적을 기반으로<br class="mo-br"> 여유로운 동선과<br class="br-1280"> 인상적인 파사드를 구현</div>
+                </div>
+            </div>
+            <div class="interior-box">
+                <img src="img/landmark2.png" alt="삼동소바 랜드마크 타입 인테리어">
+                <div class="interior-box-div">
+                    <p>판교점</p>
+                    <div>상권의 얼굴이 되는 공간 설계<br>
+                    개방감 있는 구조와<br class="mo-br"> 상징적인 파사드로<br class="br-1280"> 존재감을 만드는 타입</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="support">
+    <div class="support-container">
+        <p class="text72 w">1금융권 연계<br class="mo-br"> 든든한 창업 지원</p>
+        <div class="support-swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="support-item">
+                        <div class="support-item-inner">
+                            KB 창업 지원 자금 최대 <span>5천만원</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="support-item">
+                        <div class="support-item-inner">
+                            신한은행 프랜차이즈론 최대 <span>3천만원</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="support-item">
+                        <div class="support-item-inner">
+                            집기 렌탈 및 인테리어 분납 등을 통해 최대 <span>2억원</span> 지원 가능
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="support-item">
+                        <div class="support-item-inner">
+                            KB 창업 지원 자금 최대 <span>5천만원</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="support-item">
+                        <div class="support-item-inner">
+                            신한은행 프랜차이즈론 최대 <span>3천만원</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="support-item">
+                        <div class="support-item-inner">
+                            집기 렌탈 및 인테리어 분납 등을 통해 최대 <span>2억원</span> 지원 가능
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="cost" class="pg-padding">
     <div class="pg-container">
+        <img src="img/cloud.svg" alt="삼동소바" class="cloud l">
+        <img src="img/cloud.svg" alt="삼동소바" class="cloud r">
+        <div class="pg-top">
+            <div class="pg-top-div">
+                <img src="img/pg-top-icon.png" alt="삼동소바">
+                <p class="text72">삼동소바 창업비용</p>
+            </div>
+            <div class="text28 normal">가맹점과 함께 성장하는 삼동소바,<br class="mo-br"> 다년간의 운영 관리 노하우로<br>
+            안정적인 창업 프로세스를 도와드립니다.</div>
+        </div>
+        <div class="cost-table-container">
+            <table class="cost-table">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>내용</th>
+                        <th>20평</th>
+                        <th>40평</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>가맹비</td>
+                        <td>브랜드사용권, 노하우 및<br class="mo-br mo-no-br"> 기술전수, 영업권 보장</td>
+                        <td>1,500</td>
+                        <td>1,500</td>
+                    </tr>
+                    <tr>
+                        <td>교육비</td>
+                        <td>개점 전 브랜드 메뉴얼 및<br class="mo-br mo-no-br"> 운영 서비스 교육</td>
+                        <td>500</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>판촉홍보비</td>
+                        <td>명판, 명함, 유니폼 및<br class="mo-br"> 오픈 마케팅 홍보</td>
+                        <td>300</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>인테리어</td>
+                        <td>목공/도장/전기 및 조명/바닥,<br class="mo-br mo-no-br"> 주방공사 등 내부 인테리어 공사<br>
+                        <span class="sm-txt">* 평당 200만원</span>
+                        </td>
+                        <td>4,000</td>
+                        <td>8,000</td>
+                    </tr>
+                    <tr>
+                        <td>주방설비</td>
+                        <td>냉장, 냉동고, 튀김기, 간택기,<br class="mo-br mo-no-br"> 제면기, 싱크대, 선반 등</td>
+                        <td>2,600</td>
+                        <td>2,950</td>
+                    </tr>
+                    <tr>
+                        <td>주방기물</td>
+                        <td>주방기물, 접시, 그릇류</td>
+                        <td>950</td>
+                        <td>1,200</td>
+                    </tr>
+                    <tr>
+                        <td>가구</td>
+                        <td>고급테이블/의자<br class="mo-br">(철제프레임, 멜바우상판)</td>
+                        <td>440</td>
+                        <td>780</td>
+                    </tr>
+                    <tr>
+                        <td>간판</td>
+                        <td>전면간판/현수막, 메뉴판 및<br class="mo-br mo-no-br"> 내·외부 기본 사인물<br>
+                        <span class="sm-txt">* 전면간판 및 기본사인물 외 추가</span>
+                        </td>
+                        <td>700</td>
+                        <td>750</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="cost-total">
+                <p>합계 <span>(VAT 별도)</span></p>
+                <img src="img/cost-total1.png" alt="삼동소바" class="cost-total1">
+                <img src="img/cost-total2.png" alt="삼동소바" class="cost-total2">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="area">
+    <div class="area-left">
+        <p class="text72 w">철저한 거리제한!<br>
+        선별된 파트너</p>
+        <div class="area-content">삼동소바는 단순 직선거리 기준이 아닌,<br>
+        <span class="bold w">실제 상권 분석을 기반으로</span><br>
+        가맹점 간 상권이 겹치지 않도록<br>
+        영업권을 보호합니다.<br>
+        <br>
+        이미 선정된 상권의 경우,<br>
+        동일 상권 내 <span class="bold w">추가 입점은 불가능합니다.</span></div>
+        <div class="red-btn">
+            입점 가능한 상권 확인
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM8.98828 7.41211C8.43631 7.41225 7.98859 7.86018 7.98828 8.41211C7.98828 8.96431 8.43612 9.41197 8.98828 9.41211H13.459L7.13379 15.7373C6.74334 16.1278 6.74349 16.7608 7.13379 17.1514C7.52431 17.5419 8.15733 17.5419 8.54785 17.1514L14.873 10.8262V15.2969C14.873 15.8491 15.3208 16.2968 15.873 16.2969C16.4252 16.2967 16.873 15.8491 16.873 15.2969V8.41211C16.8727 7.86018 16.425 7.41225 15.873 7.41211H8.98828Z" fill="white"/>
+            </svg>
+        </div>
+    </div>
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="area-container" data-aos="fade-up" data-aos-duration="1000">
+            <div class="wave wave01 bg-full"></div>
+            <div class="wave wave02 bg-full"></div>
+            <div class="wave wave03 bg-full"></div>
+            <div class="area-circle">
+                <img src="img/head-logo2.png" alt="삼동소바">
+            </div>
+            <div class="meter-div">
+                <img src="img/meter.png" alt="삼동소바" class="meter l">
+                <img src="img/meter.png" alt="삼동소바" class="meter r">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="process" class="pg-padding">
+    <div class="pg-container">
+        <img src="img/lt-icon.svg" alt="삼동소바" class="lt-icon">
+        <img src="img/rt-icon.svg" alt="삼동소바" class="rt-icon">
+        <img src="img/lb-icon.svg" alt="삼동소바" class="lb-icon">
+        <img src="img/rb-icon.svg" alt="삼동소바" class="rb-icon">
         <div class="pg-top-div">
             <img src="img/pg-top-icon.png" alt="삼동소바">
             <p class="text72">창업절차</p>
+        </div>
+        <div class="process-container">
+            <div class="process-box">
+                <p class="process-num">01</p>
+                <img src="img/process-icon1.png" alt="삼동소바 창업절차">
+                <p class="process-tit">가맹상담</p>
+                <div class="process-content">
+                    방문, 현장, 유선을<br>
+                    통해 창업 상담
+                </div>
+            </div>
+            <img src="img/process-arrow.svg" alt="삼동소바 창업절차">
+            <div class="process-box">
+                <p class="process-num">02</p>
+                <img src="img/process-icon2.png" alt="삼동소바 창업절차">
+                <p class="process-tit">입지/상권조사</p>
+                <div class="process-content">
+                    개별 지역 상권 조사 및<br>
+                    점포 최적의 입지 선정
+                </div>
+            </div>
+            <img src="img/process-arrow.svg" alt="삼동소바 창업절차">
+            <div class="process-box">
+                <p class="process-num">03</p>
+                <img src="img/process-icon3.png" alt="삼동소바 창업절차">
+                <p class="process-tit">점포/가맹계약</p>
+                <div class="process-content">
+                    가맹점개설 승인<br>
+                    계약서 작성<br>
+                    본사와의 가맹계약
+                </div>
+            </div>
+            <img src="img/process-arrow.svg" alt="삼동소바 창업절차">
+            <div class="process-box">
+                <p class="process-num">04</p>
+                <img src="img/process-icon4.png" alt="삼동소바 창업절차">
+                <p class="process-tit">시설공사</p>
+                <div class="process-content">
+                    도면 협의 및 공사 일정<br>
+                    확인 후 시설 공사
+                </div>
+            </div>
+            <img src="img/process-arrow.svg" alt="삼동소바 창업절차" class="mo-arrow">
+            <div class="process-box">
+                <p class="process-num">05</p>
+                <img src="img/process-icon5.png" alt="삼동소바 창업절차">
+                <p class="process-tit">가맹점 교육</p>
+                <div class="process-content">
+                    인테리어 공사 기간동안<br>
+                    가맹점주 교육
+                </div>
+            </div>
+            <img src="img/process-arrow.svg" alt="삼동소바 창업절차">
+            <div class="process-box">
+                <p class="process-num">06</p>
+                <img src="img/process-icon6.png" alt="삼동소바 창업절차">
+                <p class="process-tit">매장 영업 준비</p>
+                <div class="process-content">
+                    식자재 및 매장 운영에<br>
+                    필요한 초도 물품 공급<br>
+                    및 오픈 교육
+                </div>
+            </div>
+            <img src="img/process-arrow.svg" alt="삼동소바 창업절차" data-aos="flip-left" data-aos-duration="600">
+            <div class="process-box">
+                <p class="process-num">07</p>
+                <img src="img/process-icon7.png" alt="삼동소바 창업절차">
+                <p class="process-tit">그랜드 오픈</p>
+                <div class="process-content">
+                    본사 지원 인력과 함께<br>
+                    매장 오픈 및 운영
+                </div>
+            </div>
+            <img src="img/process-arrow.svg" alt="삼동소바 창업절차">
+            <div class="process-box">
+                <p class="process-num">08</p>
+                <img src="img/process-icon8.png" alt="삼동소바 창업절차">
+                <p class="process-tit">사후 관리</p>
+                <div class="process-content">
+                    SNS 및 브랜드 마케팅<br>
+                    신제품 개발
+                </div>
+            </div>
         </div>
     </div>
 </div>
