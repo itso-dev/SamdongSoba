@@ -808,6 +808,15 @@ select {
     line-height: normal;
     letter-spacing: -1.8px;
 }
+.text40{
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 48px */
+    letter-spacing: -1px;
+}
 .text34{
     font-family: Pretendard;
     font-size: 34px;
@@ -854,6 +863,9 @@ select {
 .white{
     color: #fff;
 }
+.gold{
+    color: #D0B18B;
+}
 .p120{
     padding: 120px 0;
     position: relative;
@@ -861,7 +873,7 @@ select {
     width: 100%;
 }
 .tit-deco{
-    width: 165px;
+    width: 380px;
     margin: 0 auto 20px;
     display: block;
 }
@@ -878,6 +890,26 @@ select {
     position: absolute;
     inset: 0;
     background: var(--Red, #D02326);
+    transform: scaleX(var(--fill, 0));   /* ✅ JS에서 --fill 변경 */
+    transform-origin: left center;
+    z-index: -1;
+    will-change: transform;
+}
+.line-animation2::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #5B373B;
+    transform: scaleX(var(--fill, 0));   /* ✅ JS에서 --fill 변경 */
+    transform-origin: left center;
+    z-index: -1;
+    will-change: transform;
+}
+.line-animation3::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0B080C;
     transform: scaleX(var(--fill, 0));   /* ✅ JS에서 --fill 변경 */
     transform-origin: left center;
     z-index: -1;
@@ -973,9 +1005,14 @@ select {
         font-size: 28px;
         letter-spacing: -0.7px;
     }
-
+    .text72{
+        font-size: 65px;
+    }
     .txt34{
         font-size: 30px;
+    }
+    .text28{
+        font-size: 25px;
     }
     .text20{
         font-size: 18px;
@@ -1050,6 +1087,18 @@ select {
     .p120{
         padding: 100px 0;
     }
+    .text72 {
+        font-size: 55px;
+    }
+    .text40{
+        font-size: 38px;
+    }
+    .text32{
+        font-size: 30px;
+    }
+    .text28 {
+        font-size: 23px;
+    }
 }
 
 @media(max-width: 900px) {
@@ -1078,6 +1127,18 @@ select {
     }
     .p120{
         padding: 80px 0;
+    }
+    .text72 {
+        font-size: 45px;
+    }
+    .text40{
+        font-size: 36px;
+    }
+    .text32{
+        font-size: 28px;
+    }
+    .text28 {
+        font-size: 20px;
     }
 }
 
@@ -1119,8 +1180,26 @@ select {
     .top-line {
         width: 300%;
     }
+    .text72 {
+        font-size: 40px;
+    }
+    .text40{
+        font-size: 32px;
+    }
+    .text32{
+        font-size: 25px;
+    }
     .text34{
-
+        font-size: 30px;
+    }
+    .text28 {
+        font-size: 18px;
+    }
+    .text20 {
+        font-size: 17px;
+    }
+    .tit-deco {
+        width: 225px;
     }
 }
 
@@ -1142,11 +1221,49 @@ select {
     .top-line {
         width: 400%;
     }
+    .text34 {
+        font-size: 26px;
+    }
+    .text28 {
+        font-size: 15px;
+    }
+    .page2 .flex-wrap .left-wrap .top-wrap .item svg {
+        width: 50px;
+        margin-bottom: 12px;
+    }
+    .page2 .flex-wrap .left-wrap .top-wrap {
+        width: 300px;
+    }
+    .page2 .flex-wrap .left-wrap .page-logo {
+        margin: 20px 0 60px !important;
+    }
+    .page2 .flex-wrap {
+        flex-direction: column;
+        gap: 180px !important;
+    }
 }
 
 @media(max-width: 400px) {
     .xxs-br {
         display: block;
+    }
+    .text34 {
+        font-size: 24px;
+    }
+    .text20 {
+        font-size: 15px;
+    }
+    .page2 .flex-wrap .left-wrap .top-wrap {
+        width: 280px;
+    }
+    .page2 .flex-wrap .left-wrap .top-wrap .item .txt{
+        font-size: 14px
+    }
+    .page2 .flex-wrap .left-wrap .top-wrap .item svg {
+        width: 48px;
+    }
+    .page2 .flex-wrap .right-wrap .youtube-wrap{
+        font-size: 18px !important;
     }
 }
 

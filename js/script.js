@@ -45,6 +45,66 @@ window.addEventListener("load", () => {
             });
         });
     });
+    //page4 제목
+    document.querySelectorAll(".page4 .sales-container .tit-wrap").forEach((el) => {
+        // 초기값(혹시 CSS가 늦게 먹는 환경 대비)
+        gsap.set(el, {
+            clipPath: "inset(0 50% 0 50%)",
+            opacity: 0,
+            y: 10
+        });
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: el,
+                start: "top 80%",
+                toggleActions: "play none none reverse",
+                // markers: true
+            }
+        })
+            .to(el, {
+                opacity: 1,
+                y: 0,
+                duration: 0.45,
+                ease: "power2.out"
+            }, 0)
+            .to(el, {
+                clipPath: "inset(0 0% 0 0%)", // 가운데 → 양옆
+                duration: 0.7,
+                ease: "power2.out"
+            }, 0);
+    });
+    //page4 도장
+    let tl2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".page4 .flex-wrap",
+            start: "top 40%",
+            toggleActions: "play none none reset",
+            // markers: true,
+        }
+    });
+    tl2.fromTo(".page4 .mark",
+        {
+            scale: 3,
+            opacity: 0,
+            filter: "blur(16px)",
+        },
+        {
+            scale: 1,
+            opacity: 1,
+            filter: "blur(0px)",
+            duration: 0.2,
+            ease: "power2.in"
+        }
+    ).to(".page4 .mark", {
+        duration: 0.3,
+        ease: "power2.out"
+    }, "+=0.4");
+
+
+
+    // 이미지/폰트 로딩 후 위치 변동 대비
+    ScrollTrigger.refresh();
 });
 
 
