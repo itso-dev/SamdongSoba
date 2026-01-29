@@ -313,19 +313,33 @@ if ($popup_stt->rowCount() > 0) {
     </div>
 </div>
 
+<div id="cost" class="pg-padding">
+    <div class="pg-container">
+        <div class="pg-top-div">
+            <img src="img/pg-top-icon.png" alt="삼동소바">
+            <p class="text72">창업절차</p>
+        </div>
+    </div>
+</div>
+
 <div id="contact">
+    <img src="img/top-red-line.png" alt="삼동소바" class="top-line">
     <div class="contact-container">
         <div class="contact-left">
             <div class="contact-left-div">
                 <img src="img/head-logo.png" alt="삼동소바" class="contact-logo">
                 <p class="text72 w">창업문의</p>
             </div>
-            <div class="contact-left-txt">
-                부동산 가치 분석이 포함된 삼동소바 창업 컨설팅을 신청하세요.<br>
-                영업일 기준 2-3일 내에 삼동소바 창업컨설턴트가 연락을 드립니다.
+            <div class="text20 w">
+                부동산 가치 분석이 포함된<br class="mo-br"> 삼동소바 창업 컨설팅을 신청하세요.<br>
+                영업일 기준 2-3일 내에 삼동소바<br class="mo-br"> 창업컨설턴트가 연락을 드립니다.
+            </div>
+            <div class="contact-img-div">
+                <img src="img/contact-img.png" alt="삼동소바" class="contact-img fadeRight pc-img">
+                <img src="img/contact-mo-img.png" alt="삼동소바" class="contact-img fadeRight mo-img">
             </div>
         </div>
-        <form class="contact-form" name="contact_form" id="contact_form" method="post" action="contact_write.php" data-aos="fade-up" data-aos-duration="800">
+        <form class="contact-form fadeUp" name="contact_form" id="contact_form" method="post" action="contact_write.php">
             <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
             <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-1">
             <input type="hidden" name="writer_ip" value="<?= get_client_ip() ?>" />
@@ -335,13 +349,13 @@ if ($popup_stt->rowCount() > 0) {
             <input type="hidden" name="stay_time" id="stay_time" value="0" />
 
             <div class="contact-inner">
-                <div class="flex-input">
+                <div class="contact-form-div">
                     <div class="item">
                         <div class="label">
                             <label for="name">성함</label>
                         </div>
                         <div class="input">
-                            <input type="text" id="name" name="name" placeholder="성함" required>
+                            <input type="text" id="name" name="name" required>
                         </div>
                     </div>
                     <div class="item">
@@ -349,57 +363,88 @@ if ($popup_stt->rowCount() > 0) {
                             <label for="phone">연락처</label>
                         </div>
                         <div class="input">
-                            <input type="tel" name="phone" id="phone-input" placeholder="연락처" required maxlength="11" inputmode="numeric">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-input">
-                    <div class="item">
-                        <div class="label">
-                            <label for="location">창업 희망 지역</label>
-                        </div>
-                        <div class="input">
-                            <input type="text" id="location" name="location" placeholder="창업 희망 지역" required>
+                            <input type="tel" name="phone" id="phone-input" required maxlength="11" inputmode="numeric">
                         </div>
                     </div>
                     <div class="item">
                         <div class="label">
-                            <label for="sort">창업형태</label>
+                            <label for="location">희망 지역</label>
                         </div>
-                        <div class="s-btn-wrap">
-                            <input type="hidden" name="sort" value="신규 창업">
-                            <div class="form-tab s-tab have">
-                                <span>신규 창업</span>
+                        <div class="input select-wrap">
+                            <input type="hidden" id="location" name="location" placeholder="선택" readonly>
+                            <div class="select-box" id="select-location-box">선택</div>
+                            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                            <path d="M2.52887 6.86572L1.72028 7.67432L8.75153 14.7056L9.15582 15.0923L9.56012 14.7056L16.5914 7.67432L15.7828 6.86572L9.15582 13.4927L2.52887 6.86572Z" fill="#505050"/>
+                            </svg>
+                            <div class="select-child" id="select-location-child">
+                                <div class="option" value="서울특별시">서울특별시</div>
+                                <div class="option" value="경기도">경기도</div>
+                                <div class="option" value="인천광역시">인천광역시</div>
+                                <div class="option" value="강원도">강원도</div>
+                                <div class="option" value="세종특별자치시">세종특별자치시</div>
+                                <div class="option" value="대전광역시">대전광역시</div>
+                                <div class="option" value="충청북도">충청북도</div>
+                                <div class="option" value="충청남도">충청남도</div>
+                                <div class="option" value="광주광역시">광주광역시</div>
+                                <div class="option" value="전라북도">전라북도</div>
+                                <div class="option" value="전라남도">전라남도</div>
+                                <div class="option" value="부산광역시">부산광역시</div>
+                                <div class="option" value="대구광역시">대구광역시</div>
+                                <div class="option" value="울산광역시">울산광역시</div>
+                                <div class="option" value="경상북도">경상북도</div>
+                                <div class="option" value="경상남도">경상남도</div>
+                                <div class="option" value="제주특별자치도">제주특별자치도</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="label">
+                            <label for="sort">신규창업/업종변경</label>
+                        </div>
+                        <div class="form-btn-wrap">
+                            <input type="hidden" name="sort" value="신규창업">
+                            <div class="form-tab s-tab this">
+                                <span>신규창업</span>
                             </div>
                             <div class="form-tab s-tab">
-                                <span>업종 변경</span>
+                                <span>업종변경</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="label">
+                            <label for="store">상가보유</label>
+                        </div>
+                        <div class="form-btn-wrap">
+                            <input type="hidden" name="store" value="유">
+                            <div class="form-tab store-tab have">
+                                <span>유</span>
+                            </div>
+                            <div class="form-tab store-tab">
+                                <span>무</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="label">
-                        <label for="phone">문의내용(선택)</label>
-                    </div>
-                    <div class="input">
-                        <textarea name="contact_desc" id="contact_desc" placeholder="문의 내용을 작성해주세요"></textarea>
-                    </div>
+                <div class="agree-wrap">
+                    <label class="checkbox-label">
+                        <input class="round-checkbox" type="checkbox" id="agree" name="agree" required>
+                    </label>
+                    <label for="agree" class="agree">개인정보취급방침을 읽었으며 이에 동의합니다. <span class="agree-open">[자세히보기]</span></label>
                 </div>
-                <div class="form-wrap">
-                    <div class="agree-wrap">
-                        <label class="checkbox-label">
-                            <input class="round-checkbox" type="checkbox" id="agree" name="agree" required>
-                        </label>
-                        <label for="agree" class="agree"><span class="agree-open">개인정보취급방침(보기)</span> 동의</label>
-                    </div>
-                    <input type="submit" value="문의하기" class="c-btn">
-                </div>
+                <button type="submit" class="c-btn">
+                    성공 사례 리포트 및 입지 분석 신청하기
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM8.98828 7.41211C8.43631 7.41225 7.98859 7.86018 7.98828 8.41211C7.98828 8.96431 8.43612 9.41197 8.98828 9.41211H13.459L7.13379 15.7373C6.74334 16.1278 6.74349 16.7608 7.13379 17.1514C7.52431 17.5419 8.15733 17.5419 8.54785 17.1514L14.873 10.8262V15.2969C14.873 15.8491 15.3208 16.2968 15.873 16.2969C16.4252 16.2967 16.873 15.8491 16.873 15.2969V8.41211C16.8727 7.86018 16.425 7.41225 15.873 7.41211H8.98828Z" fill="white"/>
+                    </svg>
+                </button>
             </div>
         </form>
 
     </div>
 </div>
 
+<script type="text/javascript" src="<?= $site_url ?>/js/script2.js"></script>
 
 <script type="text/javascript">
 
@@ -430,11 +475,101 @@ if ($popup_stt->rowCount() > 0) {
         },
     });
 
-
     const phoneInput = document.getElementById('phone-input');
 
     phoneInput.addEventListener('input', function () {
         this.value = this.value.replace(/[^0-9]/g, '');
+    });
+
+    function toggleSelectBox(boxSelector, childSelector) {
+        const currentEl = $(childSelector);
+
+        // 이미 열려 있는 다른 박스 모두 닫기
+        $(".select-child:visible").not(currentEl).each(function () {
+            gsap.to($(this), { 
+                height: 0, 
+                duration: 0.15, 
+                ease: "power2.out", 
+                onComplete: () => $(this).hide() 
+            });
+        });
+
+        if (currentEl.is(":visible")) {
+            gsap.to(currentEl, { 
+                height: 0, 
+                duration: 0.15, 
+                ease: "power2.out", 
+                onComplete: () => currentEl.hide() 
+            });
+        } else {
+            currentEl.show();
+            const height = currentEl[0].scrollHeight;
+            gsap.fromTo(currentEl, 
+                { height: 0 }, 
+                { height: height, duration: 0.15, ease: "power2.out" }
+            );
+        }
+    }
+
+    $(".contact-form").each(function () {
+        const $form = $(this);
+
+        $form.find("#select-location-box").on("click", function (e) {
+            e.stopPropagation();
+            toggleSelectBox($(this), $form.find("#select-location-child"));
+        });
+    });
+
+    $(".contact-form").each(function () {
+        var $form = $(this);
+
+        // 지역 선택
+        $form.find("#select-location-child .option").click(function (){
+            var txt = $(this).text();
+            var value = $(this).attr("value");
+
+            $form.find("#location").val(value);
+            $form.find("#select-location-box").text(txt).addClass("selected");
+            $form.find("#select-location-child").slideUp(300);
+        });
+
+    });
+
+    $(document).on("click", function (e) {
+        if (!$(e.target).closest(".select-box, .select-child").length) {
+            $(".select-child:visible").each(function () {
+                gsap.to($(this), { 
+                    height: 0, 
+                    duration: 0.15, 
+                    ease: "power2.out", 
+                    onComplete: () => $(this).hide() 
+                });
+            });
+        }
+    });
+
+    $(".form-btn-wrap .s-tab").click(function() {
+
+        $(".form-btn-wrap .s-tab").removeClass("this");
+
+        $(this).addClass("this");
+
+        var text = $(".this > span").text();
+
+        $("input[name=sort]").val(text);
+
+    });
+
+    $(".form-btn-wrap .store-tab").click(function() {
+
+        $(".form-btn-wrap .store-tab").removeClass("have");
+
+        $(this).addClass("have");
+
+        var text = $(".have > span").text();
+
+        $("input[name=store]").val(text);
+
     });
 
     // 페이지 진입 시간 저장
