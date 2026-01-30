@@ -101,10 +101,32 @@ window.addEventListener("load", () => {
         ease: "power2.out"
     }, "+=0.4");
 
-
-
     // 이미지/폰트 로딩 후 위치 변동 대비
     ScrollTrigger.refresh();
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const inner = document.querySelector(".rolling-inner");
+    const items = document.querySelectorAll(".rolling-inner .item");
+    const itemHeight = items[0].offsetHeight;
+    let index = 0;
+
+    // 마지막 아이템 복제 → 자연스럽게 루프
+    inner.appendChild(items[0].cloneNode(true));
+
+    setInterval(() => {
+        index++;
+        inner.style.transition = "transform 0.5s ease";
+        inner.style.transform = `translateY(-${itemHeight * index}px)`;
+
+        // 끝에 도달하면 순간 리셋
+        if (index === items.length) {
+            setTimeout(() => {
+                inner.style.transition = "none";
+                inner.style.transform = "translateY(0)";
+                index = 0;
+            }, 500);
+        }
+    }, 1500); // 2초마다 변경
+});

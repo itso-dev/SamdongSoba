@@ -879,7 +879,8 @@ select {
 }
 .line-animation1,
 .line-animation2,
-.line-animation3{
+.line-animation3,
+.line-animation4{
     padding: 2px 7px 2px 5px;
     overflow: hidden;
     z-index: 0;
@@ -910,6 +911,16 @@ select {
     position: absolute;
     inset: 0;
     background: #0B080C;
+    transform: scaleX(var(--fill, 0));   /* ✅ JS에서 --fill 변경 */
+    transform-origin: left center;
+    z-index: -1;
+    will-change: transform;
+}
+.line-animation4::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #773E2A;
     transform: scaleX(var(--fill, 0));   /* ✅ JS에서 --fill 변경 */
     transform-origin: left center;
     z-index: -1;
@@ -957,6 +968,71 @@ select {
     left: 0;
     top: 0;
 }
+
+.pg-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    z-index: 5;
+}
+
+.pg-container {
+    border: 1px solid #5B373B;
+    background: #FFF;
+    position: relative;
+}
+
+.bottom-line {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.red-btn {
+    display: flex;
+    box-sizing: border-box;
+    padding: 16px 32px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+    background: #D02326;
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    color: #FFF;
+    font-family: "ON YeossihyangyakeonhaeOTF";
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 120%; /* 33.6px */
+    letter-spacing: -0.7px;
+}
+
+.red-btn:hover {
+    background: #A61C1E;
+}
+
+.contain-active {
+    display: flex !important;
+}
+
+.circle-sub {
+    display: flex;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #773E2A;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.8px;
+    border-radius: 99px;
+    border: 1px solid #773E2A;
+}
+
 
 @media(max-width: 1280px) {
     #header {
@@ -1019,6 +1095,16 @@ select {
     }
     .top-line {
         width: 150%;
+    }
+    .pg-padding {
+        padding: 30px;
+    }
+    .bottom-line {
+        width: 150%;
+    }
+    .circle-sub {
+        font-size: 28px;
+        letter-spacing: -0.7px;
     }
 }
 
@@ -1099,6 +1185,10 @@ select {
     .text28 {
         font-size: 23px;
     }
+    .circle-sub {
+        font-size: 24px;
+        letter-spacing: -0.6px;
+    }
 }
 
 @media(max-width: 900px) {
@@ -1115,6 +1205,19 @@ select {
     }
     .top-line {
         width: 200%;
+    }
+    .red-btn {
+        padding: 12px 20px;
+        font-size: 24px;
+        letter-spacing: -0.6px;
+    }
+    .bottom-line {
+        width: 200%;
+    }
+    .circle-sub {
+        font-size: 20px;
+        letter-spacing: -0.5px;
+        padding: 8px 16px;
     }
 }
 
@@ -1139,6 +1242,9 @@ select {
     }
     .text28 {
         font-size: 20px;
+    }
+    .pg-padding {
+        padding: 20px;
     }
 }
 
@@ -1201,6 +1307,14 @@ select {
     .tit-deco {
         width: 225px;
     }
+    .bottom-line {
+        width: 300%;
+    }
+    .circle-sub {
+        font-size: 18px;
+        letter-spacing: -0.45px;
+        padding: 8px 12px;
+    }
 }
 
 @media(max-width: 480px) {
@@ -1227,19 +1341,16 @@ select {
     .text28 {
         font-size: 15px;
     }
-    .page2 .flex-wrap .left-wrap .top-wrap .item svg {
-        width: 50px;
-        margin-bottom: 12px;
+
+    .text72 {
+        font-size: 35px;
     }
-    .page2 .flex-wrap .left-wrap .top-wrap {
-        width: 300px;
+    .bottom-line {
+        width: 400%;
     }
-    .page2 .flex-wrap .left-wrap .page-logo {
-        margin: 20px 0 60px !important;
-    }
-    .page2 .flex-wrap {
-        flex-direction: column;
-        gap: 180px !important;
+    .circle-sub {
+        font-size: 16px;
+        letter-spacing: -0.4px;
     }
 }
 
@@ -1253,18 +1364,7 @@ select {
     .text20 {
         font-size: 15px;
     }
-    .page2 .flex-wrap .left-wrap .top-wrap {
-        width: 280px;
-    }
-    .page2 .flex-wrap .left-wrap .top-wrap .item .txt{
-        font-size: 14px
-    }
-    .page2 .flex-wrap .left-wrap .top-wrap .item svg {
-        width: 48px;
-    }
-    .page2 .flex-wrap .right-wrap .youtube-wrap{
-        font-size: 18px !important;
-    }
+
 }
 
 @media(max-width: 370px) {

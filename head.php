@@ -2,8 +2,8 @@
 header('P3P: CP="NOI CURa ADMa DEVa TAIa OUR DELa BUS IND PHY ONL UNI COM NAV INT DEM PRE"');
 session_start();
 
-$site_path = $_SERVER["DOCUMENT_ROOT"]."/SamdongSoba";
-$site_url = "http://".$_SERVER["HTTP_HOST"]."/SamdongSoba";
+$site_path = $_SERVER["DOCUMENT_ROOT"]."/Samdong";
+$site_url = "http://".$_SERVER["HTTP_HOST"]."/Samdong";
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
