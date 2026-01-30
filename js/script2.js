@@ -3,6 +3,188 @@ ScrollTrigger.config({autoRefreshEvents: "visibilitychange,DOMContentLoaded,load
 let mm = gsap.matchMedia();
 let timeoutClear;
 
+let countUp = false;
+let countUp2 = false;
+
+
+window.addEventListener('scroll', function() {
+  let scroll = window.scrollY;
+
+  let profit1Top = document.getElementById('profit-box1').offsetTop - 200;
+
+  if (scroll >= profit1Top && !countUp) {
+
+    let countBox = document.querySelector('#number1');
+    let count = 0;
+    let number1 = 147750000;
+
+    let counting = setInterval(function () {
+        if (count >= number1) {
+            count = number1;
+            clearInterval(counting);
+        } else {
+            count += 1477500;
+        }
+        countBox.innerHTML = new Intl.NumberFormat().format(count);
+    }, 10);
+
+    countUp = true;
+
+  }
+
+  let profit2Top = document.getElementById('profit-box2').offsetTop - 200;
+
+  if (scroll >= profit2Top && !countUp2) {
+
+    let countBox2 = document.querySelector('#number2');
+    let count2 = 0;
+    let number2 = 91900000;
+
+    let counting = setInterval(function () {
+        if (count2 >= number2) {
+            count2 = number2;
+            clearInterval(counting);
+        } else {
+            count2 += 919000;
+        }
+        countBox2.innerHTML = new Intl.NumberFormat().format(count2);
+    }, 10);
+
+    countUp2 = true;
+
+  }
+
+});
+
+
+const auto = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".auto-container",
+    start: "top 40%",
+    toggleActions: "play none none reset",
+  }
+});
+
+const items = gsap.utils.toArray(".auto-item .auto-txt");
+
+items.forEach((item, i) => {
+  auto.fromTo(
+    item,
+    {
+      clipPath: "inset(0 50% 0 50%)",
+    },
+    {
+      clipPath: "inset(0% 0 0 0)",
+      duration: 0.2,
+      ease: "power2.out"
+    },
+  );
+
+  auto.add(i === 0 ? 0 : "+=0.1");
+});
+
+var edu = new Swiper(".edu-swiper-container", {
+  slidesPerView: 3,
+  spaceBetween: 0,
+  loop: true,
+  direction: "vertical",
+  autoplay: {
+    delay: 1800,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 16
+    },
+    650: {
+      slidesPerView: 3,
+      spaceBetween: 16
+    },
+  },
+});
+
+$(document).ready(function() {
+  let swipers = {};
+
+  $(".menu-swiper").each(function (index) {
+    let swiperId = "menuSwiper" + index; 
+
+    swipers[swiperId] = new Swiper(this, {
+      slidesPerView: 3,
+      spaceBetween: 0,
+      loop: true,
+      centeredSlides: false,
+      autoplay: { 
+        delay: 0,
+        disableOnInteraction: false,
+      }, 
+      // initialSlide: 2,
+      speed: 2500,
+      breakpoints: {
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 0,
+        },
+        1024: {
+          slidesPerView: 2.5,
+          spaceBetween: 0,
+        },
+        900: {
+          slidesPerView: 2.1,
+          spaceBetween: 0,
+        },
+        650: {
+          slidesPerView: 2.5,
+          spaceBetween: 0,
+        },
+        400: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        0: {
+          slidesPerView: 1.7,
+          spaceBetween: 0,
+        }
+      },
+      a11y: false,
+    });
+  });
+
+  $("#menu-tab1").addClass("contain-active");
+
+  const firstSwiperKey = Object.keys(swipers)[0];
+  if (firstSwiperKey) {
+    swipers[firstSwiperKey].update();
+    swipers[firstSwiperKey].autoplay.start();
+  }
+
+  let tabs = $(".menu-tab");
+
+  tabs.click(function () {
+    tabs.removeClass("active");
+    $(".menu-wrap").removeClass("contain-active");
+
+    let tab_id = $(this).attr("data-tab");
+    $(this).addClass("active");
+    $("#" + tab_id).addClass("contain-active");
+    
+    // Swiper 업데이트
+    let activeSwiper = $("#" + tab_id).find(".menu-swiper").get(0);
+    
+    if (activeSwiper) {
+        let swiperKey = Object.keys(swipers).find((key) => swipers[key].el === activeSwiper);
+        if (swiperKey) {
+            swipers[swiperKey].update();
+            swipers[swiperKey].slideToLoop(0, 0);
+            // swipers[swiperKey].setTranslate(0);
+            swipers[swiperKey].autoplay.start();
+        }
+    }
+  });
+
+});
+
 $("#interior-tab1").addClass("contain-active");
 
   let Itabs = $(".interior-tab");
