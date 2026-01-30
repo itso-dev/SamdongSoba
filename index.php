@@ -678,21 +678,21 @@ if ($popup_stt->rowCount() > 0) {
             </svg>
             <img class="tit-deco" src="<?= $site_url ?>/img/tit-deco.png" />
             <p class="text72 font-style mask">
-                 <span class="red">랜드마크형</span> <span>최고 매출</span> <span class="line-animation line-animation1 white">2억 3,000만원</span><br>
-                 <span class="red">스탠다드형</span> <span>최고 매출</span> <span class="line-animation line-animation1 white">9,800만원</span>
+                 <span class="red">랜드마크형</span> <span>최고 매출</span> <br class="mi-br"><span class="line-animation line-animation1 white">2억 3,000만원</span><br>
+                 <span class="red">스탠다드형</span> <span>최고 매출</span> <br class="mi-br"><span class="line-animation line-animation1 white">9,800만원</span>
             </p>
             <p class="text28">
-                점주님의 예산과 목표 매출에 따라 다른 타입으로 창업이 가능합니다.<br>
-                상담 신청 시 삼동소바 창업 컨설턴트가 타입 선택을 도와드립니다.
+                점주님의 예산과 목표 매출에 따라 <br class="mo-br">다른 타입으로 창업이 가능합니다.<br>
+                상담 신청 시 삼동소바 창업 컨설턴트가 <br class="mo-br">타입 선택을 도와드립니다.
             </p>
             <div class="table-wrap">
                 <table>
                     <tr>
                         <td class="black-bg">구분</td>
-                        <td class="brown-bg">랜드마크형 (평균 매출)</td>
-                        <td class="brown-bg">랜드마크형 (최고 매출)</td>
-                        <td class="black-bg">스탠다드형 (평균 매출)</td>
-                        <td class="black-bg">스탠다드형 (최고 매출)</td>
+                        <td class="brown-bg">랜드마크형 <br>(평균 매출)</td>
+                        <td class="brown-bg">랜드마크형 <br>(최고 매출)</td>
+                        <td class="black-bg">스탠다드형 <br>(평균 매출)</td>
+                        <td class="black-bg">스탠다드형 <br>(최고 매출)</td>
                     </tr>
                     <tr>
                         <td>월 매출</td>
@@ -700,25 +700,75 @@ if ($popup_stt->rowCount() > 0) {
                             <strong>1억 3천 650만원</strong>
                             <p class="small">25년 7월</p>
                         </td>
-                        <td><img class="stamp1" src="<?= $site_url ?>/img/page10-stamp1.png"/></td>
+                        <td>
+                            <img class="stamp stamp1 pc-stamp" src="<?= $site_url ?>/img/page10-stamp1.png"/>
+                            <img class="stamp stamp1 mo-stamp" src="<?= $site_url ?>/img/page10-stamp1-mo.png"/>
+                        </td>
                         <td>
                             <strong>6,900만원</strong>
                             <p class="small">25년 7월</p>
                         </td>
-                        <td><img class="stamp1" src="<?= $site_url ?>/img/page10-stamp2.png"/></td>
+                        <td>
+                            <img class="stamp stamp1 pc-stamp" src="<?= $site_url ?>/img/page10-stamp2.png"/>
+                            <img class="stamp stamp1 mo-stamp" src="<?= $site_url ?>/img/page10-stamp2-mo.png"/>
+                        </td>
                     </tr>
-                    <tr>
+                    <tr class="h">
                         <td><strong>총 비용 (68%)</strong></td>
-                        <td colspan="4"><strong>총 비용 (68%) 구성</strong> : 원가 + 인건비 + 임대료 + 로열티 + 기타비용</td>
+                        <td colspan="4"><strong>총 비용 (68%) 구성</strong> : <br>원가 + 인건비 + 임대료 + 로열티 + 기타비용</td>
                     </tr>
                     <tr>
-                        <td class="brown-bg">순이익 (35%)</td>
+                        <td class="brown-bg">순이익 <br>(35%)</td>
                         <td class="brown-bg">5,250만원</td>
-                        <td class="brown-bg"><img class="stamp2" src="<?= $site_url ?>/img/page10-stamp3.png"/></td>
+                        <td class="brown-bg">
+                            <img class="stamp stamp2 pc-stamp" src="<?= $site_url ?>/img/page10-stamp3.png"/>
+                            <img class="stamp stamp2 mo-stamp" src="<?= $site_url ?>/img/page10-stamp3-mo.png"/>
+                        </td>
                         <td class="brown-bg">2,550만원</td>
-                        <td class="brown-bg"><img class="stamp2" src="<?= $site_url ?>/img/page10-stamp4.png"/></td>
+                        <td class="brown-bg">
+                            <img class="stamp stamp2 pc-stamp" src="<?= $site_url ?>/img/page10-stamp4.png"/>
+                            <img class="stamp stamp2 mo-stamp" src="<?= $site_url ?>/img/page10-stamp4-mo.png"/>
+                        </td>
                     </tr>
                 </table>
+            </div>
+            <p class="bottom" onclick="location.href='#contact'">
+                삼동소바 창업 문의
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM8.98828 7.41211C8.43631 7.41225 7.98859 7.86018 7.98828 8.41211C7.98828 8.96431 8.43612 9.41197 8.98828 9.41211H13.459L7.13379 15.7373C6.74334 16.1278 6.74349 16.7608 7.13379 17.1514C7.52431 17.5419 8.15733 17.5419 8.54785 17.1514L14.873 10.8262V15.2969C14.873 15.8491 15.3208 16.2968 15.873 16.2969C16.4252 16.2967 16.873 15.8491 16.873 15.2969V8.41211C16.8727 7.86018 16.425 7.41225 15.873 7.41211H8.98828Z" fill="white"/>
+                </svg>
+            </p>
+        </div>
+    </div>
+    <div class="page11">
+        <div class="tit-wrap">
+            <span class="text40 font-style red">삼동소바</span>
+            <span class="text32 font-style">브랜드 이야기</span>
+        </div>
+        <div class="flex-wrap">
+            <div class="text-wrap">
+                <p class="txt1">100년을 이어갈 한국식 소바 문화를 만듭니다.</p>
+                <p class="txt2">장인정신 백년소바</p>
+                <p class="txt3">
+                    삼동소바는<br>
+                    <strong>제대로 만든 한 그릇은 시간이 지날수록<br>
+                    그 가치가 더욱 분명해진다고 믿습니다.</strong><br>
+                    <br>
+                    일본 현지에서 습득한 제면 기술을 기반으로,<br>
+                    쉽게 모방할 수 없는 맛과 질감을 구현합니다.<br>
+                    <br>
+                    6개월이면 누구나 흉내 낼 수 있는 음식이 아닌,<br>
+                    기술·완성도·접객의 태도까지 갖춘 한 그릇.<br>
+                    <br>
+                    좋은 손님이 자연스럽게 모이는 외식 공간으로,<br>
+                    운영할수록 더 높은 가치로 평가받는<br>
+                    브랜드를 만들어가겠습니다.
+                </p>
+            </div>
+            <div class="img-wrap">
+                <img class="img" src="<?= $site_url?>/img/page11-img2.png">
+                <img class="cloud1" src="<?= $site_url?>/img/page11-cloud.png">
+                <img class="cloud2" src="<?= $site_url?>/img/page11-cloud.png">
             </div>
         </div>
     </div>
