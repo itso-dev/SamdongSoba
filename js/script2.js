@@ -3,6 +3,86 @@ ScrollTrigger.config({autoRefreshEvents: "visibilitychange,DOMContentLoaded,load
 let mm = gsap.matchMedia();
 let timeoutClear;
 
+let countUp = false;
+let countUp2 = false;
+
+
+window.addEventListener('scroll', function() {
+  let scroll = window.scrollY;
+
+  let profit1Top = document.getElementById('profit-box1').offsetTop - 200;
+
+  if (scroll >= profit1Top && !countUp) {
+
+    let countBox = document.querySelector('#number1');
+    let count = 0;
+    let number1 = 147750000;
+
+    let counting = setInterval(function () {
+        if (count >= number1) {
+            count = number1;
+            clearInterval(counting);
+        } else {
+            count += 1477500;
+        }
+        countBox.innerHTML = new Intl.NumberFormat().format(count);
+    }, 10);
+
+    countUp = true;
+
+  }
+
+  let profit2Top = document.getElementById('profit-box2').offsetTop - 200;
+
+  if (scroll >= profit2Top && !countUp2) {
+
+    let countBox2 = document.querySelector('#number2');
+    let count2 = 0;
+    let number2 = 91900000;
+
+    let counting = setInterval(function () {
+        if (count2 >= number2) {
+            count2 = number2;
+            clearInterval(counting);
+        } else {
+            count2 += 919000;
+        }
+        countBox2.innerHTML = new Intl.NumberFormat().format(count2);
+    }, 10);
+
+    countUp2 = true;
+
+  }
+
+});
+
+
+const auto = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".auto-container",
+    start: "top 40%",
+    toggleActions: "play none none reset",
+  }
+});
+
+const items = gsap.utils.toArray(".auto-item .auto-txt");
+
+items.forEach((item, i) => {
+  auto.fromTo(
+    item,
+    {
+      clipPath: "inset(0 50% 0 50%)",
+    },
+    {
+      clipPath: "inset(0% 0 0 0)",
+      duration: 0.2,
+      ease: "power2.out"
+    },
+  );
+
+  auto.add(i === 0 ? 0 : "+=0.1");
+});
+
 var edu = new Swiper(".edu-swiper-container", {
   slidesPerView: 3,
   spaceBetween: 0,
