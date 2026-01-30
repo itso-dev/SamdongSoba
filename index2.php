@@ -313,6 +313,459 @@ if ($popup_stt->rowCount() > 0) {
     </div>
 </div>
 
+<div id="edu" class="pg-padding">
+    <div class="edu-inner">
+        <div class="edu-top-div">
+            <p class="circle-sub w">삼동소바 경쟁력 04</p>
+            <div class="text72 w">'장사의 달인'에게 배우는<br>
+            장사 수업 삼동소바 학교</div>
+            <div class="text28">
+                단순 조리 교육이 아닌,<br class="mo-br"> 삼동소바의 기술·철학·운영 체계를<br>
+                체계적으로 학습할 수 있는<br class="xs-br"> 심화 교육 프로그램을 제공합니다.
+            </div>
+        </div>
+        <div class="edu-swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="edu-item">
+                        삼동소바 장인정신 운영 철학 교육
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="edu-item">
+                        삼동소바 자가제면 기술 도제식 교육
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="edu-item">
+                        매장 운영 및 마케팅 실무 교육
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="edu-item">
+                        삼동소바 장인정신 운영 철학 교육
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="edu-item">
+                        삼동소바 자가제면 기술 도제식 교육
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="edu-item">
+                        매장 운영 및 마케팅 실무 교육
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="menu">
+    <img src="img/top-brown-line.png" alt="삼동소바" class="top-line">
+    <img src="img/bottom-brown-line.png" alt="삼동소바" class="bottom-line">
+    <img src="img/menu-bg-icon.png" alt="삼동소바" class="menu-bg-icon">
+    <div class="pg-top-div">
+        <img src="img/pg-top-icon.png" alt="삼동소바">
+        <p class="text72">삼동소바 메뉴</p>
+    </div>
+    <div class="menu-container">
+        <div class="tab-wrap">
+            <div class="common-tab active menu-tab" data-tab="menu-tab1">
+                <p class="tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 0C10.2091 0 12 1.79086 12 4C14.2091 4 16 5.79086 16 8C16 10.2091 14.2091 12 12 12C12 14.2091 10.2091 16 8 16C5.79086 16 4 14.2091 4 12C1.79086 12 0 10.2091 0 8C0 5.79086 1.79086 4 4 4C4 1.79086 5.79086 0 8 0Z" fill="#773E2A"/>
+                    </svg>
+                    정식메뉴
+                </p>
+            </div>
+            <div class="common-tab menu-tab" data-tab="menu-tab2">
+                <p class="tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 0C10.2091 0 12 1.79086 12 4C14.2091 4 16 5.79086 16 8C16 10.2091 14.2091 12 12 12C12 14.2091 10.2091 16 8 16C5.79086 16 4 14.2091 4 12C1.79086 12 0 10.2091 0 8C0 5.79086 1.79086 4 4 4C4 1.79086 5.79086 0 8 0Z" fill="#773E2A"/>
+                    </svg>
+                    메인메뉴
+                </p>
+            </div>
+            <div class="common-tab menu-tab" data-tab="menu-tab3">
+                <p class="tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 0C10.2091 0 12 1.79086 12 4C14.2091 4 16 5.79086 16 8C16 10.2091 14.2091 12 12 12C12 14.2091 10.2091 16 8 16C5.79086 16 4 14.2091 4 12C1.79086 12 0 10.2091 0 8C0 5.79086 1.79086 4 4 4C4 1.79086 5.79086 0 8 0Z" fill="#773E2A"/>
+                    </svg>
+                    신메뉴
+                </p>
+            </div>
+        </div>
+        <div class="menu-wrap" id="menu-tab1">
+            <div class="fixed-div"></div>
+            <div class="menu-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/set1.png" alt="삼동소바 정식메뉴 삼동소바 정식">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Samdong Soba SET</p>
+                                    <div class="menu-tit-div">
+                                        <p>삼동소바 정식</p>
+                                    </div>
+                                </div>
+                                <p class="menu-des">삼동소바+돈가스single</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/set2.png" alt="삼동소바 정식메뉴 온소바 정식">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Hot Soba SET</p>
+                                    <div class="menu-tit-div">
+                                        <p>온소바 정식</p>
+                                    </div>
+                                </div>
+                                <p class="menu-des">온소바+돈가스single</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/set3.png" alt="삼동소바 정식메뉴 오동통 우동 정식">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Udon SET</p>
+                                    <div class="menu-tit-div">
+                                        <p>오동통 우동 정식</p>
+                                    </div>
+                                </div>
+                                <p class="menu-des">사누끼우동+돈가스single</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/set4.png" alt="얼큰 오동통 얼큰 오동통 우동 정식">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Spicy Udon SET</p>
+                                    <div class="menu-tit-div">
+                                        <p>얼큰 오동통 우동 정식</p>
+                                    </div>
+                                </div>
+                                <p class="menu-des">얼큰우동+돈가스single</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/set1.png" alt="삼동소바 정식메뉴 삼동소바 정식">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Samdong Soba SET</p>
+                                    <div class="menu-tit-div">
+                                        <p>삼동소바 정식</p>
+                                    </div>
+                                </div>
+                                <p class="menu-des">삼동소바+돈가스single</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/set2.png" alt="삼동소바 정식메뉴 온소바 정식">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Hot Soba SET</p>
+                                    <div class="menu-tit-div">
+                                        <p>온소바 정식</p>
+                                    </div>
+                                </div>
+                                <p class="menu-des">온소바+돈가스single</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/set3.png" alt="삼동소바 정식메뉴 오동통 우동 정식">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Udon SET</p>
+                                    <div class="menu-tit-div">
+                                        <p>오동통 우동 정식</p>
+                                    </div>
+                                </div>
+                                <p class="menu-des">사누끼우동+돈가스single</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/set4.png" alt="얼큰 오동통 얼큰 오동통 우동 정식">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Spicy Udon SET</p>
+                                    <div class="menu-tit-div">
+                                        <p>얼큰 오동통 우동 정식</p>
+                                    </div>
+                                </div>
+                                <p class="menu-des">얼큰우동+돈가스single</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-wrap" id="menu-tab2">
+            <div class="fixed-div"></div>
+            <div class="menu-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/main1.png" alt="삼동소바 메인메뉴 삼동소바">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Samdong Soba</p>
+                                    <div class="menu-tit-div">
+                                        <p>삼동소바</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/main2.png" alt="삼동소바 메인메뉴 비빔소바">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Bibim Soba</p>
+                                    <div class="menu-tit-div">
+                                        <p>비빔소바</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/main3.png" alt="삼동소바 메인메뉴 온소바">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Hot Soba</p>
+                                    <div class="menu-tit-div">
+                                        <p>온소바</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/main4.png" alt="삼동소바 메인메뉴 카레 돈까스 덮밥">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Curry Pork Cutlet Rice</p>
+                                    <div class="menu-tit-div">
+                                        <p>카레 돈까스 덮밥</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/main5.png" alt="삼동소바 메인메뉴 매콤 우육 우동">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Spicy Beef Udon</p>
+                                    <div class="menu-tit-div">
+                                        <p>매콤 우육 우동</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/main6.png" alt="삼동소바 메인메뉴 순두부 짬뽕밥">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Soft Tofu jjamppong Rice</p>
+                                    <div class="menu-tit-div">
+                                        <p>순두부 짬뽕밥</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/main7.png" alt="삼동소바 메인메뉴 오동통 우동">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Sanuki Udon</p>
+                                    <div class="menu-tit-div">
+                                        <p>오동통 우동</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/main8.png" alt="삼동소바 얼큰 오동통 우동">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Spicy Udon</p>
+                                    <div class="menu-tit-div">
+                                        <p>얼큰 오동통 우동</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/main9.png" alt="삼동소바 우육소바">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Beef Soba</p>
+                                    <div class="menu-tit-div">
+                                        <p>우육소바</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/main10.png" alt="삼동소바 우육우동">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Beef Udon</p>
+                                    <div class="menu-tit-div">
+                                        <p>우육우동</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/main11.png" alt="삼동소바 매콤 우육 소바">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Spicy Beef Soba</p>
+                                    <div class="menu-tit-div">
+                                        <p>매콤 우육 소바</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/main12.png" alt="삼동소바 순두부 짬뽕 우동">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Soft Tofu jjamppong Udon</p>
+                                    <div class="menu-tit-div">
+                                        <p>순두부 짬뽕 우동</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-wrap" id="menu-tab3">
+            <div class="fixed-div"></div>
+            <div class="menu-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/new1.png" alt="삼동소바 신메뉴 카레우동">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Curry Udon</p>
+                                    <div class="menu-tit-div">
+                                        <p>카레우동</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/new2.png" alt="삼동소바 신메뉴 카레소바">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Curry Soba</p>
+                                    <div class="menu-tit-div">
+                                        <p>카레소바</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/new1.png" alt="삼동소바 신메뉴 카레우동">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Curry Udon</p>
+                                    <div class="menu-tit-div">
+                                        <p>카레우동</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/new2.png" alt="삼동소바 신메뉴 카레소바">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Curry Soba</p>
+                                    <div class="menu-tit-div">
+                                        <p>카레소바</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/new1.png" alt="삼동소바 신메뉴 카레우동">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Curry Udon</p>
+                                    <div class="menu-tit-div">
+                                        <p>카레우동</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-slide">
+                            <img src="img/menu/new2.png" alt="삼동소바 신메뉴 카레소바">
+                            <div class="menu-slide-inner">
+                                <div class="menu-slide-div">
+                                    <p class="en-sub">Curry Soba</p>
+                                    <div class="menu-tit-div">
+                                        <p>카레소바</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="interior">
     <p class="text72 w">삼동소바 인테리어</p>
     <div class="interior-container">

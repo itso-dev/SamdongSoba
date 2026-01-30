@@ -3,6 +3,108 @@ ScrollTrigger.config({autoRefreshEvents: "visibilitychange,DOMContentLoaded,load
 let mm = gsap.matchMedia();
 let timeoutClear;
 
+var edu = new Swiper(".edu-swiper-container", {
+  slidesPerView: 3,
+  spaceBetween: 0,
+  loop: true,
+  direction: "vertical",
+  autoplay: {
+    delay: 1800,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 16
+    },
+    650: {
+      slidesPerView: 3,
+      spaceBetween: 16
+    },
+  },
+});
+
+$(document).ready(function() {
+  let swipers = {};
+
+  $(".menu-swiper").each(function (index) {
+    let swiperId = "menuSwiper" + index; 
+
+    swipers[swiperId] = new Swiper(this, {
+      slidesPerView: 3,
+      spaceBetween: 0,
+      loop: true,
+      centeredSlides: false,
+      autoplay: { 
+        delay: 0,
+        disableOnInteraction: false,
+      }, 
+      // initialSlide: 2,
+      speed: 2500,
+      breakpoints: {
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 0,
+        },
+        1024: {
+          slidesPerView: 2.5,
+          spaceBetween: 0,
+        },
+        900: {
+          slidesPerView: 2.1,
+          spaceBetween: 0,
+        },
+        650: {
+          slidesPerView: 2.5,
+          spaceBetween: 0,
+        },
+        400: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        0: {
+          slidesPerView: 1.7,
+          spaceBetween: 0,
+        }
+      },
+      a11y: false,
+    });
+  });
+
+  $("#menu-tab1").addClass("contain-active");
+
+  const firstSwiperKey = Object.keys(swipers)[0];
+  if (firstSwiperKey) {
+    swipers[firstSwiperKey].update();
+    swipers[firstSwiperKey].autoplay.start();
+  }
+
+  let tabs = $(".menu-tab");
+
+  tabs.click(function () {
+    tabs.removeClass("active");
+    $(".menu-wrap").removeClass("contain-active");
+
+    let tab_id = $(this).attr("data-tab");
+    $(this).addClass("active");
+    $("#" + tab_id).addClass("contain-active");
+    
+    // Swiper 업데이트
+    let activeSwiper = $("#" + tab_id).find(".menu-swiper").get(0);
+    
+    if (activeSwiper) {
+        let swiperKey = Object.keys(swipers).find((key) => swipers[key].el === activeSwiper);
+        if (swiperKey) {
+            swipers[swiperKey].update();
+            swipers[swiperKey].slideToLoop(0, 0);
+            // swipers[swiperKey].setTranslate(0);
+            swipers[swiperKey].autoplay.start();
+        }
+    }
+  });
+
+});
+
 $("#interior-tab1").addClass("contain-active");
 
   let Itabs = $(".interior-tab");
