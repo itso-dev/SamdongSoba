@@ -108,17 +108,17 @@ $(document).ready(function() {
   let swipers = {};
 
   $(".menu-swiper").each(function (index) {
-    let swiperId = "menuSwiper" + index; 
+    let swiperId = "menuSwiper" + index;
 
     swipers[swiperId] = new Swiper(this, {
       slidesPerView: 3,
       spaceBetween: 0,
       loop: true,
       centeredSlides: false,
-      autoplay: { 
+      autoplay: {
         delay: 0,
         disableOnInteraction: false,
-      }, 
+      },
       // initialSlide: 2,
       speed: 2500,
       breakpoints: {
@@ -168,10 +168,10 @@ $(document).ready(function() {
     let tab_id = $(this).attr("data-tab");
     $(this).addClass("active");
     $("#" + tab_id).addClass("contain-active");
-    
+
     // Swiper 업데이트
     let activeSwiper = $("#" + tab_id).find(".menu-swiper").get(0);
-    
+
     if (activeSwiper) {
         let swiperKey = Object.keys(swipers).find((key) => swipers[key].el === activeSwiper);
         if (swiperKey) {
@@ -227,13 +227,13 @@ const cost = gsap.timeline({
   }
 });
 
-cost.fromTo(".cost-total1", 
+cost.fromTo(".cost-total1",
   { scale: 2, opacity: 0, filter: "blur(16px)", },
   { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.in",},
   "+=0.2"
 );
 
-cost.fromTo(".cost-total2", 
+cost.fromTo(".cost-total2",
   { scale: 2, opacity: 0, filter: "blur(16px)", },
   { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.in",},
 );
@@ -309,27 +309,16 @@ const c = gsap.timeline({
   }
 });
 
-c.fromTo(".contact-form", 
+c.fromTo(".contact-form",
   { opacity: 0, y: 50},
   { opacity: 1, y: 0, duration: 0.3, ease: "power2.out"},
   "+=0.4"
 );
 
 
-c.fromTo(".contact-img", 
+c.fromTo(".contact-img",
   { opacity: 0, xPercent: -50},
   { opacity: 1, xPercent: 0, duration: 0.8, ease: "power2.out"},
   "+=0.2"
 );
 
-gsap.fromTo(".contact-form .c-btn", 
-  { scale: 2, opacity: 0, filter: "blur(16px)", },
-  { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.in",
-    scrollTrigger: {
-      trigger: ".contact-form .c-btn",
-      start: "top 75%",    
-      toggleActions: "play none none reset",
-    }
-  },
-    "together"
-);

@@ -44,6 +44,7 @@
     flex-direction: column;
     align-items: stretch;
     gap: 100px;
+
 }
 
 .profit-box {
@@ -58,7 +59,16 @@
     gap: 80px;
     position: relative;
 }
-
+.profit-box:nth-child(1){
+    padding: 80px 40px 80px;
+}
+.profit-box .small{
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    font-size: 16px;
+    color: #505050;
+}
 .profit-box-tit {
     width: 637px;
     height: 103px;
@@ -206,7 +216,7 @@
 }
 
 .auto-container {
-    max-width: 1300px; 
+    max-width: 1300px;
     width: 90%;
     display: flex;
     align-items: stretch;
@@ -947,13 +957,13 @@
 .cost-total1 {
     width: 240px;
     position: absolute;
-    left: 52%;
+    right: 20%;
 }
 
 .cost-total2 {
     width: 240px;
     position: absolute;
-    left: 68%;
+    right: 0%;
 }
 
 .cloud {
@@ -1039,13 +1049,27 @@
     justify-content: center;
     align-items: center;
 }
-
+.map-container .mark,
+.map-container .mark1,
+.map-container .mark2,
+.map-container .mark3{
+    position: absolute;
+    z-index: 5;
+    width: 70%;
+}
+.map-container .mark1{
+    left: 10%;
+    top: 20%;
+}
 #map {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    background: url("../img/map.png");
+    background-position: center !important;
+    background-size: cover;
 }
 
 .area-container {
@@ -1371,7 +1395,7 @@
 .item label {
     display: block;
     width: 142px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     color: #0B080C;
     font-size: 20px !important;
     font-weight: 600 !important;
@@ -1521,7 +1545,7 @@
     color: #0B080C;
     font-size: 16px !important;
     font-weight: 400;
-    line-height: 140% !important; 
+    line-height: 140% !important;
     letter-spacing: -0.4px !important;
     cursor: pointer;
     word-break: keep-all;
@@ -1602,6 +1626,9 @@
         gap: 50px;
         padding: 60px 30px 40px;
     }
+    .profit-box .small {
+        left: 30px;
+    }
     .profit-table {
         width: calc(52% - 25px);
     }
@@ -1662,7 +1689,7 @@
     }
     .menu-tit-div p {
         font-size: 28px;
-        letter-spacing: -0.7px; 
+        letter-spacing: -0.7px;
     }
     .menu-des {
         font-size: 18px;
@@ -1814,7 +1841,9 @@
     .map-container {
         height: 700px;
     }
-    
+    .map-container .mark, .map-container .mark1, .map-container .mark2, .map-container .mark3{
+        width: 60%;
+    }
 }
 
 @media(max-width: 1024px) {
@@ -1832,6 +1861,13 @@
         max-width: 600px;
         width: 100%;
         margin-right: -3.5%;
+    }
+    .profit-box:nth-child(1){
+        padding: 60px 30px 40px;
+        gap: 100px;
+    }
+    .profit-box .small{
+        top: 50%;
     }
     .fixed-div {
         width: 32.5%;
@@ -1892,6 +1928,7 @@
     .contact-form {
         width: 100%;
     }
+
 }
 
 @media(max-width: 900px) {
@@ -2069,7 +2106,7 @@
         width: 100%;
     }
     .profit-box {
-        padding: 60px 30px 40px;
+        padding: 60px 30px 40px !important;
     }
     .profit-box-tit {
         width: 480px;
@@ -2083,6 +2120,9 @@
     .profit-box-tit p span {
         font-size: 18px;
         letter-spacing: -0.45px;
+    }
+    .profit-box .small {
+        top: 700px;
     }
     #auto {
         padding: 80px 20px;
@@ -2106,7 +2146,7 @@
     }
     .menu-tit-div p {
         font-size: 24px;
-        letter-spacing: -0.6px; 
+        letter-spacing: -0.6px;
     }
     .menu-des {
         font-size: 16px;
@@ -2152,11 +2192,19 @@
     .contact-container {
         width: 100%;
     }
+    .map-container .mark, .map-container .mark1, .map-container .mark2, .map-container .mark3 {
+        width: 70%;
+    }
 }
 
 @media(max-width: 650px) {
     .profit-box {
-        padding: 50px 16px 40px;
+        padding: 50px 16px 40px !important;
+    }
+    .profit-box .small {
+        top: 685px;
+        left: 16px;
+        font-size: 14px;
     }
     .profit-box-tit {
         width: 380px;
@@ -2387,6 +2435,9 @@
     .mo-no-br {
         display: none;
     }
+    .map-container .mark, .map-container .mark1, .map-container .mark2, .map-container .mark3 {
+        width: 90%;
+    }
 }
 
 @media(max-width: 550px) {
@@ -2420,6 +2471,17 @@
     .profit-table tr:last-child td:last-child {
         font-size: 20px;
         letter-spacing: -0.5px;
+    }
+    .profit-box:nth-child(1) {
+        gap: 110px;
+    }
+
+    .profit-box .small{
+        top: 680px;
+        left: 16px;
+        font-size: 13px;
+        word-break: keep-all;
+        width: calc(100% - 20px);
     }
     .auto-img {
         aspect-ratio: 1 / 0.8;
@@ -2481,13 +2543,13 @@
         width: 75px;
     }
     .cost-table th:nth-child(2) {
-        width: calc(100% - 185px);
+        width: 80px !important;
     }
     .cost-table th:nth-child(3), .cost-table th:last-child {
         width: 55px;
     }
     .cost-table td {
-        font-size: 14px;
+        font-size: 10px;
         letter-spacing: -0.35px;
         padding: 8px;
     }
@@ -2508,10 +2570,15 @@
         width: 126px;
     }
     .cost-total1 {
-        left: 25%;
+        left: unset;
+        width: 85px;
+        right: 18%;
+        bottom: 3px;
     }
     .cost-total2 {
-        left: 55%;
+        left: unset;
+        width: 85px;
+        right: -6%;
     }
     .area-content {
         font-size: 16px;
@@ -2579,7 +2646,7 @@
         top: -27.5px;
     }
     .profit-box {
-        padding: 40px 16px;
+        padding: 40px 16px !important;
     }
     .profit-box-tit p {
         font-size: 18px;
@@ -2626,7 +2693,7 @@
         width: 50px;
     }
     .cost-table td {
-        font-size: 12px;
+        font-size: 10px;
         letter-spacing: -0.3px;
     }
     .cost-table td .sm-txt {
@@ -2640,10 +2707,15 @@
         padding: 0 4px;
     }
     .cost-total1 {
-        left: 20%;
+        left: unset;
+        width: 80px;
+        right: 21%;
+        bottom: 3px;
     }
     .cost-total2 {
-        left: 55%;
+        left: unset;
+        width: 80px;
+        right: -6%;
     }
     .map-container {
         height: 480px;
@@ -2660,6 +2732,9 @@
     .c-btn, .form-tab {
         font-size: 14px;
         letter-spacing: -0.35px;
+    }
+    .profit-box .small {
+        top: 550px;
     }
 }
 

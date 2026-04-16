@@ -2,3 +2,4 @@
 db/dbconfig.php
 adm/ajax/login_check.php
 adm/head.php
+.DS_Store

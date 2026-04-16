@@ -2,8 +2,8 @@
 header('P3P: CP="NOI CURa ADMa DEVa TAIa OUR DELa BUS IND PHY ONL UNI COM NAV INT DEM PRE"');
 session_start();
 
-$site_path = $_SERVER["DOCUMENT_ROOT"]."/SamdongSoba";
-$site_url = "http://".$_SERVER["HTTP_HOST"]."/SamdongSoba";
+$site_path = $_SERVER["DOCUMENT_ROOT"]."/Samdongsoba";
+$site_url = "http://".$_SERVER["HTTP_HOST"]."/Samdongsoba";
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -188,7 +188,6 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
 <html lang="ko">
 <head>
     <?= $site['head_script'] ?>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
     <meta name="HandheldFriendly" content="true">
@@ -219,27 +218,99 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
 
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '908539868329096');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=908539868329096&ev=PageView&noscript=1"
+        /></noscript>
+    <!-- End Meta Pixel Code -->
+
 </head>
 
 <body>
     <?= $site['body_script'] ?>
 
+    <div id="preloader">
+        <div class="load-wrap">
+            <div class="loading-img">
+                <p class="loading-text">0%</p>
+            </div>
+            <div class="load-4">
+                <div class="ring-1"></div>
+            </div>
+        </div>
+        <img src="img/head-logo3.png" class="loading-footprint">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let percent = 0;
+            let loadingText = document.querySelector(".loading-text");
+            let preloader = document.getElementById("preloader");
+
+            function updateLoading() {
+                percent += Math.random() * 10; // 0~10%씩 증가
+                if (percent > 100) percent = 100;
+                loadingText.textContent = Math.floor(percent) + "%";
+
+                if (percent < 100) {
+                    setTimeout(updateLoading, 200);
+                } else {
+                    hidePreloader();
+                }
+            }
+
+            function hidePreloader() {
+                preloader.style.transition = "opacity 1s ease-out";
+                preloader.style.opacity = "0";
+
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                }, 800);
+            }
+
+            updateLoading();
+
+            window.onload = function () {
+                if (percent >= 100) {
+                    hidePreloader();
+                }
+            };
+        });
+    </script>
     <div id="header">
         <div class="head-wrap">
             <img src="img/head-logo.png" class="head-logo white" alt="삼동소바">
             <img src="img/head-logo2.png" class="head-logo black" alt="삼동소바">
             <nav>
                 <ul>
-                    <li class="link" data-target="main">브랜드소개</li>
-                    <li class="link" data-target="section4">성공요인</li>
-                    <li class="link" data-target="section5">메뉴소개</li>
+                    <li class="link" data-target="menu1">브랜드소개</li>
+                    <li class="link" data-target="menu2">성공요인</li>
+                    <li class="link" data-target="menu">메뉴소개</li>
                     <li class="link" data-target="contact">창업문의</li>
                 </ul>
             </nav>
             <div class="header-div">
                 <div class="mo-menu-open">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
-                        <path d="M3.5 14.5H24.5M3.5 7.25H24.5M3.5 21.75H24.5" stroke="#393B85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2.39994 3.84C2.27273 3.8382 2.14643 3.8617 2.02838 3.90914C1.91033 3.95658 1.80289 4.027 1.71229 4.11633C1.6217 4.20565 1.54976 4.31209 1.50066 4.42945C1.45156 4.54682 1.42627 4.67278 1.42627 4.8C1.42627 4.92722 1.45156 5.05318 1.50066 5.17055C1.54976 5.28791 1.6217 5.39435 1.71229 5.48367C1.80289 5.573 1.91033 5.64342 2.02838 5.69086C2.14643 5.7383 2.27273 5.7618 2.39994 5.76H21.5999C21.7272 5.7618 21.8535 5.7383 21.9715 5.69086C22.0896 5.64342 22.197 5.573 22.2876 5.48367C22.3782 5.39435 22.4501 5.28791 22.4992 5.17055C22.5483 5.05318 22.5736 4.92722 22.5736 4.8C22.5736 4.67278 22.5483 4.54682 22.4992 4.42945C22.4501 4.31209 22.3782 4.20565 22.2876 4.11633C22.197 4.027 22.0896 3.95658 21.9715 3.90914C21.8535 3.8617 21.7272 3.8382 21.5999 3.84H2.39994ZM2.39994 11.04C2.27273 11.0382 2.14643 11.0617 2.02838 11.1091C1.91033 11.1566 1.80289 11.227 1.71229 11.3163C1.6217 11.4056 1.54976 11.5121 1.50066 11.6295C1.45156 11.7468 1.42627 11.8728 1.42627 12C1.42627 12.1272 1.45156 12.2532 1.50066 12.3705C1.54976 12.4879 1.6217 12.5944 1.71229 12.6837C1.80289 12.773 1.91033 12.8434 2.02838 12.8909C2.14643 12.9383 2.27273 12.9618 2.39994 12.96H21.5999C21.7272 12.9618 21.8535 12.9383 21.9715 12.8909C22.0896 12.8434 22.197 12.773 22.2876 12.6837C22.3782 12.5944 22.4501 12.4879 22.4992 12.3705C22.5483 12.2532 22.5736 12.1272 22.5736 12C22.5736 11.8728 22.5483 11.7468 22.4992 11.6295C22.4501 11.5121 22.3782 11.4056 22.2876 11.3163C22.197 11.227 22.0896 11.1566 21.9715 11.1091C21.8535 11.0617 21.7272 11.0382 21.5999 11.04H2.39994ZM2.39994 18.24C2.27273 18.2382 2.14643 18.2617 2.02838 18.3091C1.91033 18.3566 1.80289 18.427 1.71229 18.5163C1.6217 18.6056 1.54976 18.7121 1.50066 18.8295C1.45156 18.9468 1.42627 19.0728 1.42627 19.2C1.42627 19.3272 1.45156 19.4532 1.50066 19.5705C1.54976 19.6879 1.6217 19.7944 1.71229 19.8837C1.80289 19.973 1.91033 20.0434 2.02838 20.0909C2.14643 20.1383 2.27273 20.1618 2.39994 20.16H21.5999C21.7272 20.1618 21.8535 20.1383 21.9715 20.0909C22.0896 20.0434 22.197 19.973 22.2876 19.8837C22.3782 19.7944 22.4501 19.6879 22.4992 19.5705C22.5483 19.4532 22.5736 19.3272 22.5736 19.2C22.5736 19.0728 22.5483 18.9468 22.4992 18.8295C22.4501 18.7121 22.3782 18.6056 22.2876 18.5163C22.197 18.427 22.0896 18.3566 21.9715 18.3091C21.8535 18.2617 21.7272 18.2382 21.5999 18.24H2.39994Z" fill="#111"/>
+                    </svg>
+                </div>
+                <div class="mo-menu-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <path d="M21 7L7 21M7 7L21 21" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
             </div>
@@ -249,28 +320,19 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
     </div>
 
     <div class="mo-menu">
-        <div class="mo-menu-top">
-            <img src="img/logo.svg" class="logo">
-            <div class="menu-close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <path d="M21 7L7 21M7 7L21 21" stroke="#393B85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-        </div>
         <div class="mo-menu-bottom">
             <nav>
                 <ul>
-                    <li class="link" data-target="main">1등 브랜드</li>
-                    <li class="link" data-target="section4">5초의 법칙</li>
-                    <li class="link" data-target="section5">품질의 경쟁력</li>
-                    <li class="link" data-target="section6">브랜드 메뉴</li>
-                    <li class="link" data-target="section8">브랜드 안정성</li>
-                    <li class="link" data-target="contact">개설 문의</li>
+                    <li class="link" data-target="menu1">브랜드소개</li>
+                    <li class="link" data-target="menu2">성공요인</li>
+                    <li class="link" data-target="menu">메뉴소개</li>
+                    <li class="link" data-target="contact">창업문의</li>
                 </ul>
             </nav>
-            <a href="tel:00000000" class="call">
-                0000-0000
-            </a>
+            <div class="contact-container">
+<!--                <img class="call-img" src="--><?//= $site_url ?><!--/img/call-img.png">-->
+<!--                <a class="call-txt" href="tel:18008148">1800-8148</a>-->
+            </div>
         </div>
     </div>
 
@@ -281,19 +343,19 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
 
     $(document).ready(function () {
 
-        // checkActivemenu();
+        checkActivemenu();
 
         $(window).on('scroll', function() {
-            // checkActivemenu();
+            checkActivemenu();
         });
 
         function checkActivemenu() {
             var scrollPosition = $(window).scrollTop();
 
             menuOffsets = {
-                'section2': $('#section2').offset().top - 100,
-                'section4': $('#section4').offset().top - 100,
-                'section10': $('#section10').offset().top - 100,
+                'menu1': $('#menu1').offset().top - 100,
+                'menu2': $('#menu2').offset().top - 100,
+                'menu': $('#menu').offset().top - 100,
                 'contact': $('#contact').offset().top - 100,
             };
 
@@ -331,29 +393,33 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
     });
 
     $(".mo-menu-open").click(function () {
+        $(this).hide();
+        $(".mo-menu-close").show();
         $(".mo-menu").fadeIn(200);
         $("html").css("overflow", "hidden");
     });
 
-    $(".menu-close").click(function () {
+    $(".mo-menu-close").click(function () {
+        $(this).hide();
+        $(".mo-menu-open").show();
         $(".mo-menu").fadeOut(200, function () {
             $("html").css("overflow", "auto");
         });
     });
 
-    window.onscroll = function() {
-
-        if (window.innerWidth <= 1000) {
+    (function () {
+        const header = document.getElementById("header");
+        if (!header) {
+            console.error("#header 없음");
             return;
         }
 
-        var header = document.getElementById("header");
-
-        if (window.scrollY > 0) {
-            header.classList.add("gnb-blur");
-        } else {
-            header.classList.remove("gnb-blur");
-        }
-    };
-
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 0) {
+                header.classList.add("gnb-blur");
+            } else {
+                header.classList.remove("gnb-blur");
+            }
+        });
+    })();
 </script>
