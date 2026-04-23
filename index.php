@@ -37,7 +37,9 @@ $db_conn->prepare($view_sql)->execute(
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 
 <!-- layer popup -->
 <?
@@ -245,6 +247,557 @@ if ($popup_stt->rowCount() > 0) {
                     </svg>
                 </div>
                 <img class="back" src="<?= $site_url ?>/img/page2-back.png" />
+            </div>
+        </div>
+    </div>
+    <div id="recruit">
+        <div class="recruit-container">
+            <div class="recruit-container-inner">
+                <div class="recruit-tit-wrap">
+                    <div class="recruit-sub-tit">
+                        <span>서울 가맹점주 모집</span>
+                        <hr>
+                    </div>
+                    <div class="recruit-tit" data-aos="fade-right" data-aos-duration="1000">
+                        소형 평수로도,<br><span class="r">서울에서 억대매출</span><br>가능합니다.
+                    </div>
+                    <div class="recruit-tit-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+                        20평대 골목 상권에서 시작해도 충분합니다.<br> 삼동소바가 억대 매출 상권을 직접 분석하고<br class="xs-br"> 안내해드립니다.
+                    </div>
+                </div>
+                <div class="recruit-content-wrap">
+                    <div class="recruit-item-wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        <div class="recruit-item">
+                            <div class="recruit-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <path d="M7 4C5.35503 4 4 5.35503 4 7V10.8789C3.91472 11.2149 3 14.8719 3 17.5C3 18.8786 3.26606 20.1985 3.99609 21.252C3.99743 21.2539 3.99867 21.2559 4 21.2578V46H10.832C10.94 46.0178 11.0502 46.0178 11.1582 46H24.832C24.94 46.0178 25.0502 46.0178 25.1582 46H38.832C38.94 46.0178 39.0502 46.0178 39.1582 46H46V21.2578C46.0013 21.2559 46.0026 21.2539 46.0039 21.252C46.7339 20.1985 47 18.8786 47 17.5C47 14.8719 46.0853 11.2149 46 10.8789V7C46 5.35503 44.645 4 43 4H7ZM7 6H43C43.565 6 44 6.43497 44 7V10H39.168C39.06 9.98215 38.9498 9.98215 38.8418 10H32.168C32.06 9.98215 31.9498 9.98215 31.8418 10H25.168C25.06 9.98215 24.9498 9.98215 24.8418 10H18.168C18.06 9.98215 17.9498 9.98215 17.8418 10H11.168C11.1073 9.98981 11.0459 9.98523 10.9844 9.98633C10.9366 9.98747 10.8889 9.99204 10.8418 10H6V7C6 6.43497 6.43497 6 7 6ZM8 7C7.73478 7 7.48043 7.10536 7.29289 7.29289C7.10536 7.48043 7 7.73478 7 8C7 8.26522 7.10536 8.51957 7.29289 8.70711C7.48043 8.89464 7.73478 9 8 9C8.26522 9 8.51957 8.89464 8.70711 8.70711C8.89464 8.51957 9 8.26522 9 8C9 7.73478 8.89464 7.48043 8.70711 7.29289C8.51957 7.10536 8.26522 7 8 7ZM11 7C10.7348 7 10.4804 7.10536 10.2929 7.29289C10.1054 7.48043 10 7.73478 10 8C10 8.26522 10.1054 8.51957 10.2929 8.70711C10.4804 8.89464 10.7348 9 11 9C11.2652 9 11.5196 8.89464 11.7071 8.70711C11.8946 8.51957 12 8.26522 12 8C12 7.73478 11.8946 7.48043 11.7071 7.29289C11.5196 7.10536 11.2652 7 11 7ZM14 7C13.7348 7 13.4804 7.10536 13.2929 7.29289C13.1054 7.48043 13 7.73478 13 8C13 8.26522 13.1054 8.51957 13.2929 8.70711C13.4804 8.89464 13.7348 9 14 9C14.2652 9 14.5196 8.89464 14.7071 8.70711C14.8946 8.51957 15 8.26522 15 8C15 7.73478 14.8946 7.48043 14.7071 7.29289C14.5196 7.10536 14.2652 7 14 7ZM5.81055 12H10V19.8496C9.35939 20.5348 8.50473 21 7.5 21C6.64864 21 6.1748 20.7469 5.80078 20.3008C5.77718 20.2694 5.75174 20.2394 5.72461 20.2109C5.71884 20.2043 5.71298 20.1978 5.70703 20.1914C5.6857 20.1628 5.66141 20.1413 5.64062 20.1113C5.24191 19.536 5 18.6063 5 17.5C5 15.6489 5.58732 12.9801 5.81055 12ZM12 12H17V19.8496C16.3594 20.5348 15.5047 21 14.5 21C13.4953 21 12.6406 20.5348 12 19.8496V12ZM19 12H24V19.8496C23.3594 20.5348 22.5047 21 21.5 21C20.4953 21 19.6406 20.5348 19 19.8496V12ZM26 12H31V19.8496C30.3603 20.5343 29.5047 21 28.5 21C27.4953 21 26.6406 20.5348 26 19.8496V12ZM33 12H38V19.8496C37.3603 20.5343 36.5047 21 35.5 21C34.4953 21 33.6397 20.5343 33 19.8496V12ZM40 12H44.1895C44.4127 12.9801 45 15.6489 45 17.5C45 18.5244 44.7867 19.3844 44.4395 19.9648C44.2585 20.0873 44.1227 20.2657 44.0527 20.4727C43.6993 20.8143 43.2413 21 42.5 21C41.4953 21 40.6397 20.5343 40 19.8496V12ZM11 21.5527C11.9586 22.3872 13.1262 23 14.5 23C15.8738 23 17.0414 22.3872 18 21.5527C18.9586 22.3872 20.1262 23 21.5 23C22.8738 23 24.0414 22.3872 25 21.5527C25.9586 22.3872 27.1262 23 28.5 23C29.8738 23 31.0415 22.3875 32 21.5527C32.9585 22.3875 34.1262 23 35.5 23C36.8738 23 38.0415 22.3875 39 21.5527C39.9585 22.3875 41.1262 23 42.5 23C43.0369 23 43.539 22.908 44 22.748V44H40V27C40 26.7348 39.8946 26.4805 39.7071 26.2929C39.5195 26.1054 39.2652 26 39 26H25.168C25.1073 25.9898 25.0459 25.9852 24.9844 25.9863C24.9366 25.9875 24.8889 25.992 24.8418 26H11C10.7348 26 10.4805 26.1054 10.2929 26.2929C10.1054 26.4805 10 26.7348 10 27V44H6V22.748C6.46098 22.908 6.96314 23 7.5 23C8.8738 23 10.0414 22.3872 11 21.5527ZM12 28H24V44H12V28ZM26 28H38V44H26V28ZM21 35C20.7348 35 20.4804 35.1054 20.2929 35.2929C20.1054 35.4804 20 35.7348 20 36C20 36.2652 20.1054 36.5196 20.2929 36.7071C20.4804 36.8946 20.7348 37 21 37C21.2652 37 21.5196 36.8946 21.7071 36.7071C21.8946 36.5196 22 36.2652 22 36C22 35.7348 21.8946 35.4804 21.7071 35.2929C21.5196 35.1054 21.2652 35 21 35ZM29 35C28.7348 35 28.4804 35.1054 28.2929 35.2929C28.1054 35.4804 28 35.7348 28 36C28 36.2652 28.1054 36.5196 28.2929 36.7071C28.4804 36.8946 28.7348 37 29 37C29.2652 37 29.5196 36.8946 29.7071 36.7071C29.8946 36.5196 30 36.2652 30 36C30 35.7348 29.8946 35.4804 29.7071 35.2929C29.5196 35.1054 29.2652 35 29 35Z" fill="black"/>
+                                </svg>
+                            </div>
+                            <div class="recruit-item-div">
+                                <p class="recruit-item-tit">20평대 소형 평수 창업 가능</p>
+                                <div class="recruit-item-content">
+                                대형 평수 없이도 메뉴 구성과 동선을 최적화한<br> 삼동소바만의 소형 매장 모델 적용 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recruit-item">
+                            <div class="recruit-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <path d="M25 1C16.1602 1 9 8.16016 9 17C9 24.3086 12.8594 32.1641 16.6562 38.25C20.4531 44.3359 24.25 48.6562 24.25 48.6562C24.4414 48.8711 24.7148 48.9961 25 48.9961C25.2852 48.9961 25.5586 48.8711 25.75 48.6562C25.75 48.6562 29.5508 44.2461 33.3438 38.125C37.1367 32.0039 41 24.168 41 17C41 8.16016 33.8398 1 25 1ZM25 3C32.7617 3 39 9.23828 39 17C39 23.4336 35.3633 31.082 31.6562 37.0625C28.5508 42.0742 25.9219 45.3008 25 46.4062C24.0703 45.3086 21.4414 42.1523 18.3438 37.1875C14.6406 31.25 11 23.5898 11 17C11 9.23828 17.2383 3 25 3ZM25 11C21.1445 11 18 14.1445 18 18C18 21.8555 21.1445 25 25 25C28.8555 25 32 21.8555 32 18C32 14.1445 28.8555 11 25 11ZM25 13C27.7734 13 30 15.2266 30 18C30 20.7734 27.7734 23 25 23C22.2266 23 20 20.7734 20 18C20 15.2266 22.2266 13 25 13Z" fill="black"/>
+                                </svg>
+                            </div>
+                            <div class="recruit-item-div">
+                                <p class="recruit-item-tit">기기·장비 렌탈 프로그램 제공</p>
+                                <div class="recruit-item-content">
+                                초기 투자 부담을 줄이는 렌탈 옵션 운영.<br>제면기·냉장설비 등 핵심 장비 포함
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recruit-item">
+                            <div class="recruit-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <path d="M11.5 2C10.7041 2 10.0353 2.46392 9.625 3.04102C9.21468 3.61811 9 4.33508 9 5.10938V19V29V40.9785C9 41.7528 9.21468 42.4717 9.625 43.0488C10.0353 43.6259 10.7041 44.0898 11.5 44.0898H12V47C12 47.2652 12.1054 47.5195 12.2929 47.7071C12.4805 47.8946 12.7348 48 13 48H18C18.2652 48 18.5195 47.8946 18.7071 47.7071C18.8946 47.5195 19 47.2652 19 47V44.0898H31V47C31 47.2652 31.1054 47.5195 31.2929 47.7071C31.4805 47.8946 31.7348 48 32 48H37C37.2652 48 37.5195 47.8946 37.7071 47.7071C37.8946 47.5195 38 47.2652 38 47V44.0898H38.5C39.2963 44.0898 39.9648 43.6259 40.375 43.0488C40.7852 42.4717 41 41.7525 41 40.9785V29V19V5.10938C41 4.33508 40.7853 3.61811 40.375 3.04102C39.9647 2.46392 39.2959 2 38.5 2H34.75H20.5H11.5ZM11.5 4H20.5H34.75H38.5C38.5291 4 38.6107 4.01156 38.7441 4.19922C38.8776 4.38688 39 4.72267 39 5.10938V18H11V5.10938C11 4.72267 11.1224 4.38688 11.2559 4.19922C11.3893 4.01156 11.4709 4 11.5 4ZM14 6C13.7348 6 13.4804 6.10536 13.2929 6.29289C13.1054 6.48043 13 6.73478 13 7C13 7.26522 13.1054 7.51957 13.2929 7.70711C13.4804 7.89464 13.7348 8 14 8C14.2652 8 14.5196 7.89464 14.7071 7.70711C14.8946 7.51957 15 7.26522 15 7C15 6.73478 14.8946 6.48043 14.7071 6.29289C14.5196 6.10536 14.2652 6 14 6ZM18 6C17.7348 6 17.4804 6.10536 17.2929 6.29289C17.1054 6.48043 17 6.73478 17 7C17 7.26522 17.1054 7.51957 17.2929 7.70711C17.4804 7.89464 17.7348 8 18 8C18.2652 8 18.5196 7.89464 18.7071 7.70711C18.8946 7.51957 19 7.26522 19 7C19 6.73478 18.8946 6.48043 18.7071 6.29289C18.5196 6.10536 18.2652 6 18 6ZM22 6C21.7348 6 21.4804 6.10536 21.2929 6.29289C21.1054 6.48043 21 6.73478 21 7C21 7.26522 21.1054 7.51957 21.2929 7.70711C21.4804 7.89464 21.7348 8 22 8C22.2652 8 22.5196 7.89464 22.7071 7.70711C22.8946 7.51957 23 7.26522 23 7C23 6.73478 22.8946 6.48043 22.7071 6.29289C22.5196 6.10536 22.2652 6 22 6ZM27 6C26.8675 5.99813 26.7359 6.02261 26.613 6.07202C26.49 6.12143 26.3781 6.1948 26.2837 6.28784C26.1893 6.38088 26.1144 6.49176 26.0632 6.61401C26.0121 6.73627 25.9858 6.86748 25.9858 7C25.9858 7.13252 26.0121 7.26373 26.0632 7.38599C26.1144 7.50824 26.1893 7.61912 26.2837 7.71216C26.3781 7.8052 26.49 7.87857 26.613 7.92798C26.7359 7.97739 26.8675 8.00187 27 8H35C35.1325 8.00187 35.2641 7.97739 35.387 7.92798C35.51 7.87857 35.6219 7.8052 35.7163 7.71216C35.8107 7.61912 35.8856 7.50824 35.9368 7.38599C35.9879 7.26373 36.0142 7.13252 36.0142 7C36.0142 6.86748 35.9879 6.73627 35.9368 6.61401C35.8856 6.49176 35.8107 6.38088 35.7163 6.28784C35.6219 6.1948 35.51 6.12143 35.387 6.07202C35.2641 6.02261 35.1325 5.99813 35 6H27ZM18 10C17.0833 10 16.2686 10.3798 15.752 10.9609C15.2353 11.5421 15 12.2778 15 13C15 13.7222 15.2353 14.4579 15.752 15.0391C16.2686 15.6202 17.0833 16 18 16C18.9167 16 19.7314 15.6202 20.248 15.0391C20.7647 14.4579 21 13.7222 21 13C21 12.2778 20.7647 11.5421 20.248 10.9609C19.7314 10.3798 18.9167 10 18 10ZM27 10C26.8675 9.99813 26.7359 10.0226 26.613 10.072C26.49 10.1214 26.3781 10.1948 26.2837 10.2878C26.1893 10.3809 26.1144 10.4918 26.0632 10.614C26.0121 10.7363 25.9858 10.8675 25.9858 11C25.9858 11.1325 26.0121 11.2637 26.0632 11.386C26.1144 11.5082 26.1893 11.6191 26.2837 11.7122C26.3781 11.8052 26.49 11.8786 26.613 11.928C26.7359 11.9774 26.8675 12.0019 27 12H35C35.1325 12.0019 35.2641 11.9774 35.387 11.928C35.51 11.8786 35.6219 11.8052 35.7163 11.7122C35.8107 11.6191 35.8856 11.5082 35.9368 11.386C35.9879 11.2637 36.0142 11.1325 36.0142 11C36.0142 10.8675 35.9879 10.7363 35.9368 10.614C35.8856 10.4918 35.8107 10.3809 35.7163 10.2878C35.6219 10.1948 35.51 10.1214 35.387 10.072C35.2641 10.0226 35.1325 9.99813 35 10H27ZM18 12C18.4167 12 18.6019 12.1202 18.752 12.2891C18.902 12.4579 19 12.7222 19 13C19 13.2778 18.902 13.5421 18.752 13.7109C18.6019 13.8798 18.4167 14 18 14C17.5833 14 17.3981 13.8798 17.248 13.7109C17.098 13.5421 17 13.2778 17 13C17 12.7222 17.098 12.4579 17.248 12.2891C17.3981 12.1202 17.5833 12 18 12ZM27 14C26.8675 13.9981 26.7359 14.0226 26.613 14.072C26.49 14.1214 26.3781 14.1948 26.2837 14.2878C26.1893 14.3809 26.1144 14.4918 26.0632 14.614C26.0121 14.7363 25.9858 14.8675 25.9858 15C25.9858 15.1325 26.0121 15.2637 26.0632 15.386C26.1144 15.5082 26.1893 15.6191 26.2837 15.7122C26.3781 15.8052 26.49 15.8786 26.613 15.928C26.7359 15.9774 26.8675 16.0019 27 16H35C35.1325 16.0019 35.2641 15.9774 35.387 15.928C35.51 15.8786 35.6219 15.8052 35.7163 15.7122C35.8107 15.6191 35.8856 15.5082 35.9368 15.386C35.9879 15.2637 36.0142 15.1325 36.0142 15C36.0142 14.8675 35.9879 14.7363 35.9368 14.614C35.8856 14.4918 35.8107 14.3809 35.7163 14.2878C35.6219 14.1948 35.51 14.1214 35.387 14.072C35.2641 14.0226 35.1325 13.9981 35 14H27ZM11 20H39V28H11V20ZM11 30H39V40.9785C39 41.3645 38.8777 41.7027 38.7441 41.8906C38.6106 42.0785 38.5287 42.0898 38.5 42.0898H37H32H18H13H11.5C11.4709 42.0898 11.3893 42.0783 11.2559 41.8906C11.1224 41.703 11 41.3652 11 40.9785V30ZM26.9824 31.9863C26.8195 31.9907 26.6602 32.0348 26.5183 32.1148C26.3763 32.1948 26.2561 32.3083 26.168 32.4453L25 34.1973L23.832 32.4453C23.741 32.3045 23.616 32.1889 23.4685 32.109C23.3211 32.0291 23.156 31.9876 22.9883 31.9883C22.8064 31.989 22.6282 32.0393 22.4728 32.1338C22.3174 32.2282 22.1907 32.3633 22.1063 32.5244C22.0219 32.6855 21.9831 32.8666 21.994 33.0481C22.0048 33.2297 22.065 33.4048 22.168 33.5547L23.1309 35H22C21.8675 34.9981 21.7359 35.0226 21.613 35.072C21.49 35.1214 21.3781 35.1948 21.2837 35.2878C21.1893 35.3809 21.1144 35.4918 21.0632 35.614C21.0121 35.7363 20.9858 35.8675 20.9858 36C20.9858 36.1325 21.0121 36.2637 21.0632 36.386C21.1144 36.5082 21.1893 36.6191 21.2837 36.7122C21.3781 36.8052 21.49 36.8786 21.613 36.928C21.7359 36.9774 21.8675 37.0019 22 37H23.1309L22.168 38.4453C22.0927 38.5545 22.0398 38.6776 22.0126 38.8074C21.9853 38.9373 21.9841 39.0712 22.0091 39.2015C22.0341 39.3318 22.0848 39.4558 22.1582 39.5663C22.2315 39.6768 22.3262 39.7716 22.4366 39.8452C22.5469 39.9188 22.6708 39.9696 22.8011 39.9949C22.9313 40.0201 23.0652 40.0192 23.1951 39.9922C23.325 39.9651 23.4482 39.9125 23.5575 39.8374C23.6669 39.7623 23.7602 39.6662 23.832 39.5547L25 37.8027L26.168 39.5547C26.2398 39.6662 26.3331 39.7623 26.4425 39.8374C26.5518 39.9125 26.675 39.9651 26.8049 39.9922C26.9347 40.0192 27.0687 40.0201 27.1989 39.9949C27.3292 39.9696 27.4531 39.9188 27.5634 39.8452C27.6738 39.7716 27.7685 39.6768 27.8418 39.5663C27.9152 39.4558 27.9659 39.3318 27.9909 39.2015C28.0159 39.0712 28.0147 38.9373 27.9874 38.8074C27.9602 38.6776 27.9073 38.5545 27.832 38.4453L26.8691 37H28C28.1325 37.0019 28.2641 36.9774 28.387 36.928C28.51 36.8786 28.6219 36.8052 28.7163 36.7122C28.8107 36.6191 28.8856 36.5082 28.9368 36.386C28.9879 36.2637 29.0142 36.1325 29.0142 36C29.0142 35.8675 28.9879 35.7363 28.9368 35.614C28.8856 35.4918 28.8107 35.3809 28.7163 35.2878C28.6219 35.1948 28.51 35.1214 28.387 35.072C28.2641 35.0226 28.1325 34.9981 28 35H26.8691L27.832 33.5547C27.9371 33.4027 27.9979 33.2246 28.0079 33.0402C28.0179 32.8557 27.9767 32.6721 27.8887 32.5097C27.8007 32.3473 27.6694 32.2124 27.5095 32.12C27.3495 32.0276 27.1671 31.9814 26.9824 31.9863ZM14 44.0898H17V46H14V44.0898ZM33 44.0898H36V46H33V44.0898Z" fill="black"/>
+                                </svg>
+                            </div>
+                            <div class="recruit-item-div">
+                                <p class="recruit-item-tit">억대매출 상권분석 & 부동산 추천</p>
+                                <div class="recruit-item-content">
+                                유동인구·경쟁 현황·임대료까지 분석한<br> 삼동소바 전용 상권 데이터로 입지 결정 지원
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recruit-btn-div">
+                        <p class="recruit-btn">
+                            우리 매장 예상매출 산정하러 가기
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M23.8748 10.4751C23.5748 10.5282 23.3342 10.747 23.2498 11.0376C23.1654 11.3313 23.2529 11.6438 23.4748 11.8501L30.8248 19.2001H7.19982C7.17482 19.2001 7.14982 19.2001 7.12482 19.2001C6.68419 19.222 6.34044 19.597 6.36232 20.0376C6.38419 20.4782 6.75919 20.822 7.19982 20.8001H30.8248L23.4748 28.1501C23.2373 28.3438 23.1279 28.6532 23.1967 28.9532C23.2654 29.2501 23.4998 29.4845 23.7967 29.5532C24.0967 29.622 24.4061 29.5126 24.5998 29.2751L33.3248 20.5751L33.8748 20.0001L33.3248 19.4251L24.5998 10.7251C24.4342 10.547 24.1936 10.4563 23.9498 10.4751C23.9248 10.4751 23.8998 10.4751 23.8748 10.4751Z" fill="white"/>
+                            </svg>
+                        </p>
+                        <div>* 무료 · 3분 내 산정 · 상담 없이도 확인 가능</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recruit-map-wrap">
+            <div class="recruit-num">
+                삼동소바 추천 상권
+            </div>
+            <div class="recruit-map">
+                <img src="img/recruit-map.png" alt="삼동소바 서울 모집 가능 지역" class="recruit-map-img">
+                <div class="recruit-dot dobong">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>도봉구</span>
+                            도봉동,방학동,창동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot eunpyeong">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>은평구</span>
+                            녹번동,불광동,응암동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot gangbuk">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>강북구</span>
+                            미아동,삼각산동,수유동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot nowon">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>노원구</span>
+                            공릉동,상계동,월계동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot seongbuk">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>성북구</span>
+                            길음동,돈암동,성북동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot jongno">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>종로구</span>
+                            종로n가동,혜화동,평창동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot jungnang">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>중랑구</span>
+                            망우동,면목동,상봉동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot gangseo">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>강서구</span>
+                            가양동,화곡동,발산동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot mapo">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>마포구</span>
+                            공덕동,망원동,연남동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot seodaemun">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>서대문구</span>
+                            신촌동,연희동,홍제동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot jung">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>중구</span>
+                            명동,신당동,을지로
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot dongdaemun">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>동대문구</span>
+                            답십리동,이문동,청량리동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot yangcheon">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>양천구</span>
+                            목동,신월동,신정동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot yeongdeungpo">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>영등포구</span>
+                            여의도,영등포동,문래동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot yongsan">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>용산구</span>
+                            이태원동,한남동,한강로동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot seongdong">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>성동구</span>
+                            성수동,왕십리동,행당동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot gwangjin">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>광진구</span>
+                            구의동,광장동,군자동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot gangdong">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>강동구</span>
+                            길동,명일동,천호동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot guro">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>구로구</span>
+                            길동,명일동,천호동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot dongjak">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>동작구</span>
+                            길동,명일동,천호동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot geumcheon">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>금천구</span>
+                            길동,명일동,천호동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot gwanak">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>관악구</span>
+                            길동,명일동,천호동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot seocho">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>서초구</span>
+                            길동,명일동,천호동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot gangnam">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>강남구</span>
+                            길동,명일동,천호동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="recruit-dot songpa">
+                    <div class="dot-wave"></div>
+                    <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                    <div class="recruit-dot-location">
+                        <p>
+                            <span>송파구</span>
+                            길동,명일동,천호동
+                        </p>
+                        <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
+                        <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <p class="recruit-dot-desc">
+                <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
+                모집 가능 지역
+            </p>
+        </div>
+    </div>
+    <div id="interview">
+        <div class="interview-tit-div">
+            <div class="tit-wrap clip-path">
+                리얼 점주 인터뷰
+            </div>
+            <div class="text72 tit2 w" data-aos="fade-up" data-aos-duration="1000">
+                <span class="w"><span>여름 성수기 매출</span> 1억 8천만원</span><br>
+                <span>꿈의 숫자!</span><br class="mo-br"> 순수익 7천만원<span>을<br>
+                달성한 점주님</span>
+            </div>
+            <p class="text28 tit1 w" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">삼동소바 창업을 통해 꿈을 이루신 점주님의 인터뷰!<br class="mi-br"> 영상을 통해 확인하세요</p>
+        </div>
+        <div class="anyang-container">
+            <div class="anyang-container-inner">
+                <div class="anyang-interview">
+                    <div class="anyang-interview-wrap">
+                        <p class="anyang-interview-tit">경기 A점 점주님</p>
+                        <p class="anyang-interview-txt">요리 경험 0년 → 창업 8개월차</p>
+                        <iframe class="anyang-interview-video" src="https://www.youtube.com/embed/jJWO8IqtkEs?autoplay=1&mute=1&loop=1&playlist=jJWO8IqtkEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=jJWO8IqtkEs" class="anyang-go-youtube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M36.0002 28.25C35.6668 30 34.2502 31.3333 32.5002 31.5833C29.7502 32 25.1668 32.5 20.0002 32.5C14.9168 32.5 10.3335 32 7.50016 31.5833C5.75016 31.3333 4.3335 30 4.00016 28.25C3.66683 26.3333 3.3335 23.5 3.3335 20C3.3335 16.5 3.66683 13.6667 4.00016 11.75C4.3335 10 5.75016 8.66667 7.50016 8.41667C10.2502 8 14.8335 7.5 20.0002 7.5C25.1668 7.5 29.6668 8 32.5002 8.41667C34.2502 8.66667 35.6668 10 36.0002 11.75C36.3335 13.6667 36.7502 16.5 36.7502 20C36.6668 23.5 36.3335 26.3333 36.0002 28.25Z" fill="#FF3D00"/>
+                        <path d="M16.6665 25.8332V14.1665L26.6665 19.9998L16.6665 25.8332Z" fill="white"/>
+                        </svg>
+                        리얼 점주 인터뷰 유튜브 바로가기
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M23.8748 10.4751C23.5748 10.5282 23.3342 10.747 23.2498 11.0376C23.1654 11.3313 23.2529 11.6438 23.4748 11.8501L30.8248 19.2001H7.19982C7.17482 19.2001 7.14982 19.2001 7.12482 19.2001C6.68419 19.222 6.34044 19.597 6.36232 20.0376C6.38419 20.4782 6.75919 20.822 7.19982 20.8001H30.8248L23.4748 28.1501C23.2373 28.3438 23.1279 28.6532 23.1967 28.9532C23.2654 29.2501 23.4998 29.4845 23.7967 29.5532C24.0967 29.622 24.4061 29.5126 24.5998 29.2751L33.3248 20.5751L33.8748 20.0001L33.3248 19.4251L24.5998 10.7251C24.4342 10.547 24.1936 10.4563 23.9498 10.4751C23.9248 10.4751 23.8998 10.4751 23.8748 10.4751Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="anyang-wrap">
+                    <div class="summer-sale-div">
+                        <div class="summer-sale">
+                            여름 성수기 월 매출
+                            <span class="sale">1.8억<span>원</span></span>
+                        </div>
+                        <hr>
+                        <div class="summer-sale">
+                            점주 순수익
+                            <span class="sale">7,000만<span>원</span></span>
+                        </div>
+                        <hr>
+                        <div class="summer-sale">
+                            창업 전 요리경력
+                            <span class="sale">0<span>년</span></span>
+                        </div>
+                    </div>
+                    <div class="anyang-bubble-wrap">
+                        <div class="anyang-bubble" data-aos="fade-right" data-aos-duration="800">
+                            <span class="quotes">“</span><span>처음엔 반신반의했어요. 근데 여름 들어서<br>
+                            <span class="point">하루 매출이 200만 원</span>을 넘기기 시작하더라고요.<span class="quotes l">“</span></span> 
+                        </div>
+                        <div class="anyang-bubble" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+                            <span class="quotes">“</span> <span>본사 교육이 정말 체계적이에요.<br>
+                            <span class="point">요리를 전혀 몰랐는데</span> 3주 만에 혼자 오픈했습니다.<span class="quotes l">“</span></span>
+                        </div>
+                        <div class="anyang-bubble" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                            <span class="quotes">“</span><span>장사 잘 됐을 때가 아니라 <span class="point">버텨야 할 때를 기준으로<br> 만든 브랜드</span>라는 게 실제로 느껴져요.<span class="quotes l">“</span></span>
+                        </div>
+                        <div class="anyang-bubble" data-aos="fade-left" data-aos-duration="800" data-aos-delay="450">
+                            <span class="quotes">“</span><span>여름엔 진짜 소바가 답이에요.<br>
+                            <span class="point">더울수록 손님이 더 옵니다.</span> 냉소바, 냉모밀 — 다 팔려요.<span class="quotes l">“</span></span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="interview-wrap">
+            <div class="interview-item">
+                <div class="interview-item-left">
+                    <iframe class="anyang-interview-video" src="https://www.youtube.com/embed/UIYsrT1Zaq8?loop=1&playlist=UIYsrT1Zaq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a href="https://youtu.be/UIYsrT1Zaq8?si=UIYsrT1Zaq8" target="_blank" class="go-youtube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M28.7998 22.6C28.5332 24 27.3998 25.0667 25.9998 25.2667C23.7998 25.6 20.1332 26 15.9998 26C11.9332 26 8.2665 25.6 5.99984 25.2667C4.59984 25.0667 3.4665 24 3.19984 22.6C2.93317 21.0667 2.6665 18.8 2.6665 16C2.6665 13.2 2.93317 10.9333 3.19984 9.4C3.4665 8 4.59984 6.93333 5.99984 6.73333C8.19984 6.4 11.8665 6 15.9998 6C20.1332 6 23.7332 6.4 25.9998 6.73333C27.3998 6.93333 28.5332 8 28.7998 9.4C29.0665 10.9333 29.3998 13.2 29.3998 16C29.3332 18.8 29.0665 21.0667 28.7998 22.6Z" fill="#FF3D00"/>
+                        <path d="M13.3335 20.6668V11.3335L21.3335 16.0002L13.3335 20.6668Z" fill="white"/>
+                        </svg>
+                        인터뷰 영상 보기
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M19.1001 8.37987C18.8601 8.42237 18.6676 8.59737 18.6001 8.82987C18.5326 9.06487 18.6026 9.31487 18.7801 9.47987L24.6601 15.3599H5.76015C5.74015 15.3599 5.72015 15.3599 5.70015 15.3599C5.34765 15.3774 5.07265 15.6774 5.09015 16.0299C5.10765 16.3824 5.40765 16.6574 5.76015 16.6399H24.6601L18.7801 22.5199C18.5901 22.6749 18.5026 22.9224 18.5576 23.1624C18.6126 23.3999 18.8001 23.5874 19.0376 23.6424C19.2776 23.6974 19.5251 23.6099 19.6801 23.4199L26.6601 16.4599L27.1001 15.9999L26.6601 15.5399L19.6801 8.57987C19.5476 8.43737 19.3551 8.36487 19.1601 8.37987C19.1401 8.37987 19.1201 8.37987 19.1001 8.37987Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="interview-item-right">
+                    <div class="interview-item-tit">
+                        <span>강릉 A점 점주님</span>
+                    </div>
+                    <div class="interview-item-content">
+                        “퇴직금 들고 나왔는데<br> <span class="point">6개월 만에 원금 회수</span>했습니다.<br>
+                        소바가 사계절 메뉴인 건 알았지만<br> 여름에 이렇게 터질 줄은 몰랐어요”
+                    </div>
+                </div>
+            </div>
+            <div class="interview-item">
+                <div class="interview-item-left">
+                    <iframe class="anyang-interview-video" src="https://www.youtube.com/embed/UIYsrT1Zaq8?loop=1&playlist=UIYsrT1Zaq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a target="_blank" class="go-youtube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M28.7998 22.6C28.5332 24 27.3998 25.0667 25.9998 25.2667C23.7998 25.6 20.1332 26 15.9998 26C11.9332 26 8.2665 25.6 5.99984 25.2667C4.59984 25.0667 3.4665 24 3.19984 22.6C2.93317 21.0667 2.6665 18.8 2.6665 16C2.6665 13.2 2.93317 10.9333 3.19984 9.4C3.4665 8 4.59984 6.93333 5.99984 6.73333C8.19984 6.4 11.8665 6 15.9998 6C20.1332 6 23.7332 6.4 25.9998 6.73333C27.3998 6.93333 28.5332 8 28.7998 9.4C29.0665 10.9333 29.3998 13.2 29.3998 16C29.3332 18.8 29.0665 21.0667 28.7998 22.6Z" fill="#FF3D00"/>
+                        <path d="M13.3335 20.6668V11.3335L21.3335 16.0002L13.3335 20.6668Z" fill="white"/>
+                        </svg>
+                        인터뷰 영상 보기
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M19.1001 8.37987C18.8601 8.42237 18.6676 8.59737 18.6001 8.82987C18.5326 9.06487 18.6026 9.31487 18.7801 9.47987L24.6601 15.3599H5.76015C5.74015 15.3599 5.72015 15.3599 5.70015 15.3599C5.34765 15.3774 5.07265 15.6774 5.09015 16.0299C5.10765 16.3824 5.40765 16.6574 5.76015 16.6399H24.6601L18.7801 22.5199C18.5901 22.6749 18.5026 22.9224 18.5576 23.1624C18.6126 23.3999 18.8001 23.5874 19.0376 23.6424C19.2776 23.6974 19.5251 23.6099 19.6801 23.4199L26.6601 16.4599L27.1001 15.9999L26.6601 15.5399L19.6801 8.57987C19.5476 8.43737 19.3551 8.36487 19.1601 8.37987C19.1401 8.37987 19.1201 8.37987 19.1001 8.37987Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="interview-item-right">
+                    <div class="interview-item-tit">
+                        <span>울산 A점 점주님</span>
+                    </div>
+                    <div class="interview-item-content">
+                        “0평으로 시작했어요. 작아서<br> 걱정됐는데 <span class="point">회전율이 오히려 더<br> 좋더라고요.</span>
+                        점심시간에 웨이팅이 생겼습니다.”
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -2486,6 +3039,7 @@ if ($popup_stt->rowCount() > 0) {
         e.target.submit();
 
     });
+
 
 </script>
 

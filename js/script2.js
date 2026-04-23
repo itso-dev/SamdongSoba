@@ -322,3 +322,25 @@ c.fromTo(".contact-img",
   "+=0.2"
 );
 
+// recruit-dot wave 애니메이션 (시간차)
+gsap.utils.toArray('#recruit .recruit-dot').forEach((dot, i) => {
+  const wave = dot.querySelector('.dot-wave');
+  gsap.set(wave, { xPercent: -50, yPercent: -50 });
+  gsap.fromTo(wave,
+    { opacity: 0, scale: 0.3 },
+    { opacity: 0.7, scale: 1.5, duration: 1.8, repeat: -1, delay: i * 0.25, ease: "power1.out" }
+  );
+});
+
+const interviewTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#interview",
+    start: "top 50%",
+    toggleActions: 'play none none reset'
+  }
+});
+
+interviewTl.from("#interview .interview-tit-div .tit-wrap", 
+  { clipPath: 'inset(0 50% 0 50%)', duration: 0.6, ease: 'power2.inOut'
+});
+

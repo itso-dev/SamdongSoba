@@ -242,7 +242,7 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
 <body>
     <?= $site['body_script'] ?>
 
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="load-wrap">
             <div class="loading-img">
                 <p class="loading-text">0%</p>
@@ -289,7 +289,7 @@ echo "<script>console.log('유입 경로: " . addslashes($flow) . "');</script>"
                 }
             };
         });
-    </script>
+    </script> -->
     <div id="header">
         <div class="head-wrap">
             <img src="img/head-logo.png" class="head-logo white" alt="삼동소바">

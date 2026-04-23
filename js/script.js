@@ -83,23 +83,23 @@ window.addEventListener("load", () => {
             // markers: true,
         }
     });
-    tl2.fromTo(".page4 .mark",
-        {
-            scale: 3,
-            opacity: 0,
-            filter: "blur(16px)",
-        },
-        {
-            scale: 1,
-            opacity: 1,
-            filter: "blur(0px)",
-            duration: 0.2,
-            ease: "power2.in"
-        }
-    ).to(".page4 .mark", {
-        duration: 0.3,
-        ease: "power2.out"
-    }, "+=0.4");
+    // tl2.fromTo(".page4 .mark",
+    //     {
+    //         scale: 3,
+    //         opacity: 0,
+    //         filter: "blur(16px)",
+    //     },
+    //     {
+    //         scale: 1,
+    //         opacity: 1,
+    //         filter: "blur(0px)",
+    //         duration: 0.2,
+    //         ease: "power2.in"
+    //     }
+    // ).to(".page4 .mark", {
+    //     duration: 0.3,
+    //     ease: "power2.out"
+    // }, "+=0.4");
 
 
     //page4 도장
