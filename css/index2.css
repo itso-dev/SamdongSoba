@@ -1788,10 +1788,26 @@
     background-repeat: repeat;
     display: flex;
     box-sizing: border-box;
-    padding: 0 40px;
+    padding: 0 40px 5%;
     justify-content: center;
     align-items: center;
     border-radius: 20px 0 0 0;
+}
+
+#recruit .recruit-map-wrap .more-desc {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%; /* 28px */
+    letter-spacing: -0.5px;
+    word-break: break-all;
+    position: absolute;
+    top: 35px;
+    left: 40px;
+}
+
+.br-1400 {
+    display: none;
 }
 
 #recruit .recruit-map, #recruit .recruit-map-img {
@@ -1950,6 +1966,11 @@
     right: 12%;
 }
 
+@keyframes dotLocationFloat {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(-5px); }
+}
+
 #recruit .recruit-dot-location {
     position: absolute;
     display: flex;
@@ -1957,13 +1978,19 @@
     align-items: center;
     left: 50%;
     transform: translateX(-50%);
-    top: -250%;
+    top: -210%;
     z-index: 4;
+    cursor: pointer;
+}
+
+#recruit .recruit-dot.active .recruit-dot-location {
+    animation: dotLocationFloat 1.2s ease-in-out infinite;
 }
 
 #recruit .recruit-dot-location svg {
     margin-top: -2px;
     z-index: 5;
+    transition: 0;
 }
 
 #recruit .recruit-dot-location p {
@@ -1978,20 +2005,35 @@
     background: #432F32;
    color: #FFF;
     text-align: center;
-    font-size: 12px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 15.6px */
-    letter-spacing: -0.3px;
+    letter-spacing: -0.45px;
     white-space: nowrap;
+    transition: none;
+}
+
+#recruit .recruit-dot-location svg path {
+    transition: none;
 }
 
 #recruit .recruit-dot-location p span {
    color: #D0B18B;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 130%; /* 18.2px */
-    letter-spacing: -0.35px;
+}
+
+#recruit .recruit-dot.active .recruit-dot-location p {
+    color: #D02326;
+    background: #FFF;
+}
+
+#recruit .recruit-dot.active .recruit-dot-location p span {
+    color: #D02326;
+}
+
+#recruit .recruit-dot.active .recruit-dot-location svg path {
+    stroke: #FFF;
+    fill: #FFF;
 }
 
 #recruit .recruit-num {
@@ -2028,6 +2070,66 @@
     font-weight: 400;
     line-height: 150%; /* 33px */
     letter-spacing: -0.55px;
+}
+
+#recruit .recruit-loca-detail {
+    max-width: 670px;
+    width: 90%;
+    aspect-ratio: 670 / 102;
+    position: absolute;
+    left: 50%;
+    bottom: 110px;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#recruit .recruit-loca-detail .vector {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#recruit .recruit-loca-detail .recommend {
+    width: 120px;
+    position: absolute;
+    left: -5%;
+    bottom: 20%;
+    z-index: 3;
+    animation: zoomIn 1.2s linear infinite;
+}
+
+#recruit .recruit-loca-detail p {
+    color: #D02326;
+    font-family: "ON YeossihyangyakeonhaeOTF";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 67.2px */
+    letter-spacing: -1.2px;
+    z-index: 3;
+}
+
+#recruit .recruit-loca-detail .detail-div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #111;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 140%; /* 44.8px */
+    letter-spacing: -0.8px;
+    z-index: 3;
+}
+
+#recruit .recruit-loca-detail .detail-div hr {
+    width: 1px;
+    height: 28px;
+    background: #9E9385;
+    border: none;
 }
 
 
@@ -2445,13 +2547,9 @@
     #recruit .recruit-dot .recruit-dot-img {
         width: 20px;
     }
-    #recruit .recruit-dot-location p span {
-        font-size: 12px;
-        letter-spacing: -0.3px;
-    }
     #recruit .recruit-dot-location p {
-        font-size: 10px;
-        letter-spacing: -0.25px;
+        font-size: 16px;
+        letter-spacing: -0.4px;
     }
     #interview .anyang-container-inner {
         flex-direction: column;
@@ -2567,6 +2665,9 @@
     #recruit .recruit-dot-desc {
         font-size: 20px;
         letter-spacing: -0.5px;
+    }
+    .br-1400 {
+        display: block;
     }
 }
 
@@ -2762,20 +2863,34 @@
         width: 16px;
     }
     #recruit .recruit-dot-location {
-        top: -300%;
-    }
-    #recruit .recruit-dot-location p span {
-        font-size: 10px;
-        letter-spacing: -0.25px;
+        top: -280%;
     }
     #recruit .recruit-dot-location p {
-        font-size: 8px;
-        letter-spacing: -0.2px;
+        font-size: 14px;
+        letter-spacing: -0.35px;
+    }
+    #recruit .recruit-loca-detail {
+        gap: 20px;
+    }
+    #recruit .recruit-loca-detail p {
+        font-size: 40px;
+        letter-spacing: -1px;
+    }
+    #recruit .recruit-loca-detail .detail-div {
+        font-size: 28px;
+        letter-spacing: -0.7px;
+        gap: 8px;
     }
     #recruit .recruit-num {
         font-size: 20px;
         letter-spacing: -0.5px;
         right: 20px;
+        top: 20px;
+    }
+    #recruit .recruit-map-wrap .more-desc {
+        font-size: 18px;
+        letter-spacing: -0.45px;
+        left: 20px;
         top: 20px;
     }
     #interview {
@@ -2971,8 +3086,7 @@
         gap: 32px;
     }
     #recruit .recruit-map-wrap {
-        padding: 0;
-        aspect-ratio: 1 / 0.7;
+        padding: 100px 40px 200px;
     }
     #recruit .recruit-map {
         max-width: 700px;
@@ -2980,14 +3094,6 @@
     }
     #recruit .recruit-dot .recruit-dot-img {
         width: 18px;
-    }
-    #recruit .recruit-dot-location p span {
-        font-size: 12px;
-        letter-spacing: -0.3px;
-    }
-    #recruit .recruit-dot-location p {
-        font-size: 10px;
-        letter-spacing: -0.25px;
     }
     #interview .interview-wrap {
         flex-direction: column;
@@ -3181,9 +3287,6 @@
     .process-container>img {
         width: 30px;
     }
-    #recruit .recruit-map-wrap {
-        aspect-ratio: 1 / 0.9;
-    }
     #recruit .recruit-dot-desc {
         font-size: 18px;
         letter-spacing: -0.45px;
@@ -3328,8 +3431,7 @@
         width: 70%;
     }
     #recruit .recruit-map-wrap {
-        aspect-ratio: unset;
-        padding: 60px 0;
+        padding: 100px 0 200px;
     }
     #interview {
         gap: 40px;
@@ -3650,8 +3752,6 @@
     #recruit .recruit-num {
         font-size: 18px;
         letter-spacing: -0.45px;
-        right: 10px;
-        top: 10px;
         padding: 5px 7px;
         border-radius: 3.514px;
     }
@@ -3659,18 +3759,39 @@
         width: 14px;
     }
     #recruit .recruit-dot-location {
-        top: -300%;
-    }
-    #recruit .recruit-dot-location p span {
-        font-size: 10px;
-        letter-spacing: -0.25px;
+        top: -250%;
     }
     #recruit .recruit-dot-location p {
-        font-size: 8px;
-        letter-spacing: -0.2px;
+        font-size: 12px;
+        letter-spacing: -0.3px;
         padding: 2.196px 2.636px;
         border-width: 0.439px;
         border-radius: 0.879px;
+    }
+    #recruit .recruit-map-wrap .more-desc {
+        font-size: 16px;
+        letter-spacing: -0.4px;
+    }
+    #recruit .recruit-loca-detail {
+        bottom: 60px;
+    }
+    #recruit .recruit-loca-detail p {
+        font-size: 32px;
+        letter-spacing: -0.8px;
+    }
+    #recruit .recruit-loca-detail .detail-div {
+        font-size: 24px;
+        letter-spacing: -0.6px;
+        gap: 6px;
+    }
+    #recruit .recruit-loca-detail .detail-div hr {
+        height: 20px;
+    }
+    #recruit .recruit-loca-detail .recommend {
+        width: 20%;
+    }
+    #recruit .recruit-map-wrap {
+        padding: 100px 0 140px;
     }
     #interview .text72 {
         font-size: 40px;
@@ -3782,20 +3903,6 @@
     .support-item-inner span {
         font-size: 28px;
         letter-spacing: -0.7px;
-    }
-    #recruit .recruit-dot .recruit-dot-img {
-        width: 10px;
-    }
-    #recruit .recruit-dot-location {
-        top: -370%;
-    }
-    #recruit .recruit-dot-location p span {
-        font-size: 8px;
-        letter-spacing: -0.2px;
-    }
-    #recruit .recruit-dot-location p {
-        font-size: 6px;
-        letter-spacing: -0.15px;
     }
     #interview .anyang-wrap .summer-sale-div .summer-sale {
         gap: 6.75px;
@@ -4015,9 +4122,6 @@
         font-size: 14px;
         letter-spacing: -0.35px;
     }
-    #recruit .recruit-map-wrap {
-        padding: 80px 0;
-    }
     #recruit .recruit-dot .recruit-dot-img {
         width: 7px;
     }
@@ -4028,17 +4132,13 @@
         width: 10px;
         height: auto;
     }
-    #recruit .recruit-dot-location p span {
-        font-size: 6.15px;
-        letter-spacing: -0.154px;
-    }
-    #recruit .recruit-dot-location p {
-        font-size: 5.271px;
-        letter-spacing: -0.132px;
-    }
     #recruit .recruit-num {
         font-size: 16px;
         letter-spacing: -0.4px;
+    }
+    #recruit .recruit-map-wrap .more-desc {
+        font-size: 14px;
+        letter-spacing: -0.35px;
     }
     #recruit .recruit-dot-desc {
         font-size: 14px;
@@ -4049,6 +4149,17 @@
     }
     #recruit .recruit-dot .recruit-dot-img {
         width: 12px;
+    }
+    #recruit .recruit-loca-detail p {
+        font-size: 28px;
+        letter-spacing: -0.7px;
+    }
+    #recruit .recruit-loca-detail .detail-div {
+        font-size: 18px;
+        letter-spacing: -0.45px;
+    }
+    #recruit .recruit-loca-detail .detail-div hr {
+        height: 18px;
     }
     #interview .text72 .w {
         font-size: 28px;
@@ -4205,6 +4316,21 @@
     }
     .profit-box .small {
         top: 550px;
+    }
+    #recruit .recruit-map-wrap {
+        padding: 90px 0 120px;
+    }
+    #recruit .recruit-dot-location p {
+        font-size: 10px;
+        letter-spacing: -0.25px;
+    }
+    #recruit .recruit-loca-detail p {
+        font-size: 24px;
+        letter-spacing: -0.6px;
+    }
+    #recruit .recruit-loca-detail .detail-div {
+        font-size: 16px;
+        letter-spacing: -0.4px;
     }
     #interview .anyang-wrap .summer-sale-div .summer-sale {
         font-size: 12px;
@@ -4407,18 +4533,33 @@
         width: 20px;
     }
     #recruit .recruit-dot .recruit-dot-img {
-        width: 6px;
+        width: 7px;
     }
     #recruit .recruit-dot-location {
         top: -350%;
     }
-    #recruit .recruit-dot-location p span {
-        font-size: 5px;
-        letter-spacing: -0.15px;
+    #recruit .recruit-num {
+        font-size: 14px;
+        letter-spacing: -0.35px;
+        right: 10px;
+        top: 15px;
     }
-    #recruit .recruit-dot-location p {
-        font-size: 4px;
-        letter-spacing: -0.1px;
+    #recruit .recruit-map-wrap .more-desc {
+        font-size: 12px;
+        letter-spacing: -0.3px;
+        left: 10px;
+        top: 15px;
+    }
+    #recruit .recruit-loca-detail {
+        gap: 16px;
+    }
+    #recruit .recruit-loca-detail p {
+        font-size: 20px;
+        letter-spacing: -0.5px;
+    }
+    #recruit .recruit-loca-detail .detail-div {
+        font-size: 14px;
+        letter-spacing: -0.35px;
     }
     #interview .anyang-interview .anyang-go-youtube {
         font-size: 16px;

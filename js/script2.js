@@ -332,6 +332,24 @@ gsap.utils.toArray('#recruit .recruit-dot').forEach((dot, i) => {
   );
 });
 
+// recruit-dot 클릭 시 recruit-loca-detail 업데이트
+function activateRecruitDot(dot) {
+  document.querySelectorAll('#recruit .recruit-dot').forEach(d => d.classList.remove('active'));
+  dot.classList.add('active');
+  const gu = dot.dataset.gu;
+  const dongs = dot.dataset.dongs.split(',');
+  document.querySelector('.recruit-loca-detail p').textContent = gu;
+  document.querySelector('.recruit-loca-detail .detail-div').innerHTML = dongs.join('<hr>');
+}
+
+document.querySelectorAll('#recruit .recruit-dot').forEach(dot => {
+  dot.addEventListener('click', function() { activateRecruitDot(this); });
+});
+
+// 초기 강서구 활성화
+const defaultDot = document.querySelector('#recruit .recruit-dot.gangseo');
+if (defaultDot) activateRecruitDot(defaultDot);
+
 const interviewTl = gsap.timeline({
   scrollTrigger: {
     trigger: "#interview",

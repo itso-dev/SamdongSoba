@@ -259,7 +259,7 @@ if ($popup_stt->rowCount() > 0) {
                         <hr>
                     </div>
                     <div class="recruit-tit" data-aos="fade-right" data-aos-duration="1000">
-                        소형 평수로도,<br><span class="r">서울에서 억대매출</span><br>가능합니다.
+                        소형 평수로도,<br><span class="r">서울에서 억대매출</span> 가능!
                     </div>
                     <div class="recruit-tit-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
                         20평대 골목 상권에서 시작해도 충분합니다.<br> 삼동소바가 억대 매출 상권을 직접 분석하고<br class="xs-br"> 안내해드립니다.
@@ -289,7 +289,7 @@ if ($popup_stt->rowCount() > 0) {
                             <div class="recruit-item-div">
                                 <p class="recruit-item-tit">기기·장비 렌탈 프로그램 제공</p>
                                 <div class="recruit-item-content">
-                                초기 투자 부담을 줄이는 렌탈 옵션 운영.<br>제면기·냉장설비 등 핵심 장비 포함
+                                초기 투자 부담을 줄이는 렌탈 옵션 운영<br>제면기·냉장설비 등 핵심 장비 포함
                                 </div>
                             </div>
                         </div>
@@ -314,367 +314,299 @@ if ($popup_stt->rowCount() > 0) {
                             <path d="M23.8748 10.4751C23.5748 10.5282 23.3342 10.747 23.2498 11.0376C23.1654 11.3313 23.2529 11.6438 23.4748 11.8501L30.8248 19.2001H7.19982C7.17482 19.2001 7.14982 19.2001 7.12482 19.2001C6.68419 19.222 6.34044 19.597 6.36232 20.0376C6.38419 20.4782 6.75919 20.822 7.19982 20.8001H30.8248L23.4748 28.1501C23.2373 28.3438 23.1279 28.6532 23.1967 28.9532C23.2654 29.2501 23.4998 29.4845 23.7967 29.5532C24.0967 29.622 24.4061 29.5126 24.5998 29.2751L33.3248 20.5751L33.8748 20.0001L33.3248 19.4251L24.5998 10.7251C24.4342 10.547 24.1936 10.4563 23.9498 10.4751C23.9248 10.4751 23.8998 10.4751 23.8748 10.4751Z" fill="white"/>
                             </svg>
                         </p>
-                        <div>* 무료 · 3분 내 산정 · 상담 없이도 확인 가능</div>
+                        <div>* 상담 시 상권전문가가 예상매출 산정</div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="recruit-map-wrap">
+            <p class="more-desc">지역구 클릭시 부동산팀이<br class="br-1400"> 조사한 추천입지가 나타납니다</p>
             <div class="recruit-num">
                 삼동소바 추천 상권
             </div>
             <div class="recruit-map">
                 <img src="img/recruit-map.png" alt="삼동소바 서울 모집 가능 지역" class="recruit-map-img">
-                <div class="recruit-dot dobong">
+                <div class="recruit-dot dobong" data-gu="도봉구" data-dongs="도봉동,방학동,창동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>도봉구</span>
-                            도봉동,방학동,창동
-                        </p>
+                        <p><span>도봉구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot eunpyeong">
+                <div class="recruit-dot eunpyeong" data-gu="은평구" data-dongs="녹번동,불광동,응암동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>은평구</span>
-                            녹번동,불광동,응암동
-                        </p>
+                        <p><span>은평구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot gangbuk">
+                <div class="recruit-dot gangbuk" data-gu="강북구" data-dongs="미아동,삼각산동,수유동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>강북구</span>
-                            미아동,삼각산동,수유동
-                        </p>
+                        <p><span>강북구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot nowon">
+                <div class="recruit-dot nowon" data-gu="노원구" data-dongs="공릉동,상계동,월계동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>노원구</span>
-                            공릉동,상계동,월계동
-                        </p>
+                        <p><span>노원구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot seongbuk">
+                <div class="recruit-dot seongbuk" data-gu="성북구" data-dongs="길음동,돈암동,성북동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>성북구</span>
-                            길음동,돈암동,성북동
-                        </p>
+                        <p><span>성북구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot jongno">
+                <div class="recruit-dot jongno" data-gu="종로구" data-dongs="종로n가동,혜화동,평창동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>종로구</span>
-                            종로n가동,혜화동,평창동
-                        </p>
+                        <p><span>종로구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot jungnang">
+                <div class="recruit-dot jungnang" data-gu="중랑구" data-dongs="망우동,면목동,상봉동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>중랑구</span>
-                            망우동,면목동,상봉동
-                        </p>
+                        <p><span>중랑구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot gangseo">
+                <div class="recruit-dot gangseo" data-gu="강서구" data-dongs="가양동,화곡동,발산동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>강서구</span>
-                            가양동,화곡동,발산동
-                        </p>
+                        <p><span>강서구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot mapo">
+                <div class="recruit-dot mapo" data-gu="마포구" data-dongs="공덕동,망원동,연남동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>마포구</span>
-                            공덕동,망원동,연남동
-                        </p>
+                        <p><span>마포구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot seodaemun">
+                <div class="recruit-dot seodaemun" data-gu="서대문구" data-dongs="신촌동,연희동,홍제동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>서대문구</span>
-                            신촌동,연희동,홍제동
-                        </p>
+                        <p><span>서대문구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot jung">
+                <div class="recruit-dot jung" data-gu="중구" data-dongs="명동,신당동,을지로">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>중구</span>
-                            명동,신당동,을지로
-                        </p>
+                        <p><span>중구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot dongdaemun">
+                <div class="recruit-dot dongdaemun" data-gu="동대문구" data-dongs="답십리동,이문동,청량리동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>동대문구</span>
-                            답십리동,이문동,청량리동
-                        </p>
+                        <p><span>동대문구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot yangcheon">
+                <div class="recruit-dot yangcheon" data-gu="양천구" data-dongs="목동,신월동,신정동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>양천구</span>
-                            목동,신월동,신정동
-                        </p>
+                        <p><span>양천구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot yeongdeungpo">
+                <div class="recruit-dot yeongdeungpo" data-gu="영등포구" data-dongs="여의도,영등포동,문래동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>영등포구</span>
-                            여의도,영등포동,문래동
-                        </p>
+                        <p><span>영등포구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot yongsan">
+                <div class="recruit-dot yongsan" data-gu="용산구" data-dongs="이태원동,한남동,한강로동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>용산구</span>
-                            이태원동,한남동,한강로동
-                        </p>
+                        <p><span>용산구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot seongdong">
+                <div class="recruit-dot seongdong" data-gu="성동구" data-dongs="성수동,왕십리동,행당동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>성동구</span>
-                            성수동,왕십리동,행당동
-                        </p>
+                        <p><span>성동구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot gwangjin">
+                <div class="recruit-dot gwangjin" data-gu="광진구" data-dongs="구의동,광장동,군자동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>광진구</span>
-                            구의동,광장동,군자동
-                        </p>
+                        <p><span>광진구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot gangdong">
+                <div class="recruit-dot gangdong" data-gu="강동구" data-dongs="길동,명일동,천호동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>강동구</span>
-                            길동,명일동,천호동
-                        </p>
+                        <p><span>강동구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot guro">
+                <div class="recruit-dot guro" data-gu="구로구" data-dongs="구로동,신도림동,오류동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>구로구</span>
-                            길동,명일동,천호동
-                        </p>
+                        <p><span>구로구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot dongjak">
+                <div class="recruit-dot dongjak" data-gu="동작구" data-dongs="노량진동,사당동,상도동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>동작구</span>
-                            길동,명일동,천호동
-                        </p>
+                        <p><span>동작구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot geumcheon">
+                <div class="recruit-dot geumcheon" data-gu="금천구" data-dongs="가산동,독산동,시흥동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>금천구</span>
-                            길동,명일동,천호동
-                        </p>
+                        <p><span>금천구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot gwanak">
+                <div class="recruit-dot gwanak" data-gu="관악구" data-dongs="봉천동,신림동,서원동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>관악구</span>
-                            길동,명일동,천호동
-                        </p>
+                        <p><span>관악구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot seocho">
+                <div class="recruit-dot seocho" data-gu="서초구" data-dongs="반포동,서초동,양재동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>서초구</span>
-                            길동,명일동,천호동
-                        </p>
+                        <p><span>서초구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot gangnam">
+                <div class="recruit-dot gangnam" data-gu="강남구" data-dongs="논현동,압구정동,역삼동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>강남구</span>
-                            길동,명일동,천호동
-                        </p>
+                        <p><span>강남구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
-                <div class="recruit-dot songpa">
+                <div class="recruit-dot songpa" data-gu="송파구" data-dongs="가락동,문정동,잠실동">
                     <div class="dot-wave"></div>
                     <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
                     <div class="recruit-dot-location">
-                        <p>
-                            <span>송파구</span>
-                            길동,명일동,천호동
-                        </p>
+                        <p><span>송파구</span></p>
                         <svg width="22" height="12" viewBox="19 18.8 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.168 18.8889L23.9181 23.721L28.8321 18.8889" stroke="#D0B18B" stroke-width="0.439276" fill="none"/>
                         <path d="M23.9181 23.721L19.168 18.8889H28.8321L23.9181 23.721Z" fill="#432F32"/>
                         </svg>
                     </div>
                 </div>
+            </div>
+            <div class="recruit-loca-detail">
+                <img src="img/recommend.png" alt="삼동소바 상권 추천" class="recommend">
+                <img src="img/vector.svg" alt="삼동소바" class="vector">
+                <p>강서구</p>
+                <div class="detail-div">가양동<hr>화곡동<hr>발산동</div>
             </div>
             <p class="recruit-dot-desc">
                 <img src="img/recruit-dot.svg" alt="삼동소바 서울 모집 가능 지역" class="recruit-dot-img">
@@ -750,7 +682,7 @@ if ($popup_stt->rowCount() > 0) {
                 </div>
             </div>
         </div>
-        <div class="interview-wrap">
+        <!-- <div class="interview-wrap">
             <div class="interview-item">
                 <div class="interview-item-left">
                     <iframe class="anyang-interview-video" src="https://www.youtube.com/embed/UIYsrT1Zaq8?loop=1&playlist=UIYsrT1Zaq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -799,7 +731,7 @@ if ($popup_stt->rowCount() > 0) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="page3 p120 mask">
         <img class="tit-deco" src="<?= $site_url ?>/img/tit-deco.png" />
