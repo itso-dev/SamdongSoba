@@ -1843,11 +1843,13 @@
 
 @media (max-width: 768px) {
   .layer-popup {
+    max-height: 95vh !important;
     position: fixed;
-    top: 5%;
-    left: 5%;
+    top: 2% !important;
+    left: 5% !important;
+    width: 80% !important;
+    overflow: scroll;
   }
-
   .page1 .swap-txt-wrap .txt{
     font-size: 30px;
   }

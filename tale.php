@@ -190,7 +190,7 @@
         return false;
     });
 
-    $("#go-contact").click(function (){
+    $(".recruit-btn").click(function (){
         $('html, body').animate({
             scrollTop: $('#contact').offset().top
         }, 500);

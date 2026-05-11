@@ -2252,13 +2252,13 @@ if ($popup_stt->rowCount() > 0) {
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="support-item">
                             <div class="support-item-inner">
                                 집기 렌탈 및 인테리어 분납 등을 통해 최대 <span>2억원</span> 지원 가능
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="swiper-slide">
                         <div class="support-item">
                             <div class="support-item-inner">
@@ -2273,10 +2273,24 @@ if ($popup_stt->rowCount() > 0) {
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="support-item">
                             <div class="support-item-inner">
                                 집기 렌탈 및 인테리어 분납 등을 통해 최대 <span>2억원</span> 지원 가능
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="swiper-slide">
+                        <div class="support-item">
+                            <div class="support-item-inner">
+                                KB 창업 지원 자금 최대 <span>5천만원</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="support-item">
+                            <div class="support-item-inner">
+                                신한은행 프랜차이즈론 최대 <span>3천만원</span>
                             </div>
                         </div>
                     </div>
